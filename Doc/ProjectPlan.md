@@ -131,7 +131,7 @@ Prima di effettuare un merge nel ramo principale, il codice viene sottoposto a u
 - Gestione del lavoro: Utilizzo di strumenti come Kanban board per 
   tracciare le attività e monitorare lo stato di avanzamento del progetto.
 
-  ## 1.5 Attività di gestione
+## 1.5 Attività di gestione
 Lo sviluppo del progetto è stato organizzato seguendo i principi dei metodi agili, in particolare ispirandosi alla filosofia dell'Extreme Programming, che favorisce una maggiore efficienza e flessibilità ad eventuali modifiche dei requisiti. Il team ha collaborato in tutte le fasi, in modo da mantenere sempre il focus sugli obiettivi del progetto piuttosto che quelli personali.
 Durante i primi incontri è stata data grande importanza all'attività pianificazione, alla scelta dei requisiti e alla loro classificazione in base alla priorità, dopodichè è stato eseguito il lavoro vero e proprio, in parallelo con verifiche e test per assicurarsi volta per volta che tutto venisse svolto correttamente. 
 Per ogni attività pianificata è stata inoltre definita una scadenza allo scopo di garantire un avanzamento costante del progetto, monitorare i progressi rispetto agli obiettivi prefissati e intervenire tempestivamente in caso di eventuali ritardi o problematiche.
@@ -150,10 +150,49 @@ correttive.
  
   ## 1.7 Membri
   I membri che hanno partecipato al progetto sono stati precedentemente menzionati.
+ 
   ## 1.8 Metodi e tecniche
-  ## 1.9 Garanzie di qualità
+  Nel progetto sono stati adottati metodi e tecniche specifiche per garantire un approccio strutturato, efficace e allineato agli obiettivi prefissati. Di seguito vengono descritte le metodologie utilizzate nelle principali aree del ciclo di sviluppo.
+- Metodologia SCRUM: il team utilizza il framework agile SCRUM per organizzare il lavoro in sprint di durata fissa. Le attività principali includono:
+  - Pianificazione dello sprint (Sprint Planning) per definire obiettivi e 
+    priorità.
+  - Meeting giornalieri per monitorare i progressi.
+  - Retrospettive al termine di ogni sprint per valutare i risultati e 
+    migliorare il processo.
+- Strumenti di gestione:
+  - GitHub Projects per tracciare attività, assegnare 
+    responsabilità e monitorare lo stato di avanzamento.
+  - Git per il controllo del versionamento del codice, utilizzando 
+    strategie come Git Flow per la gestione dei rami.
+- Progettazione UML: il sistema è stato progettato utilizzando i diagrammi 
+  UML, tra cui:  use case diagram, class diagram, state machine diagram, 
+  sequence diagram, communication diagram/timing diagram, activity diagram 
+  e component diagram.
+- Architettura MVC (Model-View-Controller): il progetto segue l'architettura MVC per separare le responsabilità tra i diversi moduli del software, migliorando la manutenibilità e la modularità.
+  - Model: rappresenta i dati principali e la logica applicativa del sw, gestione del database e logica di gioco.
+  - View: gestisce la rappresentazione grafica dell'applicazione
+  - Controller: funziona come intermediario tra model e view.
+- Programmazione orientata agli oggetti: il software è sviluppato seguendo 
+  i principi della programmazione orientata agli oggetti, garantendo 
+  riusabilità del codice e manutenibilità.
+- Tecniche di testing(? da definire?) !!!!
+
+ ## 1.9 Garanzie di qualità
   
-  ## 1.10 Package di lavoro
+## 1.10 Package di lavoro  DA SISTEMARE NON SONO SICURA
+  Elenco dei package di lavoro
+
+| **ID** | **Nome del package**           | **Descrizione**                                                                 | **Responsabile**       | **Output atteso**                               | **Durata prevista** |
+|--------|--------------------------------|---------------------------------------------------------------------------------|------------------------|-------------------------------------------------|---------------------|
+| WP1    | Raccolta requisiti             | Identificazione dei requisiti utilizzando la metodologia MoSCoW.                | Luca e Erica          | Documento dei requisiti.                       | 1 settimana         |
+| WP2    | Progettazione                  | Creazione di diagrammi UML e definizione dell'architettura MVC.                 | ???                   | Diagrammi UML, struttura del progetto.         | ???         |
+| WP3    | Configurazione ambiente        | Configurazione di GitHub, Maven, database SQLite(?) e JavaFX(?).                      | ???                | Ambiente pronto per lo sviluppo.               | ???         |
+| WP4    | Sviluppo del Model             | Implementazione della logica applicativa, del database e delle regole di gioco. | ???                 | Componenti del Model funzionanti.              | ???         |
+| WP5    | Sviluppo del Controller        | Implementazione della logica che collega il Model con la View.                  | ???                   | Controller funzionanti e testati.              | ???         |
+| WP6    | Sviluppo della View            | Creazione dell’interfaccia grafica con JavaFX.                                  | ???                | Interfaccia grafica operativa.                 | ???         |
+| WP7    | Integrazione e testing         | Integrazione dei moduli e test unitari, di integrazione e di sistema.           | Tutto il team          | Software funzionante e testato.                | ???         |
+| WP8    | Documentazione                 | Creazione della documentazione finale, inclusi manuale utente e report tecnico. | ???                 | Documentazione completa del progetto.          | 1 settimana         |
+
   ## 1.11 Risorse
   Le risorse usate dal team sono le seguenti:
   - Github come sistema per il Configuration Management
@@ -164,8 +203,11 @@ correttive.
  L'utente invece per poter usare il software necessita semplicemente di un computer. 
 
   ## 1.12 Budget e pianificazione
+  Non è stato concordato alcun budget monetario, ma solamente il tempo messo a disposizione dal team. 
+  
   ## 1.13 Cambiamenti
   Qualsiasi cambiamento potrà essere effettuato solo dopo l'approvazione da parte del team della richiesta di modifica.
   I cambiamenti, come detto in precedenza, potranno essere suggeriti dagli utenti tramite un forum apposito, oltre che dai membri del team per perfezionare il software insieme alla documentazione per chiarire le    migliorie introdotte.
 
   ## 1.14 Consegna
+La consegna del progetto è prevista per cinque giorni prima dell'esame scritto, mentre il project plan deve essere consegnato un mese prima dell'esame. Il team si impegna,inoltre, ad effettuare un'ultima revisione prima della pubblicazione finale del progetto.
