@@ -1,2 +1,2 @@
 # ProgettoCasinò
-Progetto di ingegneria del software 23/24 dell’Università degli Studi di Bergamo
+Progetto di ingegneria del software 24/25 dell’Università degli Studi di Bergamo
