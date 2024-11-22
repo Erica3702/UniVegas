@@ -26,7 +26,10 @@
 
 
   ## 1. Project plan
+  Questo project plan si riferisce al progetto di ingegneria del Software a.a. 24/25, si basa sullo sviluppo di un casinò virtuale all'interno del quale è possibile giocare 
+  a tre differenti giochi: Blackjack, Poker e Roulette. Le partite si possono svolgere in due differenti modalità: multiplayer sullo stesso pc e single player.
   ## 1.1 Introduzione
+  
   ## 1.2 Modello di processo
   ## 1.3 Organizzazione del progetto
   ## 1.4 Standards, linee guida e procedure
