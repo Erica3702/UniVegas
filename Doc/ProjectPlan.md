@@ -26,16 +26,16 @@
 
 
    ## 1. Project plan
-  Questo project plan si riferisce al progetto di ingegneria del Software a.a. 24/25, si basa sullo sviluppo di un casinò virtuale all'interno del quale è 
-  possibile giocare a tre differenti giochi: Blackjack, Poker e Roulette. Le partite si possono svolgere in due differenti modalità: multiplayer sullo stesso pc e 
-  single player.
+  Il seguente project plan si riferisce al progetto di ingegneria del Software a.a. 24/25 e consiste nello sviluppo di un casinò virtuale all'interno del quale è 
+  possibile giocare a tre differenti giochi: Blackjack, Poker e Roulette. Le partite si possono svolgere in due modalità: multiplayer sullo stesso pc e 
+  singleplayer.
 
    ## 1.1 Introduzione
   Negli ultimi anni, il settore del gioco d'azzardo online ha registrato una crescita esponenziale, spinta dall'aumento dell'accesso a internet, dall'evoluzione 
   tecnologica e dalla crescente popolarità dei giochi digitali.
-  Il progetto prevede lo sviluppo, il test e il rilascio del software entro il 24/01/2025, attraverso l'impiego di metodologie agili per garantire un 
+  Il progetto prevede lo sviluppo, il test e il rilascio del software entro il 19/01/2025, attraverso l'impiego di metodologie agili per garantire un 
   approccio flessibile e iterativo. Questo documento illustra i dettagli relativi agli obiettivi, alla portata, ai requisiti tecnici, al piano di lavoro e alle 
-  risorse necessarie per lo sviluppo del progetto. I requisiti sono stati classificati e prioritizzati con l'approccio MoSCoW come verrà mostrato in seguito.
+  risorse necessarie per lo sviluppo del progetto. I requisiti sono stati classificati e prioritizzati seguendo l'approccio MoSCoW come verrà mostrato in seguito.
   
   ## 1.2 Modello di processo
    Durante la fase di lavoro iniziale il team si è focalizzato sulla definizione dei requisiti del software ideato. I requisiti sono stati identificati attraverso un'analisi approfondita delle esigenze funzionali e non funzionali, basandosi su ciò che il gruppo riteneva opportuno e prendendo ispirazione da software di casinò già presenti sul mercato. Questa attività è stata essenziale per creare una base solida per le fasi successive. Per garantire un approccio chiaro e prioritario alla definizione dei requisiti, abbiamo utilizzato la metodologia MoSCoW. Di seguito vengono elencati i requisiti identificati per il nostro software di casinò virtuale:
@@ -108,9 +108,9 @@ Dopo la consegna del prodotto, il team si impegna a fornire supporto per la riso
 Grazie al modello SCRUM, ogni sprint culmina con una revisione del lavoro completato e una retrospettiva per migliorare il processo nelle iterazioni successive.
 
   ## 1.3 Organizzazione del progetto
-Tutti i membri del team sono coinvolti nella progettazione del gioco. Verrà reso disponibile un forum in seguito alla pubblicazione che permetterà ai giocatori di segnalare bug ed eventuali malfunzionamenti, oltre che suggerire idee e nuove funzionalità da implementare. 
-Sono previsti due incontri a settimana, lunedì e venerdi ed eventuali meeting per analizzare e pianificare le successive attività da svolgere.
-Si è deciso di suddividere i lavori in base alle capacità personali, con l'aggiunta di una revisione del codice in seguito ad ogni giornata lavorativa, che permette a chi l'ha sviluppato di spiegare ciò che ha realizzato e agli altri membri del team di proporre evenutuali migliorie.
+Tutti i membri del team partecipano attivamente alla progettazione e allo sviluppo del software. Dopo la pubblicazione sarà disponibile un forum dedicato dove i giocatori potranno segnalare bug e malfunzionamenti, oltre che proporre idee e nuove funzionalità da integrare.
+Il team si riunirà due volte a settimana, il lunedì e il venerdì, con la possibilità di organizzare videoconferenze a distanza per discutere e pianificare le attività future.
+I compiti sono suddivisi in base alle competenze individuali, con l'introduzione di una revisione del codice al termine di ogni giornata lavorativa. Questo momento consente allo sviluppatore di spiegare il proprio lavoro e agli altri membri di suggerire eventuali miglioramenti.
 
   ## 1.4 Standards, linee guida e procedure
   Per garantire uno sviluppo strutturato e di alta qualità del software, il team ha stabilito l'adozione di standard e linee guida specifiche durante tutte le fasi del progetto. Di seguito sono riportati i principali standard, procedure e strumenti utilizzati:
@@ -132,9 +132,9 @@ Prima di effettuare un merge nel ramo principale, il codice viene sottoposto a u
   tracciare le attività e monitorare lo stato di avanzamento del progetto.
 
 ## 1.5 Attività di gestione
-Lo sviluppo del progetto è stato organizzato seguendo i principi dei metodi agili, in particolare ispirandosi alla filosofia dell'Extreme Programming, che favorisce una maggiore efficienza e flessibilità ad eventuali modifiche dei requisiti. Il team ha collaborato in tutte le fasi, in modo da mantenere sempre il focus sugli obiettivi del progetto piuttosto che quelli personali.
-Durante i primi incontri è stata data grande importanza all'attività pianificazione, alla scelta dei requisiti e alla loro classificazione in base alla priorità, dopodichè è stato eseguito il lavoro vero e proprio, in parallelo con verifiche e test per assicurarsi volta per volta che tutto venisse svolto correttamente. 
-Per ogni attività pianificata è stata inoltre definita una scadenza allo scopo di garantire un avanzamento costante del progetto, monitorare i progressi rispetto agli obiettivi prefissati e intervenire tempestivamente in caso di eventuali ritardi o problematiche.
+Lo sviluppo del progetto è stato organizzato secondo i principi dei metodi agili, con particolare riferimento alla filosofia dell'Extreme Programming, che promuove efficienza e adattabilità a eventuali modifiche dei requisiti. Il team ha lavorato in stretta collaborazione durante tutte le fasi, mantenendo il focus sugli obiettivi del progetto anziché su interessi personali.
+Nei primi incontri si è data grande importanza alla pianificazione, con la definizione dei requisiti e la loro classificazione per priorità. Successivamente, si è passati alla realizzazione vera e propria, affiancata da verifiche e test continui per garantire che ogni fase fosse svolta correttamente.
+Ogni attività pianificata è stata associata a una scadenza specifica, con l’obiettivo di assicurare un avanzamento costante del progetto, monitorare i progressi rispetto agli obiettivi stabiliti e intervenire rapidamente in caso di ritardi o problemi.
 
   ## 1.6 Rischi
  Nel corso del progetto, il team ha identificato una serie di potenziali 
@@ -149,7 +149,7 @@ Ogni sprint sarà un’occasione per rivalutare i rischi e adottare misure
 correttive.
  
   ## 1.7 Membri
-  I membri che hanno partecipato al progetto sono stati precedentemente menzionati.
+  I membri che hanno partecipato al progetto sono quelli precedentemente menzionati.
  
   ## 1.8 Metodi e tecniche
   Nel progetto sono stati adottati metodi e tecniche specifiche per garantire un approccio strutturato, efficace e allineato agli obiettivi prefissati. Di seguito vengono descritte le metodologie utilizzate nelle principali aree del ciclo di sviluppo.
@@ -178,7 +178,19 @@ correttive.
 - Tecniche di testing(? da definire?) !!!!
 
  ## 1.9 Garanzie di qualità
-  
+ La qualità del software è garantita dall'osservazione in tutte le fasi dei seguenti criteri:
+ -Funzionalità: il software deve rispettare le esigenze espresse e deve funzionare senza 
+ errori, verranno eseguiti diversi test funzionali per assicurare che operi correttamente in 
+ tutti gli scenari previsti
+ -Affidabilità: il software deve garantire un elevato livello di prestazioni durante 
+ l'utilizzo e deve operare sempre in modo stabile.
+ -Usabilità: il software deve offrire un'esperienza utente ottimale. L'interfaccia utente sarà 
+ semplice con un focus sulla facilità d'uso; verranno inviati messaggi chiari e tempestivi 
+ per ogni interazione dell'utente, come conferme delle operazioni e notifiche di errori in 
+ modo da facilitare l'utilizzo.
+ -Manutenibilità: il software deve essere aggiornabile nel tempo, per far fronte a nuove esigenze o correggere eventuali malfunzionamenti.
+
+ 
 ## 1.10 Package di lavoro  DA SISTEMARE NON SONO SICURA
   Elenco dei package di lavoro
 
@@ -198,7 +210,7 @@ correttive.
   - Github come sistema per il Configuration Management
   - Papyrus come software per la creazione dei diagrammi UML
   -  *** per la crezione del database
-  -  Eclipse
+  -  Eclipse come ambiente di sviluppo
 
  L'utente invece per poter usare il software necessita semplicemente di un computer. 
 
@@ -206,8 +218,9 @@ correttive.
   Non è stato concordato alcun budget monetario, ma solamente il tempo messo a disposizione dal team. 
   
   ## 1.13 Cambiamenti
-  Qualsiasi cambiamento potrà essere effettuato solo dopo l'approvazione da parte del team della richiesta di modifica.
-  I cambiamenti, come detto in precedenza, potranno essere suggeriti dagli utenti tramite un forum apposito, oltre che dai membri del team per perfezionare il software insieme alla documentazione per chiarire le    migliorie introdotte.
+  Qualsiasi cambiamento potrà essere effettuato solamente dopo l'approvazione da parte di tutti  membri del team della richiesta di modifica.
+  Le proposte di cambiamento potranno provenire sia dai membri del team sia dagli utenti attraverso l’apposito forum. Ogni richiesta dovrà essere corredata da una 
+  documentazione dettagliata che illustri il motivo della modifica e i benefici che essa comporterebbe.
 
   ## 1.14 Consegna
 La consegna del progetto è prevista per cinque giorni prima dell'esame scritto, mentre il project plan deve essere consegnato un mese prima dell'esame. Il team si impegna,inoltre, ad effettuare un'ultima revisione prima della pubblicazione finale del progetto.
