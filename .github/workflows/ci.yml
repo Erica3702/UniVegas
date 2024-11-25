@@ -44,8 +44,7 @@ jobs:
       # Step 4: Esegui i comandi Maven
       - name: Build and test
         run: |
-          cd UniVegas/casino-game # Cambia il percorso in base alla struttura
-          mvn clean install
+          cd casino-game/target/classes/META-INF/maven/com.casino/casino-game/pom.xml
 
       - name: Debug directory structure
         run: ls -R
