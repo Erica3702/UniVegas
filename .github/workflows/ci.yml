@@ -43,4 +43,7 @@ jobs:
 
       # Step 4: Esegui i comandi Maven
       - name: Build and test
-        run: mvn clean install
+        run: |
+          cd UniVegas/casino-game # Cambia il percorso in base alla struttura
+          mvn clean install
+
