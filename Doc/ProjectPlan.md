@@ -179,13 +179,12 @@ correttive.
 
  ## 1.9 Garanzie di qualità
  La qualità del software è garantita dall'osservazione in tutte le fasi dei seguenti criteri:
- -Funzionalità: il software deve rispettare le esigenze espresse e deve funzionare senza errori, verranno eseguiti diversi test funzionali per assicurare che operi correttamente in  tutti gli scenari previsti.
+ - Funzionalità: il software deve rispettare le esigenze espresse e deve funzionare senza errori, verranno eseguiti diversi test funzionali per assicurare che operi correttamente in  tutti gli scenari previsti.
+ - Affidabilità: il software deve garantire un elevato livello di prestazioni durante l'utilizzo e deve operare sempre in modo stabile.
  
- -Affidabilità: il software deve garantire un elevato livello di prestazioni durante l'utilizzo e deve operare sempre in modo stabile.
+ - Usabilità: il software deve offrire un'esperienza utente ottimale. L'interfaccia utente sarà semplice con un focus sulla facilità d'uso; verranno inviati messaggi chiari e tempestivi per ogni interazione dell'utente, come conferme delle operazioni e notifiche di errori in modo da facilitare l'utilizzo.
  
- -Usabilità: il software deve offrire un'esperienza utente ottimale. L'interfaccia utente sarà semplice con un focus sulla facilità d'uso; verranno inviati messaggi chiari e tempestivi per ogni interazione dell'utente, come conferme delle operazioni e notifiche di errori in modo da facilitare l'utilizzo.
- 
- -Manutenibilità: il software deve essere aggiornabile nel tempo, per far fronte a nuove esigenze o correggere eventuali malfunzionamenti.
+ - Manutenibilità: il software deve essere aggiornabile nel tempo, per far fronte a nuove esigenze o correggere eventuali malfunzionamenti.
  
 
  
