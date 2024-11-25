@@ -1,4 +1,4 @@
-## Requisiti funzionali:
+# Requisiti funzionali:
 Sistema per la gestione degli utenti (registrazione e login)
 Interfaccia grafica
 Integrazione database
@@ -8,7 +8,7 @@ Gestione profilo utente
 Forum segnalazione bug
 Modalità multiplayer
 
-## Requisiti non funzionali:
+# Requisiti non funzionali:
 Prestazione 
 Scalabilità 
 Affidabilità 
