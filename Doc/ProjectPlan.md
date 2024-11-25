@@ -12,7 +12,7 @@
   - [1.1 Introduzione](#11-introduzione)
   - [1.2 Modello di processo](#12-modello-di-processo)
   - [1.3 Organizzazione del progetto](#13-organizzazione-del-progetto)
-  - [1.4 Standards, linee guida e procedure](#14-standard-linee-guida-e-procedure)
+  - [1.4 Standards, linee guida e procedure](#14-standards-linee-guida-e-procedure)
   - [1.5 Attività di gestione](#15-attività-di-gestione)
   - [1.6 Rischi](#16-rischi)
   - [1.7 Membri](#17-membri)
