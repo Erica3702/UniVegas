@@ -179,14 +179,9 @@ correttive.
 
  ## 1.9 Garanzie di qualità
  La qualità del software è garantita dall'osservazione in tutte le fasi dei seguenti criteri:
- -Funzionalità: il software deve rispettare le esigenze espresse e deve funzionare senza 
- errori, verranno eseguiti diversi test funzionali per assicurare che operi correttamente in 
- tutti gli scenari previsti
- -Affidabilità: il software deve garantire un elevato livello di prestazioni durante 
- l'utilizzo e deve operare sempre in modo stabile.
- -Usabilità: il software deve offrire un'esperienza utente ottimale. L'interfaccia utente sarà 
- semplice con un focus sulla facilità d'uso; verranno inviati messaggi chiari e tempestivi 
- per ogni interazione dell'utente, come conferme delle operazioni e notifiche di errori in 
+ -Funzionalità: il software deve rispettare le esigenze espresse e deve funzionare senza errori, verranno eseguiti diversi test funzionali per assicurare che  operi correttamente in  tutti gli scenari previsti
+ -Affidabilità: il software deve garantire un elevato livello di prestazioni durante l'utilizzo e deve operare sempre in modo stabile.
+ -Usabilità: il software deve offrire un'esperienza utente ottimale. L'interfaccia utente sarà semplice con un focus sulla facilità d'uso; verranno inviati messaggi chiari e tempestivi per ogni interazione dell'utente, come conferme delle operazioni e notifiche di errori in 
  modo da facilitare l'utilizzo.
  -Manutenibilità: il software deve essere aggiornabile nel tempo, per far fronte a nuove esigenze o correggere eventuali malfunzionamenti.
 
@@ -209,8 +204,8 @@ correttive.
   Le risorse usate dal team sono le seguenti:
   - Github come sistema per il Configuration Management
   - Papyrus come software per la creazione dei diagrammi UML
-  -  *** per la crezione del database
-  -  Eclipse come ambiente di sviluppo
+  - SQLLite per la crezione del database
+  - Eclipse come ambiente di sviluppo
 
  L'utente invece per poter usare il software necessita semplicemente di un computer. 
 
