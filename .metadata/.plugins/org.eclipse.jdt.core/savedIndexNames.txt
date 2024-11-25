@@ -1,0 +1,11 @@
+INDEX VERSION 1.134+C:\Users\erica\Desktop\Progetto ing sw\ProgettoCasino\.metadata\.plugins\org.eclipse.jdt.core
+690932000.index
+3457799583.index
+1865797976.index
+2456562037.index
+4070937003.index
+2585776557.index
+2854782215.index
+4041177713.index
+1805408893.index
+3443196338.index
