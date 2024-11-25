@@ -1,4 +1,4 @@
-# Casinò (nome)
+# UniVegas
 ## Progetto di ingegneria del software a.a. 2024/2025
 
 ### Progetto a cura di:
@@ -188,7 +188,7 @@ correttive.
  
 
  
-## 1.10 Package di lavoro  DA SISTEMARE NON SONO SICURA
+## 1.10 Package di lavoro  
   Elenco dei package di lavoro
 
 | **ID** | **Nome del package**           | **Descrizione**                                                                 | **Responsabile**       | **Output atteso**                               | **Durata prevista** |
