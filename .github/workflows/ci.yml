@@ -47,3 +47,7 @@ jobs:
           cd UniVegas/casino-game # Cambia il percorso in base alla struttura
           mvn clean install
 
+      - name: Debug directory structure
+        run: ls -R
+
+
