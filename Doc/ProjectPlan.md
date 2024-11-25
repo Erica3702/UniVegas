@@ -194,13 +194,13 @@ correttive.
 | **ID** | **Nome del package**           | **Descrizione**                                                                 | **Responsabile**       | **Output atteso**                               | **Durata prevista** |
 |--------|--------------------------------|---------------------------------------------------------------------------------|------------------------|-------------------------------------------------|---------------------|
 | WP1    | Raccolta requisiti             | Identificazione dei requisiti utilizzando la metodologia MoSCoW.                | Luca e Erica          | Documento dei requisiti.                       | 1 settimana         |
-| WP2    | Progettazione                  | Creazione di diagrammi UML e definizione dell'architettura MVC.                 | ???                   | Diagrammi UML, struttura del progetto.         | ???         |
-| WP3    | Configurazione ambiente        | Configurazione di GitHub, Maven, database SQLite(?) e JavaFX(?).                      | ???                | Ambiente pronto per lo sviluppo.               | ???         |
-| WP4    | Sviluppo del Model             | Implementazione della logica applicativa, del database e delle regole di gioco. | ???                 | Componenti del Model funzionanti.              | ???         |
-| WP5    | Sviluppo del Controller        | Implementazione della logica che collega il Model con la View.                  | ???                   | Controller funzionanti e testati.              | ???         |
-| WP6    | Sviluppo della View            | Creazione dell’interfaccia grafica con JavaFX.                                  | ???                | Interfaccia grafica operativa.                 | ???         |
-| WP7    | Integrazione e testing         | Integrazione dei moduli e test unitari, di integrazione e di sistema.           | Tutto il team          | Software funzionante e testato.                | ???         |
-| WP8    | Documentazione                 | Creazione della documentazione finale, inclusi manuale utente e report tecnico. | ???                 | Documentazione completa del progetto.          | 1 settimana         |
+| WP2    | Progettazione                  | Creazione di diagrammi UML e definizione dell'architettura MVC.                 | Tutto il team                  | Diagrammi UML, struttura del progetto.         | 3 giorni         |
+| WP3    | Configurazione ambiente        | Configurazione di GitHub, Maven, database SQLite e JavaFX(?).                      | Erica               | Ambiente pronto per lo sviluppo.               | 3 giorni         |
+| WP4    | Sviluppo del Model             | Implementazione della logica applicativa, del database e delle regole di gioco. | Tutto il team                 | Componenti del Model funzionanti.              | 1 settimana         |
+| WP5    | Sviluppo del Controller        | Implementazione della logica che collega il Model con la View.                  | Tutto il team                  | Controller funzionanti e testati.              | 1 settimana         |
+| WP6    | Sviluppo della View            | Creazione dell’interfaccia grafica con JavaFX(?).                                  | Tutto il team                | Interfaccia grafica operativa.                 | 1 settimana         |
+| WP7    | Integrazione e testing         | Integrazione dei moduli e test unitari, di integrazione e di sistema.           | Tutto il team          | Software funzionante e testato.                | 1 settimana         |
+| WP8    | Documentazione                 | Creazione della documentazione finale, inclusi manuale utente e report tecnico. | Tutto il team                 | Documentazione completa del progetto.          | 1 settimana         |
 
   ## 1.11 Risorse
   Le risorse usate dal team sono le seguenti:
