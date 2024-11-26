@@ -44,8 +44,6 @@ jobs:
       # Step 4: Esegui i comandi Maven
       - name: Build and test
         run: |
-          cd casino-game/target/classes/META-INF/maven/com.casino/casino-game/pom.xml
-
-      - name: Debug directory structure
-        run: ls -R
+          cd casino-game 
+          mvn clean install 
 
