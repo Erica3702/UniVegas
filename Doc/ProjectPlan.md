@@ -108,7 +108,7 @@ Dopo la consegna del prodotto, il team si impegna a fornire supporto per la riso
 Grazie al modello SCRUM, ogni sprint culmina con una revisione del lavoro completato e una retrospettiva per migliorare il processo nelle iterazioni successive.
 
   ## 1.3 Organizzazione del progetto
-Tutti i membri del team partecipano attivamente alla progettazione e allo sviluppo del software. Dopo la pubblicazione sarà disponibile un forum dedicato dove i giocatori potranno segnalare bug e malfunzionamenti, oltre che proporre idee e nuove funzionalità da integrare.
+Tutti i membri del team partecipano attivamente alla progettazione e allo sviluppo del software. 
 Il team si riunirà due volte a settimana, il lunedì e il venerdì, con la possibilità di organizzare videoconferenze a distanza per discutere e pianificare le attività future.
 I compiti sono suddivisi in base alle competenze individuali, con l'introduzione di una revisione del codice al termine di ogni giornata lavorativa. Questo momento consente allo sviluppatore di spiegare il proprio lavoro e agli altri membri di suggerire eventuali miglioramenti.
 
@@ -175,7 +175,7 @@ correttive.
 - Programmazione orientata agli oggetti: il software è sviluppato seguendo 
   i principi della programmazione orientata agli oggetti, garantendo 
   riusabilità del codice e manutenibilità.
-- Tecniche di testing(? da definire?) !!!!
+- Tecniche di testing: è stato implementata la continous integration with maven in GitHub, che permette di effettuare un testing automatico ad ogni commit
 
  ## 1.9 Garanzie di qualità
  La qualità del software è garantita dall'osservazione in tutte le fasi dei seguenti criteri:
@@ -206,7 +206,7 @@ correttive.
   Le risorse usate dal team sono le seguenti:
   - Github come sistema per il Configuration Management
   - Papyrus come software per la creazione dei diagrammi UML
-  - SQLLite per la crezione del database
+  - SQLite per la crezione del database
   - Eclipse come ambiente di sviluppo
 
  L'utente invece per poter usare il software necessita semplicemente di un computer. 
