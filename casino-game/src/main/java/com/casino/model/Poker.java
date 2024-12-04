@@ -1,5 +1,5 @@
 package com.casino.model;
 
-public class Poker {
+public class Poker extends Game{
 
 }
