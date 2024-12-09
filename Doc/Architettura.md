@@ -21,8 +21,6 @@ Classi da creare:
 
 ### Controller 
 Contiene le classi che gestiscono l'interazione tra model e view.
-
-Classi da creare:
 - MainController: (coordina la schermata principale e il flusso dell'app)
 - LoginController: gestisce l'autenticazione degli utenti
 - GameController: gestisce la logica comune dei giochi (es. puntate, risultati)
