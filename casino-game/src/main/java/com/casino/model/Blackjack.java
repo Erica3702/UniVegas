@@ -1,5 +1,10 @@
 package com.casino.model;
 
-public class Blackjack extends Game{
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List; 
+
+public class Blackjack {
+	
 
 }
