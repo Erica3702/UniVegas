@@ -10,7 +10,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import com.casino.view.Login;
 
 public class MenuUtente {
 	//genera il menu e i due bottoni interattivi
