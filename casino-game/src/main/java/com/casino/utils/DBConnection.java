@@ -4,15 +4,17 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DBConnection {
 	private static final Logger logger = LogManager.getLogger(DBConnection.class);
 
 	
-	private static final String URL = "jdbc:sqlite::memory:"; // Usa il database in memoria
+	private static final String URL = "jdbc:sqlite:src/main/resources/database/casino.db"; // Usa il database in memoria
 
-	public Connection connect() {
+	public static Connection connect() {
         Connection connection = null;
         try {
             logger.info("Attempting to connect to the in-memory database...");
@@ -35,5 +37,4 @@ public class DBConnection {
 	        logger.error("Error executing test query: ", e);
 	    }
 	}
-
 }
