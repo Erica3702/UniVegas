@@ -1,5 +1,6 @@
 package com.casino.casino_game;
 
+import com.casino.utils.DBConnection;
 
 import com.casino.utils.DBConnection;
 import com.casino.view.Menu;
@@ -14,23 +15,11 @@ public class App {
     private static DBConnection db;
 
     public static void main(String[] args) {
-        db = new DBConnection();
-        db.testQuery(); //collegamento db e test query
+
+		DBConnection db = new DBConnection();
+        db.connect(); //collegamento db e test query
         
        MenuUtente.startMenu();
     // MenuGiochi.Start();
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
 }
