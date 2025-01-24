@@ -1,5 +1,6 @@
 package com.casino.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Dealer {
@@ -7,7 +8,7 @@ public abstract class Dealer {
 	private List<Card> mano;
 	 
 	public Dealer() {
-		 this.mano = mano;
+		 this.mano = new ArrayList<>();
 	 }
 	
 	public List<Card> getMano(){

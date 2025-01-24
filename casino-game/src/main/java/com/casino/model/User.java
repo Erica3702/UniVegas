@@ -4,34 +4,37 @@ import java.util.List;
 
 public abstract class User {
 
+	
 	private String username;
 	private  String password;
-	private int token;
-	private List<Card> mano;
 	
-	public User(String username, String password, int token, List<Card> mano) {
+	
+	public User(String username, String password) {
 		super();
+		
 		this.username = username;
 		this.password = password;
-		this.token = token;
-		this.mano = mano;
+		
 	}
 	
 	public String getUsername() {
 		return username;
 	}
 	
-	public int getTokens() {
-		return token;
-	}
+	 
+	public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 	
-	public void aggiornaToken(int amount) {
-		token = token + amount;
-	}
 	
-	public List<Card> getMano(){
-		return mano;
-	}
 	
 	public abstract int calcolaValoreMano();
 }

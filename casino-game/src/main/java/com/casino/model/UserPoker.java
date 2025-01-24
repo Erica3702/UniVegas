@@ -5,7 +5,7 @@ import java.util.List;
 public class UserPoker extends User{
 
 	public UserPoker(String username, String password, int token, List<Card> mano) {
-		super(username, password, token, mano);
+		super(username, password);
 		// TODO Auto-generated constructor stub
 	}
 
