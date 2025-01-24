@@ -42,7 +42,7 @@ public class BlackjackController {
 	public String hit() {
 		giocatore.aggiungiCarta(mazzo.pescaCarta());
 		if(giocatore.calcolaValoreMano() > 21) {
-			return "Hai perso!";
+			return "Hai perso! hit";
 		}
 		return "Carta aggiunta alla mano";
 	}
@@ -56,11 +56,11 @@ public class BlackjackController {
 		int valoreDealer = dealer.calcolaValoreMano();
 		
 		if (valoreDealer > 21 || valoreGiocatore > valoreDealer) {
-			return "Hai vinto!";
+			return "Hai vinto! ciao";
 		}else if (valoreGiocatore == valoreDealer) {
-			return "Pareggio";
+			return "Pareggio ciao";
 		}else {
-			return "Hai perso";
+			return "Hai perso ciao";
 		}
 	}
 	

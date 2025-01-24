@@ -37,9 +37,9 @@ public class UserBlackjack extends User{
 		return tokens;
 	}
 
-	public int adjustTokens(int amount) {
+	public void adjustTokens(int amount) {
 		this.tokens += amount;
-		return tokens;
+		//return tokens;
 	}
 
 	public List<Card> getMano() {
