@@ -10,6 +10,9 @@ public class Mazzo {
 	private int numMazzi;
 	
 	public Mazzo( int numMazzi) {
+		if(numMazzi <=0) {
+			throw new IllegalArgumentException("il numero di mazzi deve essere maggiore di zero");
+		}
 		carte = new ArrayList<>();
 		this.numMazzi = numMazzi;
 		creaMazzo();
@@ -30,6 +33,9 @@ public class Mazzo {
 	  }
 	}
 	
+	
+	
+	
 	public void shuffle() {
 		Collections.shuffle(carte);
 	}
@@ -45,4 +51,12 @@ public class Mazzo {
 	public int getCarteRimanenti() {
 		return carte.size();
 	}
+	
+	public void reset() { //se il mazzo si svuota genera nuove carte
+		carte.clear();
+		creaMazzo();
+		shuffle();
+	}
+	
+	
 }

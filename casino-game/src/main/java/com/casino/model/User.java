@@ -1,5 +1,6 @@
 package com.casino.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class User {
@@ -7,6 +8,12 @@ public abstract class User {
 	
 	private String username;
 	private  String password;
+
+	private int token;
+	private List<Card> mano;
+	private String ruolo; // Es . "Dealer","Big blind","Small blind"
+	private boolean inGioco;
+
 	
 	
 	public User(String username, String password) {
@@ -14,13 +21,26 @@ public abstract class User {
 		
 		this.username = username;
 		this.password = password;
-		
+
+		this.token = token;
+		this.mano = new ArrayList<>(mano);
+		this.inGioco = true;
+	}
+	
+	public boolean isInGioco() {
+		return inGioco;
+	}
+	
+	public void setInGioco(boolean inGioco) {
+		this.inGioco = inGioco;
+
 	}
 	
 	public String getUsername() {
 		return username;
 	}
 	
+
 	 
 	public void setUsername(String username) {
         this.username = username;
@@ -34,7 +54,62 @@ public abstract class User {
         this.password = password;
     }
 	
+
+	public boolean puòPuntare(int puntata) {
+		return puntata<=token;
+	}
+	
+	public void effettuaPuntata(int puntata) {
+		if(puntata>token) {
+			throw new IllegalArgumentException("puntata maggiore dei token disponibili");
+		}
+		aggiornaToken(-puntata);
+	}
+	
+	public void resetMano() {
+		mano.clear();
+	}
+	
+	public String visualizzaMano() {
+		StringBuilder sb = new StringBuilder();
+		for(Card carta : mano) {
+			sb.append(carta.toString()).append(", ");
+		}
+		return sb.toString().trim();
+	}
+	
+	public int getTokens() {
+		return token;
+	}
+	
+	public void aggiornaToken(int amount) {
+		token = token + amount;
+        if (token < 0) {
+            token = 0; // Impedisce di scendere sotto zero
+        }
+	}
+
 	
 	
-	public abstract int calcolaValoreMano();
+    public String getRuolo() {
+        return ruolo;
+    }
+
+    public void setRuolo(String ruolo) {
+        this.ruolo = ruolo;
+    }
+    
+    // Aggiungi token
+    public void aggiungiToken(int amount) {
+        if (amount < 0) {
+            throw new IllegalArgumentException("Non puoi aggiungere un valore negativo.");
+        }
+        this.token += amount;
+    }
+
+    public void aggiungiCarta(Card carta) {
+        mano.add(carta);
+    }
+	
+    public abstract int calcolaValoreMano();
 }

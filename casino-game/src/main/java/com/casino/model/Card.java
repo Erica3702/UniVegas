@@ -25,7 +25,10 @@ public class Card {
 		return value;
 	}
 	
-	public String toString() {
-        return rango + " di " + seme;
+
+
+	public String toString(){
+		return seme+" "+rango;
+
 	}
 }
