@@ -56,5 +56,13 @@ public class PokerDealer extends Dealer {
         vincitore.aggiungiToken(piatto);
         piatto = 0;
     }
+    public Card pescaCarta() {
+        return mazzo.pescaCarta(); // Chiede al mazzo di rimuovere e restituire la carta in cima
+    }
+
+    // Metodo per accedere al mazzo
+    public Mazzo getMazzo() {
+        return mazzo; // Restituisce il riferimento al mazzo
+    }
 }
 

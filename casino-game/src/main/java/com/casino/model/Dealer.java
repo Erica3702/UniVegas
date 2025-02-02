@@ -74,5 +74,6 @@ public abstract class Dealer {
 		//return giocatoreConManoMigliore;
 	//}
 	
+
 	public abstract int calcolaValoreMano();
 }

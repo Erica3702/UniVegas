@@ -11,7 +11,6 @@ public abstract class User {
 
 	private int token;
 	private List<Card> mano;
-	private String ruolo; // Es . "Dealer","Big blind","Small blind"
 	private boolean inGioco;
 
 	
@@ -90,14 +89,7 @@ public abstract class User {
 	}
 
 	
-	
-    public String getRuolo() {
-        return ruolo;
-    }
 
-    public void setRuolo(String ruolo) {
-        this.ruolo = ruolo;
-    }
     
     // Aggiungi token
     public void aggiungiToken(int amount) {
