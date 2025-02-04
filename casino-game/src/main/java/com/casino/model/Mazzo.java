@@ -1,62 +1,44 @@
 package com.casino.model;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List; 
+import java.util.Random;
 
 public class Mazzo {
+    private ArrayList<Card> deck;
+    private Random random;
 
-	private List<Card> carte;
-	private int numMazzi;
-	
-	public Mazzo( int numMazzi) {
-		if(numMazzi <=0) {
-			throw new IllegalArgumentException("il numero di mazzi deve essere maggiore di zero");
-		}
-		carte = new ArrayList<>();
-		this.numMazzi = numMazzi;
-		creaMazzo();
-		shuffle();
-	}
-	
-	private void creaMazzo() {
-		String[] semi = { "Cuori", "Quadri", "Fiori", "Picche" };
-        String[] rango = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
-        int[] values = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11 };
+    public Mazzo() {
+        deck = new ArrayList<>();
+        random = new Random();
+        buildDeck();
+        shuffleDeck();
+    }
 
-        for (int d= 0; d < numMazzi; d++) {
-        for (String seme : semi) {
-            for (int i = 0; i < rango.length; i++) {
-                carte.add(new Card(rango[i], seme, values[i]));
+    private void buildDeck() {
+        String[] values = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
+        String[] types = {"C", "D", "H", "S"};
+
+        for (String type : types) {
+            for (String value : values) {
+                deck.add(new Card(value, type));
             }
         }
-	  }
-	}
-	
-	
-	
-	
-	public void shuffle() {
-		Collections.shuffle(carte);
-	}
-	
-	public Card pescaCarta() {
-		if(!carte.isEmpty()) {
-			return carte.remove(0);
-		} else {
-			throw new IllegalStateException("Il mazzo è vuoto");
-		}
-	}
-	
-	public int getCarteRimanenti() {
-		return carte.size();
-	}
-	
-	public void reset() { //se il mazzo si svuota genera nuove carte
-		carte.clear();
-		creaMazzo();
-		shuffle();
-	}
-	
-	
+    }
+
+    private void shuffleDeck() {
+        for (int i = 0; i < deck.size(); i++) {
+            int j = random.nextInt(deck.size());
+            Card temp = deck.get(i);
+            deck.set(i, deck.get(j));
+            deck.set(j, temp);
+        }
+    }
+
+    public Card drawCard() {
+        return deck.remove(deck.size() - 1);
+    }
+
+    public int getDeckSize() {
+        return deck.size();
+    }
 }

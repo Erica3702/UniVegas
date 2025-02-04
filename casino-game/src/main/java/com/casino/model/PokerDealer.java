@@ -22,30 +22,27 @@ public class PokerDealer extends Dealer {
         this.turnoCorrente = 0;
     }
 
-    @Override
-    public int calcolaValoreMano() {
-        throw new UnsupportedOperationException("Non applicabile per il Poker Dealer.");
-    }
+ 
 
     public void distribuisciCarte(List<User> giocatori) {
         for (User giocatore : giocatori) {
-            giocatore.aggiungiCarta(mazzo.pescaCarta());
-            giocatore.aggiungiCarta(mazzo.pescaCarta());
+            giocatore.addCard(mazzo.drawCard());
+            giocatore.addCard(mazzo.drawCard());
         }
     }
 
     public void mostraFlop() {
-        carteComuni.add(mazzo.pescaCarta());
-        carteComuni.add(mazzo.pescaCarta());
-        carteComuni.add(mazzo.pescaCarta());
+        carteComuni.add(mazzo.drawCard());
+        carteComuni.add(mazzo.drawCard());
+        carteComuni.add(mazzo.drawCard());
     }
 
     public void mostraTurn() {
-        carteComuni.add(mazzo.pescaCarta());
+        carteComuni.add(mazzo.drawCard());
     }
 
     public void mostraRiver() {
-        carteComuni.add(mazzo.pescaCarta());
+        carteComuni.add(mazzo.drawCard());
     }
 
     public void aggiungiAlPiatto(int puntata) {
@@ -53,11 +50,11 @@ public class PokerDealer extends Dealer {
     }
 
     public void assegnaPiatto(User vincitore) {
-        vincitore.aggiungiToken(piatto);
+       
         piatto = 0;
     }
     public Card pescaCarta() {
-        return mazzo.pescaCarta(); // Chiede al mazzo di rimuovere e restituire la carta in cima
+        return mazzo.drawCard(); // Chiede al mazzo di rimuovere e restituire la carta in cima
     }
 
     // Metodo per accedere al mazzo

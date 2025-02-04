@@ -1,70 +1,74 @@
 package com.casino.controller;
 
 import com.casino.model.Blackjack;
-import com.casino.model.DealerBlackjack;
-import com.casino.model.Mazzo;
-import com.casino.model.UserBlackjack;
-import com.casino.*;
+import com.casino.model.Card;
+import com.casino.view.BlackjackView;
 
 public class BlackjackController {
+    private Blackjack model;
+    private BlackjackView view;
 
-	private UserBlackjack giocatore;
-	private DealerBlackjack dealer;
-	private Mazzo mazzo;
-	private String password;
-	private Blackjack blkjack;
-	
-	public BlackjackController(String nomeGiocatore) {
-		this.giocatore = new UserBlackjack(nomeGiocatore, password);
-		this.dealer = new DealerBlackjack();
-		this.mazzo = new Mazzo(8);
-		this.mazzo.shuffle();
-		this.blkjack = new Blackjack(giocatore, 8);
-	}
-	
-	public UserBlackjack getGiocatore() {
-		return giocatore;
-	}
-	
-	public DealerBlackjack getDealer() {
-		return dealer;
-	}
-	
-	public void iniziaNuovoRound(int puntata) {
-		giocatore.setCurrentBet(puntata);
-		giocatore.resetMano();
-		dealer.resetMano();
-		giocatore.aggiungiCarta(mazzo.pescaCarta());
-		giocatore.aggiungiCarta(mazzo.pescaCarta());
-		dealer.aggiungiCarta(mazzo.pescaCarta());
-	}
-	
-	public String hit() {
-		giocatore.aggiungiCarta(mazzo.pescaCarta());
-		if(giocatore.calcolaValoreMano() > 21) {
-			return "Hai perso! hit";
-		}
-		return "Carta aggiunta alla mano";
-	}
-	
-	public String stand() {
-		while(dealer.calcolaValoreMano() < 17) {
-			dealer.aggiungiCarta(mazzo.pescaCarta());
-		}
-		calcolaPartita();
-		int valoreGiocatore = giocatore.calcolaValoreMano();
-		int valoreDealer = dealer.calcolaValoreMano();
-		
-		if (valoreDealer > 21 || valoreGiocatore > valoreDealer) {
-			return "Hai vinto! ciao";
-		}else if (valoreGiocatore == valoreDealer) {
-			return "Pareggio ciao";
-		}else {
-			return "Hai perso ciao";
-		}
-	}
-	
-	public void calcolaPartita() {
-		blkjack.calcolaPartita();
-	}
+    public BlackjackController(Blackjack model, BlackjackView view) {
+        this.model = model;
+        this.view = view;
+
+        view.setHitButtonListener(e -> hit());
+        view.setStayButtonListener(e -> stay());
+        view.setNextGameButtonListener(e -> nextGame());
+        view.setExitToMenuButtonListener(e -> exitToMenu()); 
+    }
+
+    private void hit() {
+        Card card = model.getDeck().drawCard();
+        model.getPlayer().addCard(card);
+        view.updateView();
+        if (model.getPlayer().getSum() > 21) {
+            view.disableHitButton();
+        }
+    }
+
+    private void stay() {
+        view.disableButtons();
+        model.revealDealerCard(); // Rivela la prima carta del dealer
+
+        // Il dealer pesca carte fino a raggiungere un punteggio di almeno 17
+        while (model.getDealer().getSum() < 17) {
+            Card card = model.getDeck().drawCard();
+            model.getDealer().addCard(card);
+        }
+
+        view.updateView();
+        view.showResult(determineResult());
+        view.enableNextGameButton(); // Abilita il pulsante "Next Game"
+    }
+    
+    private void nextGame() {
+        // Resetta il modello per una nuova partita
+        model = new Blackjack();
+        view = new BlackjackView(model);
+        new BlackjackController(model, view); // Ricrea il controller per la nuova partita
+    }
+
+    private void exitToMenu() {
+        view.close(); // Chiudi la finestra del gioco
+       //implemetnazione per tornare nel menu 
+    }
+    
+    private String determineResult() {
+        int playerSum = model.getPlayer().reduceAce();
+        int dealerSum = model.getDealer().reduceAce();
+
+        if (playerSum > 21) {
+            return "Hai Perso!";
+        } else if (dealerSum > 21) {
+            return "Hai Vinto!";
+        } else if (playerSum == dealerSum) {
+            return "Pareggio!";
+        } else if (playerSum > dealerSum) {
+            return "Hai Vinto!";
+        } else {
+            return "Hai Perso!";
+        }
+    }
 }
+
