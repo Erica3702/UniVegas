@@ -7,32 +7,31 @@ Contiene le classi che rappresentano la logica dell'applicazione e i dati.
 
 Classi da creare: 
 - User (rappresenta un utente)
-- Game (abstract)
-- Blackjack, Roulette e Poker (estendono Game e implementano la logica specifica di ogni gioco)
+- Card
+- Mazzo
+- Dealer (astratta) e classi figlie DealerBlackjack e DealerPoker
+- Blackjack, Roulette e Poker 
 
 ### View
-Contiene le classi legate all'interfaccia utente (JavaFX).
+Contiene le classi legate all'interfaccia utente (Swing).
 
 Classi da creare: 
 - MainView (schermata principale con menu) 
 - LogicView (schermata di login)
-- GameView (interfaccia per i giochi) 
-- UserProfileView (mostra statistiche giocatore)
+- BlackjackView, RouletteView, PokerView (interfaccia per i giochi) 
 
 ### Controller 
 Contiene le classi che gestiscono l'interazione tra model e view.
 - MainController: (coordina la schermata principale e il flusso dell'app)
 - LoginController: gestisce l'autenticazione degli utenti
-- GameController: gestisce la logica comune dei giochi (es. puntate, risultati)
+- BlackjackController, RouletteController, PokerController: gestisce la logica dei giochi
 
 
 ### Utils
-Contiene classi di utilità (es. gestione log con Log4j, connessione al database).
+Contiene classi di utilità (es. connessione al database).
 
 Classi da creare:
 - DBConnection: gestisce la connessione a SQLite
-- LoggerUtil: configura la libreria Log4j
-
 
 ### Data Access Object
 Contiene le classi per l'accesso al database
