@@ -33,7 +33,7 @@
    ## 1.1 Introduzione
   Negli ultimi anni, il settore del gioco d'azzardo online ha registrato una crescita esponenziale, spinta dall'aumento dell'accesso a internet, dall'evoluzione 
   tecnologica e dalla crescente popolarità dei giochi digitali.
-  Il progetto prevede lo sviluppo, il test e il rilascio del software entro il 19/01/2025, attraverso l'impiego di metodologie agili per garantire un 
+  Il progetto prevede lo sviluppo, il test e il rilascio del software, attraverso l'impiego di metodologie agili per garantire un 
   approccio flessibile e iterativo. Questo documento illustra i dettagli relativi agli obiettivi, alla portata, ai requisiti tecnici, al piano di lavoro e alle 
   risorse necessarie per lo sviluppo del progetto. I requisiti sono stati classificati e prioritizzati seguendo l'approccio MoSCoW come verrà mostrato in seguito.
   
@@ -86,7 +86,7 @@ Questa fase comprende:
 - La progettazione dell’architettura software, identificando i moduli 
   principali e il loro collegamento.
 - La progettazione del database per garantire la persistenza dei dati.
-- La definizione della GUI, con JavaFX (da definire) come framework grafico.
+- La definizione della GUI, con Swing come framework grafico.
 
 #### Implementazione e test
 Durante la fase di implementazione, il team sviluppa i moduli funzionali del software:
@@ -145,6 +145,7 @@ software. Di seguito si descrivono i principali:
 3. Problemi di integrazione tra componenti
 4. Requisiti non chiari o tardivi
 5. Errori nel database
+
 Ogni sprint sarà un’occasione per rivalutare i rischi e adottare misure 
 correttive.
  
@@ -198,7 +199,7 @@ correttive.
 | WP3    | Configurazione ambiente        | Configurazione di GitHub, Maven, database SQLite e JavaFX(?).                      | Erica               | Ambiente pronto per lo sviluppo.               | 3 giorni         |
 | WP4    | Sviluppo del Model             | Implementazione della logica applicativa, del database e delle regole di gioco. | Tutto il team                 | Componenti del Model funzionanti.              | 1 settimana         |
 | WP5    | Sviluppo del Controller        | Implementazione della logica che collega il Model con la View.                  | Tutto il team                  | Controller funzionanti e testati.              | 1 settimana         |
-| WP6    | Sviluppo della View            | Creazione dell’interfaccia grafica con JavaFX(?).                                  | Tutto il team                | Interfaccia grafica operativa.                 | 1 settimana         |
+| WP6    | Sviluppo della View            | Creazione dell’interfaccia grafica con JavaSwing.                                  | Tutto il team                | Interfaccia grafica operativa.                 | 1 settimana         |
 | WP7    | Integrazione e testing         | Integrazione dei moduli e test unitari, di integrazione e di sistema.           | Tutto il team          | Software funzionante e testato.                | 1 settimana         |
 | WP8    | Documentazione                 | Creazione della documentazione finale, inclusi manuale utente e report tecnico. | Tutto il team                 | Documentazione completa del progetto.          | 1 settimana         |
 
