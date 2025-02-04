@@ -27,8 +27,7 @@
 
    ## 1. Project plan
   Il seguente project plan si riferisce al progetto di ingegneria del Software a.a. 24/25 e consiste nello sviluppo di un casinò virtuale all'interno del quale è 
-  possibile giocare a tre differenti giochi: Blackjack, Poker e Roulette. Le partite si possono svolgere in due modalità: multiplayer sullo stesso pc e 
-  singleplayer.
+  possibile giocare a tre differenti giochi: Blackjack, Poker e Roulette. Le partite si svolgono in modalità singleplayer.
 
    ## 1.1 Introduzione
   Negli ultimi anni, il settore del gioco d'azzardo online ha registrato una crescita esponenziale, spinta dall'aumento dell'accesso a internet, dall'evoluzione 
