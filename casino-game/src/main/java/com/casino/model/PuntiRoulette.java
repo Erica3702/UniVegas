@@ -85,15 +85,14 @@ public class PuntiRoulette{
     }
 
     // punti totali
-    public static int calculateTotalPoints(int betNumber, int numeroEstratto, int betColor, int coloreEstratto,
-                                           int betType, int paritaEstratta, int betDozen, int betColumn) {
+    public static int calculateTotalPoints(int betNumber, int numeroEstratto) {
         int points = 0;
 
         points += calculatePointsForExactNumber(betNumber, numeroEstratto);
         points += calculatePointsForColor(betNumber, numeroEstratto);
-        points += calculatePointsForParity(betType, paritaEstratta);
-        points += calculatePointsForDozen(betDozen, numeroEstratto);
-        points += calculatePointsForColumn(betColumn, numeroEstratto);
+   //     points += calculatePointsForParity(betType, paritaEstratta);
+   //     points += calculatePointsForDozen(betDozen, numeroEstratto);
+   //     points += calculatePointsForColumn(betColumn, numeroEstratto);
 
         return points;
     }
