@@ -9,7 +9,6 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import com.casino.*;
 import com.casino.view.TestRoulette;
 
 public class RoulettePanel extends JPanel {
