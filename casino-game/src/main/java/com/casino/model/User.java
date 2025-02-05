@@ -1,37 +1,73 @@
 package com.casino.model;
 
-public class User {
+import java.util.ArrayList;
+import java.util.List;
 
-	private String username;
-	private String email;
-	private String password;
-	private int saldo;
+public abstract class User {
+
+	private boolean inGioco;
+
 	
-	public User(String username, String email, String password, int saldo) {
-		super();
-		this.username = username;
-		this.email = email;
-		this.password = password;
-		this.saldo = saldo;
+	 private ArrayList<Card> hand;
+	    private int sum;
+	    private int aceCount;
+
+	    public User() {
+	        hand = new ArrayList<>();
+	        sum = 0;
+	        aceCount = 0;
+	    }
+
+	    public void addCard(Card card) {
+	        hand.add(card);
+	        sum += card.getCardValue();
+	        if (card.isAce()) {
+	            aceCount++;
+	        }
+	    }
+
+	    public int getSum() {
+	        return sum;
+	    }
+
+	    public ArrayList<Card> getHand() {
+	        return hand;
+	    }
+
+	    public int reduceAce() {
+	        while (sum > 21 && aceCount > 0) {
+	            sum -= 10;
+	            aceCount--;
+	        }
+	        return sum;
+	    }
+
+	
+	public boolean isInGioco() {
+		return inGioco;
+	}
+	
+	public void setInGioco(boolean inGioco) {
+		this.inGioco = inGioco;
+
+	}
+	
+	
+	public void resetMano() {
+		hand.clear();
+	}
+	
+	public String visualizzaMano() {
+		StringBuilder sb = new StringBuilder();
+		for(Card carta : hand) {
+			sb.append(carta.toString()).append(", ");
+		}
+		return sb.toString().trim();
 	}
 
-	public String getUsername() {
-		return username;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public int getSaldo() {
-		return saldo;
-	}
-	
-	
-	
-	
+  
+    public ArrayList<Card> getMano() {
+        return hand;
+    }
+    
 }
