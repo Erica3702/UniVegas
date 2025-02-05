@@ -26,5 +26,4 @@ public class RouletteController {
 	        }
 	        return false;
 	    }
-		
 }
