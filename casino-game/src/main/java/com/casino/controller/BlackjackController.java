@@ -1,8 +1,11 @@
 package com.casino.controller;
 
+import javax.swing.JFrame;
+
 import com.casino.model.Blackjack;
 import com.casino.model.Card;
 import com.casino.view.BlackjackView;
+import com.casino.view.MenuGiochi;
 
 public class BlackjackController {
     private Blackjack model;
@@ -50,8 +53,8 @@ public class BlackjackController {
     }
 
     private void exitToMenu() {
-        view.close(); // Chiudi la finestra del gioco
-       //implemetnazione per tornare nel menu 
+        view.close();
+        MenuGiochi.Start();
     }
     
     private String determineResult() {

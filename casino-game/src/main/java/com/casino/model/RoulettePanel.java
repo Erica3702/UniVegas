@@ -32,7 +32,7 @@ public class RoulettePanel extends JPanel {
         // Carica l'immagine della roulette
   
     	// Ridimensiona l'immagine    	
-    	wheelImage = new ImageIcon("src/main/resources/numeri roulette/roulette.png");
+    	wheelImage = new ImageIcon("src/main/resources/immagini/roulette.png");
 
     	// Ottieni la larghezza e l'altezza originali dell'immagine
     	int newWidth = wheelImage.getIconWidth() * 2;  // Doppia larghezza

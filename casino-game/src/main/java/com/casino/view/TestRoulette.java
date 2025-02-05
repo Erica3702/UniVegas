@@ -31,7 +31,7 @@ public class TestRoulette extends JFrame {
         
 
         // Carica e ridimensiona l'icona della fiches
-        ImageIcon fiches = new ImageIcon("src/main/resources/numeri roulette/Logodef.png");
+        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png");
         Image scaledImage = fiches.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
         chipIcon = new ImageIcon(scaledImage);
 

@@ -8,9 +8,6 @@ import java.sql.SQLException;
 
 public class MainController {
 
-	
-	
-	
 	//metodo per controllare se username e pw sono nel db
     public static boolean verificaUtente(String username, String password) {
       String url = "jdbc:sqlite:src/main/resources/database/casino.db"; 

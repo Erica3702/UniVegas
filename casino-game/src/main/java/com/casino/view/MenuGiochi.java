@@ -1,5 +1,6 @@
 package com.casino.view;
-
+import com.casino.controller.BlackjackController;
+import com.casino.model.Blackjack;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -24,7 +25,7 @@ public class MenuGiochi {
 	        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png"); 
 	        frame.setIconImage(fiches.getImage());
 	        
-	        
+	      
 	        // Chiudi l'applicazione quando il frame viene chiuso
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -47,16 +48,12 @@ public class MenuGiochi {
 
 	        // Rendi il frame visibile
 	        frame.setVisible(true);
-	    }
-}
 	        
-	        
-	        
-	     /*   // Azioni dei bottoni, da implementare in seguito
+	        // Azioni dei bottoni, da implementare in seguito
 	        pokerButton.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	                JOptionPane.showMessageDialog(frame, "Hai scelto Poker!");
+	                JOptionPane.showMessageDialog(frame, "Momentaneamente non disponibile..");
 	            }
 	        });
 
@@ -64,6 +61,10 @@ public class MenuGiochi {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
 	                JOptionPane.showMessageDialog(frame, "Hai scelto Blackjack!");
+	                frame.dispose();
+	                Blackjack model = new Blackjack();
+	                BlackjackView view = new BlackjackView(model);
+	                new BlackjackController(model, view);
 	            }
 	        });
 
@@ -71,5 +72,8 @@ public class MenuGiochi {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
 	                JOptionPane.showMessageDialog(frame, "Hai scelto Roulette!");
+	         
 	            }
-	        });*/
+	        });        
+	    }
+}       
