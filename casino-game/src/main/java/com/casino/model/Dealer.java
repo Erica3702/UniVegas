@@ -3,7 +3,7 @@ package com.casino.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Dealer {
+public class Dealer {
     private ArrayList<Card> hand;
     private int sum;
     private int aceCount;

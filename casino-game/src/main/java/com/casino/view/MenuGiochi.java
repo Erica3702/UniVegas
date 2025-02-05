@@ -1,6 +1,9 @@
 package com.casino.view;
 import com.casino.controller.BlackjackController;
+import com.casino.controller.RouletteController;
 import com.casino.model.Blackjack;
+import com.casino.model.RouletteModel;
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -60,7 +63,6 @@ public class MenuGiochi {
 	        blackjackButton.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	                JOptionPane.showMessageDialog(frame, "Hai scelto Blackjack!");
 	                frame.dispose();
 	                Blackjack model = new Blackjack();
 	                BlackjackView view = new BlackjackView(model);
@@ -71,8 +73,12 @@ public class MenuGiochi {
 	        rouletteButton.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	                JOptionPane.showMessageDialog(frame, "Hai scelto Roulette!");
-	         
+	                frame.dispose();
+	                RouletteModel model = new RouletteModel();
+	    	        RouletteController controller = new RouletteController();
+	    	        RouletteView view = new RouletteView(controller, model);
+	    	        controller.startGame();
+	                
 	            }
 	        });        
 	    }
