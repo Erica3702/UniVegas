@@ -1,34 +1,42 @@
 package com.casino.model;
 
 public class Card {
+    private String value;
+    private String type;
 
-	private String rango;
-	private String seme;
-	private int value;
-	
-	public Card(String rango, String seme, int value) {
-		super();
-		this.rango = rango;
-		this.seme = seme;
-		this.value = value;
-	}
+    public Card(String value, String type) {
+        this.value = value;
+        this.type = type;
+    }
 
-	public String getRango() {
-		return rango;
-	}
+    public String getValue() {
+        return value;
+    }
 
-	public String getSeme() {
-		return seme;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public int getValue() {
-		return value;
-	}
-	
+    public int getCardValue() {
+        if ("AJQK".contains(value)) {
+            if (value.equals("A")) {
+                return 11;
+            }
+            return 10;
+        }
+        return Integer.parseInt(value);
+    }
 
+    public boolean isAce() {
+        return value.equals("A");
+    }
 
-	public String toString(){
-		return seme+" "+rango;
+    public String getImagePath() {
+        return "/cards/" + toString() + ".png";
+    }
 
-	}
+    @Override
+    public String toString() {
+        return value + "-" + type;
+    }
 }
