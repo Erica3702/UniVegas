@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-import com.casino.view.TestRoulette;
+import com.casino.*;
 
 public class RoulettePanel extends JPanel {
     public static int winningNumber;
@@ -26,6 +26,7 @@ public class RoulettePanel extends JPanel {
     private int radius; // Raggio della pallina
     private Image resizedImage;
     
+
     
     public RoulettePanel() {
         // Carica l'immagine della roulette
@@ -79,6 +80,7 @@ public class RoulettePanel extends JPanel {
         
         repaint(); // Ridisegna il pannello per aggiornare la pallina e la ruota
     }
+
 
     private int getWinningNumber(double finalAngle) {
         // Normalizza l'angolo tra 0 e 360

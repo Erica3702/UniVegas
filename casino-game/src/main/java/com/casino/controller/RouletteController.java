@@ -1,8 +1,5 @@
 package com.casino.controller;
 
-import com.casino.*;
-import com.casino.model.PuntiRoulette;
-
 
 public class RouletteController {
 
@@ -26,4 +23,5 @@ public class RouletteController {
 	        }
 	        return false;
 	    }
+		
 }
