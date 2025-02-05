@@ -321,9 +321,6 @@ public class TestRoulette extends JFrame {
         return points - totalBetLost; // Saldo finale = punti vinti - puntate perse
     }
 
-
-
-    
     
     public static void showResultDialog(int winningNumber) {
     	
@@ -348,6 +345,5 @@ public class TestRoulette extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(TestRoulette::new);
-    }
-        
+    } 
 }
