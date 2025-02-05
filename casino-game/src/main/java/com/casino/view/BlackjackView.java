@@ -4,8 +4,6 @@ import javax.swing.*;
 
 import com.casino.model.Blackjack;
 import com.casino.model.Card;
-import com.casino.model.DealerBlackjack;
-import com.casino.model.UserBlackjack;
 
 import javax.swing.*;
 import java.awt.*;

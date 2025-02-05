@@ -3,7 +3,7 @@ package com.casino.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class User {
+public class User {
 
 	private boolean inGioco;
 
@@ -33,6 +33,7 @@ public abstract class User {
 	    public ArrayList<Card> getHand() {
 	        return hand;
 	    }
+	    
 
 	    public int reduceAce() {
 	        while (sum > 21 && aceCount > 0) {

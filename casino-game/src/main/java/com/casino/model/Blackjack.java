@@ -3,13 +3,13 @@ package com.casino.model;
 public class Blackjack {
     private Mazzo deck;
     private Dealer dealer;
-    private UserBlackjack player;
+    private User player;
     private boolean dealerHiddenCard;
 
     public Blackjack() {
         deck = new Mazzo();
-        dealer = new DealerBlackjack();
-        player = new UserBlackjack();
+        dealer = new Dealer();
+        player = new User();
         dealerHiddenCard = true;
         startGame();
     }
@@ -17,8 +17,8 @@ public class Blackjack {
     public void startGame() {
     	//resetta il mazzo e le mani
     	deck = new Mazzo();
-        dealer = new DealerBlackjack();
-        player = new UserBlackjack();
+        dealer = new Dealer();
+        player = new User();
         dealerHiddenCard = true;
         
         dealer.addCard(deck.drawCard());
@@ -44,7 +44,7 @@ public class Blackjack {
         return dealer;
     }
 
-    public UserBlackjack getPlayer() {
+    public User getPlayer() {
         return player;
     }
 }
