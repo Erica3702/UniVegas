@@ -1,6 +1,9 @@
 # Relazione Finale: UniVegas
 ## Progetto di ingegneria del software a.a. 2024/2025
 
+![UniVegas](https://github.com/user-attachments/assets/d83cec09-0da9-4971-bc5d-36c31beb56df)
+
+
 ### Progetto a cura di:
 - Cattaneo Luca, matricola 1079489
 - Locatelli Erica, matricola 1081101
