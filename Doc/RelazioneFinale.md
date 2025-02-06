@@ -234,41 +234,29 @@ garantendo flessibilità e adattabilità ai cambiamenti durante lo sviluppo.
 Motivazione della Scelta
 Flessibilità: L'approccio Agile ci ha permesso di adattarci rapidamente ai cambiamenti nei requisiti o nelle priorità.
 Collaborazione: Scrum favorisce una stretta collaborazione tra i membri del team e con gli stakeholder.
+
 ### 2. Organizzazione del Progetto
 Abbiamo organizzato il progetto in sprint della durata di 2 settimane, seguendo il classico ciclo di Scrum. Ogni sprint è stato pianificato, eseguito e revisionato per garantire il raggiungimento degli obiettivi.
 
-Timebox e Sprint
-Sprint 1:
-
+#### Timebox e Sprint
+##### Sprint 1:
 Obiettivo: Definizione dei requisiti e progettazione dell'architettura.
-
 Attività:
-
 Brainstorming iniziale e raccolta dei requisiti.
-
 Creazione del Project Plan e del Product Backlog.
-
 Progettazione dell'architettura MVC e dei diagrammi UML iniziali (Use Case, Class Diagram).
 
-Sprint 2 :
-
+##### Sprint 2:
 Obiettivo: Implementazione e connessione database.
-
 Attività:
-
 Sviluppo del controller, view e model.
-
 Connessione con il database per login e registrazione.
 
-
-Sprint 3:
-
+##### Sprint 3:
 Obiettivo: Testing, debugging e miglioramenti finali.
 
 Attività:
-
 Esecuzione di test funzionali e correzione dei bug.
-
 Ottimizzazione delle prestazioni e refactoring del codice.
 
 Preparazione della documentazione finale.
@@ -276,20 +264,18 @@ Preparazione della documentazione finale.
 Durante lo sviluppo, abbiamo riscontrato alcune differenze rispetto a quanto previsto nel Project Plan iniziale:
 
 Modifica dei Requisiti:
-
 Durante lo Sprint 2, abbiamo riscontrato delle difficoltà nella gestione dei token nel blackjack, li abbiamo quindi eliminati.
 
 Ridistribuzione delle Attività:
-
 A causa di imprevisti tecnici, un membro del gruppo si è ritirato dal progetto, ciò ha richiesto una riorganizzazione delle attività e la mancata implementazione del gioco del Poker, assegnata a quest'ultimo. ????
 
 Estensione del Timebox:
-
 Lo Sprint 3 è stato esteso per consentire il completamento di tutte le attività di testing e documentazione.
 
 ### Configuration management
 ### 1. Gestione della Configurazione
 La gestione della configurazione è stata un aspetto fondamentale per garantire il controllo delle versioni del codice, la tracciabilità delle modifiche e la collaborazione efficace tra i membri del team. Abbiamo adottato una combinazione di strumenti e pratiche per gestire il codice sorgente, le attività e i rilasci.
+
 ### 2. Strumenti utilizzati
 GitHub: Abbiamo utilizzato GitHub per ospitare il repository del progetto, garantendo un accesso centralizzato al codice sorgente. Ogni merge request è stata sottoposta a una revisione del codice da parte di almeno un altro membro del team per garantire la qualità del codice.
 KanbanBoard: Abbiamo utilizzato la Kanban Board per gestire le attività del progetto. Ogni attività è stata rappresentata come una card, organizzata in colonne corrispondenti agli stati del flusso di lavoro (ad esempio, "To Do", "In Progress", "Revision", "Done"). la Kanban Board ci ha permesso di visualizzare lo stato delle attività in tempo reale e di identificare eventuali colli di bottiglia.
@@ -297,43 +283,27 @@ KanbanBoard: Abbiamo utilizzato la Kanban Board per gestire le attività del pro
 ### People Management and Team Organisation
 #### Organizzazione del Team
 Nel progetto UniVegas, abbiamo adottato l'approccio Scrum, che prevede un'organizzazione del lavoro basata su ruoli ben definiti e su un processo iterativo e incrementale. Il team è stato organizzato secondo i principi di Scrum, con una chiara divisione dei ruoli e delle responsabilità.
+
 #### Ruoli in Scrum
 #### Product Owner (PO)
 Responsabilità: Il Product Owner è stato responsabile della definizione e della priorizzazione del Product Backlog, garantendo che il team sviluppasse le funzionalità più importanti per il progetto.
-
 Persona: Erica.
-
-Attività:
-
-Raccolta e definizione dei requisiti.
-
+Attività:Raccolta e definizione dei requisiti.
 Approvazione delle funzionalità completate alla fine di ogni sprint.
 
 #### Scrum Master (SM)
 Responsabilità: Lo Scrum Master ha facilitato il processo Scrum, rimuovendo gli ostacoli e garantendo che il team rispettasse le pratiche e i principi di Scrum.
-
 Persona: Luca.
-
-Attività:
-
-Organizzazione delle riunioni (Daily Stand-up, Sprint Planning, Sprint Review, Sprint Retrospective).
-
-Monitoraggio del progresso del team e del rispetto dei timebox.
-
+Attività: Organizzazione delle riunioni (Daily Stand-up, Sprint Planning, Sprint Review, Sprint Retrospective). Monitoraggio del progresso del team e del rispetto dei timebox.
 Supporto al team nella risoluzione di problemi organizzativi o tecnici.
 
 #### Development Team
 Responsabilità: Il Development Team è stato responsabile dello sviluppo del prodotto, dalla progettazione all'implementazione e al testing.
-
 Persone: Erica e Luca.
-
-Attività:
-
-Implementazione delle user story assegnate durante lo sprint.
-
+Attività: Implementazione delle user story assegnate durante lo sprint.
 Collaborazione nella progettazione e nel codice (pair programming, code review).
-
 Esecuzione dei test e correzione dei bug.
+
 #### Collaborazione e Comunicazione
 La collaborazione tra i membri del team è stata favorita da:
 
@@ -416,8 +386,7 @@ Classi da creare:
 Contiene le classi che gestiscono l'interazione tra model e view.
 - MainController: (coordina la schermata principale e il flusso dell'app)
 - BlackjackController, RouletteController: gestisce la logica dei giochi
-
-
+  
 ### Utils
 Contiene classi di utilità (es. connessione al database).
 - DBConnection: gestisce la connessione a SQLite
