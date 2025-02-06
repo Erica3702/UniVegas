@@ -2,14 +2,8 @@ package com.casino.view;
 
 import javax.swing.*; // Per JFrame, JPanel, JButton, ecc.
 
-import com.casino.utils.DBConnection;
-
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 public class MenuUtente {
 	//genera il menu e i due bottoni interattivi

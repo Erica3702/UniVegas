@@ -13,9 +13,9 @@ import java.util.Map;
 public class RouletteView extends JFrame {
     private final ImageIcon chipIcon;
     private final JPanel bettingPanel;
-    private static JButton[][] buttons;
+    public static JButton[][] buttons;
     public static Map<JButton, Integer> buttonTokens;
-    private static int totalBet = 0;
+    static int totalBet = 0;
     private static JLabel totalBetLabel;
     private final RoulettePanel roulettePanel;
     private final RouletteController controller;
@@ -161,7 +161,7 @@ public class RouletteView extends JFrame {
         setVisible(true);
     }
 
-    private static void clearBets() {
+    static void clearBets() {
         totalBet = 0;
         for (JButton[] row : buttons) {
             for (JButton button : row) {
@@ -280,11 +280,5 @@ public class RouletteView extends JFrame {
 
     private static void updateTotalBetLabel() {
         SwingUtilities.invokeLater(() -> totalBetLabel.setText("TOTAL BET: " + totalBet));
-    }
-
-    public static void main(String[] args) {
-        RouletteModel model = new RouletteModel();
-        RouletteController controller = new RouletteController();
-        SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
     }
 }

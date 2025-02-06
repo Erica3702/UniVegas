@@ -37,4 +37,9 @@ public class RouletteModel {
     public int getWinningNumber() {
         return winningNumber;
     }
+
+    //per i test
+	public void setWinningNumber(int i) {
+		winningNumber = i;
+	}
 }

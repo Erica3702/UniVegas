@@ -1,13 +1,9 @@
 package com.casino.view;
 import com.casino.controller.BlackjackController;
 import com.casino.controller.RouletteController;
-import com.casino.model.Blackjack;
+import com.casino.model.BlackjackModel;
 import com.casino.model.RouletteModel;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -56,7 +52,7 @@ public class MenuGiochi {
 	        pokerButton.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
-	                JOptionPane.showMessageDialog(frame, "Momentaneamente non disponibile..");
+	                JOptionPane.showMessageDialog(frame, "Non disponibile");
 	            }
 	        });
 
@@ -64,7 +60,7 @@ public class MenuGiochi {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
 	                frame.dispose();
-	                Blackjack model = new Blackjack();
+	                BlackjackModel model = new BlackjackModel();
 	                BlackjackView view = new BlackjackView(model);
 	                new BlackjackController(model, view);
 	            }
@@ -75,10 +71,9 @@ public class MenuGiochi {
 	            public void actionPerformed(ActionEvent e) {
 	                frame.dispose();
 	                RouletteModel model = new RouletteModel();
-	    	        RouletteController controller = new RouletteController();
-	    	        RouletteView view = new RouletteView(controller, model);
-	    	        controller.startGame();
-	                
+	                RouletteController controller = new RouletteController();
+	                SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
+
 	            }
 	        });        
 	    }

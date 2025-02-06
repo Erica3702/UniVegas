@@ -1,7 +1,6 @@
 package com.casino.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class Dealer {
     private ArrayList<Card> hand;
@@ -36,6 +35,5 @@ public class Dealer {
             aceCount--;
         }
         return sum;
-    }
-    
+    } 
 }
