@@ -1,17 +1,15 @@
 package com.casino.controller;
 
-import javax.swing.JFrame;
-
-import com.casino.model.Blackjack;
+import com.casino.model.BlackjackModel;
 import com.casino.model.Card;
 import com.casino.view.BlackjackView;
 import com.casino.view.MenuGiochi;
 
 public class BlackjackController {
-    private Blackjack model;
+    private BlackjackModel model;
     private BlackjackView view;
 
-    public BlackjackController(Blackjack model, BlackjackView view) {
+    public BlackjackController(BlackjackModel model, BlackjackView view) {
         this.model = model;
         this.view = view;
 
@@ -21,7 +19,7 @@ public class BlackjackController {
         view.setExitToMenuButtonListener(e -> exitToMenu()); 
     }
 
-    private void hit() {
+    public void hit() {
         Card card = model.getDeck().drawCard();
         model.getPlayer().addCard(card);
         view.updateView();
@@ -30,7 +28,7 @@ public class BlackjackController {
         }
     }
 
-    private void stay() {
+    public void stay() {
         view.disableButtons();
         model.revealDealerCard(); // Rivela la prima carta del dealer
 
@@ -45,9 +43,9 @@ public class BlackjackController {
         view.enableNextGameButton(); // Abilita il pulsante "Next Game"
     }
     
-    private void nextGame() {
+    public void nextGame() {
         // Resetta il modello per una nuova partita
-        model = new Blackjack();
+        model = new BlackjackModel();
         view = new BlackjackView(model);
         new BlackjackController(model, view); // Ricrea il controller per la nuova partita
     }
@@ -57,7 +55,7 @@ public class BlackjackController {
         MenuGiochi.Start();
     }
     
-    private String determineResult() {
+    public String determineResult() {
         int playerSum = model.getPlayer().reduceAce();
         int dealerSum = model.getDealer().reduceAce();
 
@@ -74,4 +72,3 @@ public class BlackjackController {
         }
     }
 }
-

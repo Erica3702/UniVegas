@@ -1,7 +1,6 @@
 package com.casino.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class User {
 
@@ -69,6 +68,5 @@ public class User {
   
     public ArrayList<Card> getMano() {
         return hand;
-    }
-    
+    }   
 }

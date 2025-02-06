@@ -2,7 +2,7 @@ package com.casino.view;
 
 import javax.swing.*;
 
-import com.casino.model.Blackjack;
+import com.casino.model.BlackjackModel;
 import com.casino.model.Card;
 
 import javax.swing.*;
@@ -17,15 +17,12 @@ public class BlackjackView {
     private JButton stayButton;
     private JButton nextGameButton;
     private JButton exitToMenuButton;
-    private Blackjack model;
+    private BlackjackModel model;
 
-    public BlackjackView(Blackjack model) {
+    public BlackjackView(BlackjackModel model) {
         this.model = model;
 
         frame = new JFrame("Blackjack");
-       // frame.setSize(600, 600);
-        //frame.setLocationRelativeTo(null);
-        //frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
 

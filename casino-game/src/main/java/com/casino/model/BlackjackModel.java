@@ -1,12 +1,12 @@
 package com.casino.model;
 
-public class Blackjack {
+public class BlackjackModel {
     private Mazzo deck;
     private Dealer dealer;
     private User player;
     private boolean dealerHiddenCard;
 
-    public Blackjack() {
+    public BlackjackModel() {
         deck = new Mazzo();
         dealer = new Dealer();
         player = new User();
