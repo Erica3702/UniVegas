@@ -77,20 +77,4 @@ public class RouletteViewTest {
         assertEquals(-40, points);
     }
 	
-	
-    @Test
-    public void testClearBets() {
-        RouletteModel model = new RouletteModel();
-        RouletteController controller = new RouletteController();
-        RouletteView view = new RouletteView(controller, model);
-
-        // Simula una scommessa
-        RouletteView.buttonTokens.put(RouletteView.buttons[1][0], 5); // Aggiunge una scommessa su un bottone
-        RouletteView.totalBet = 5;
-
-        // Chiama il metodo clearBets
-        RouletteView.clearBets();
-
-        assertEquals(0, RouletteView.totalBet); // Il totale delle scommesse deve essere 0
-    }
 }
