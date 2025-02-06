@@ -27,7 +27,7 @@ public class DBConnection {
 		return connection;
     }
 	
-	public void testQuery() {
+/*	public void testQuery() {
 	    String query = "CREATE TABLE IF NOT EXISTS players (id INTEGER PRIMARY KEY, name TEXT, score INTEGER)";
 	    try (Connection connection = connect();
 	         var statement = connection.createStatement()) {
@@ -36,5 +36,5 @@ public class DBConnection {
 	    } catch (SQLException e) {
 	        logger.error("Error executing test query: ", e);
 	    }
-	}
+	}*/
 }
