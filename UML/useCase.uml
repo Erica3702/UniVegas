@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_oUwBUOSuEe-Dzak39t_i1A" name="model">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_oVZhkOSuEe-Dzak39t_i1A">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_7CkLUOSuEe-Dzak39t_i1A" name="Univegas">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_dlU0wOSvEe-Dzak39t_i1A" name="Login"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ie3WkOSvEe-Dzak39t_i1A" name="Sign Up"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_q9xAEOSwEe-Dzak39t_i1A" name="Accede al menu'">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_3rX7IOSwEe-Dzak39t_i1A" name="ExtensionPoint1"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_4cbkoOSwEe-Dzak39t_i1A" name="ExtensionPoint2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_w1_XsOSwEe-Dzak39t_i1A" name="Gioca a Blackjack">
+      <extend xmi:type="uml:Extend" xmi:id="_3rWtAOSwEe-Dzak39t_i1A" extendedCase="_q9xAEOSwEe-Dzak39t_i1A" extensionLocation="_3rX7IOSwEe-Dzak39t_i1A"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_aqUxUOSxEe-Dzak39t_i1A" name="ExtensionPoint2"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_bQdkQeSxEe-Dzak39t_i1A" name="ExtensionPoint3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_zJVTUOSwEe-Dzak39t_i1A" name="Gioca alla Roulette">
+      <extend xmi:type="uml:Extend" xmi:id="_4ca9kOSwEe-Dzak39t_i1A" extendedCase="_q9xAEOSwEe-Dzak39t_i1A" extensionLocation="_4cbkoOSwEe-Dzak39t_i1A"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_HUXpQeSxEe-Dzak39t_i1A" name="ExtensionPoint2"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_IKMeAOSxEe-Dzak39t_i1A" name="ExtensionPoint3"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_Lc3vsOSxEe-Dzak39t_i1A" name="ExtensionPoint4"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_L-mjwOSxEe-Dzak39t_i1A" name="ExtensionPoint5"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_5rFwIOSwEe-Dzak39t_i1A" name="Gira la ruota">
+      <extend xmi:type="uml:Extend" xmi:id="_HUXpQOSxEe-Dzak39t_i1A" extendedCase="_zJVTUOSwEe-Dzak39t_i1A" extensionLocation="_HUXpQeSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_889JgOSwEe-Dzak39t_i1A" name="Scommette">
+      <extend xmi:type="uml:Extend" xmi:id="_IKL28OSxEe-Dzak39t_i1A" extendedCase="_zJVTUOSwEe-Dzak39t_i1A" extensionLocation="_IKMeAOSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_BlQKUOSxEe-Dzak39t_i1A" name="Torna al menu">
+      <extend xmi:type="uml:Extend" xmi:id="_Lc3IoOSxEe-Dzak39t_i1A" extendedCase="_zJVTUOSwEe-Dzak39t_i1A" extensionLocation="_Lc3vsOSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_DsMBoOSxEe-Dzak39t_i1A" name="Cancella le puntate">
+      <extend xmi:type="uml:Extend" xmi:id="_L-l8sOSxEe-Dzak39t_i1A" extendedCase="_zJVTUOSwEe-Dzak39t_i1A" extensionLocation="_L-mjwOSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_NLOH4OSxEe-Dzak39t_i1A" name="Verifica se l'utente è registrato">
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_i-DiEeSxEe-Dzak39t_i1A" name="ExtensionPoint1"/>
+      <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_joPHgOSxEe-Dzak39t_i1A" name="ExtensionPoint2"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_Se-ggOSxEe-Dzak39t_i1A" name="Chiama carta">
+      <extend xmi:type="uml:Extend" xmi:id="_bQdkQOSxEe-Dzak39t_i1A" extendedCase="_w1_XsOSwEe-Dzak39t_i1A" extensionLocation="_bQdkQeSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_UNXU8OSxEe-Dzak39t_i1A" name="Decide di &quot;restare&quot;">
+      <extend xmi:type="uml:Extend" xmi:id="_aqUKQOSxEe-Dzak39t_i1A" extendedCase="_w1_XsOSwEe-Dzak39t_i1A" extensionLocation="_aqUxUOSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_eWikYOSxEe-Dzak39t_i1A" name="Consente accesso">
+      <extend xmi:type="uml:Extend" xmi:id="_joOgcOSxEe-Dzak39t_i1A" extendedCase="_NLOH4OSxEe-Dzak39t_i1A" extensionLocation="_joPHgOSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_gQa3IOSxEe-Dzak39t_i1A" name="Blocca accesso">
+      <extend xmi:type="uml:Extend" xmi:id="_i-DiEOSxEe-Dzak39t_i1A" extendedCase="_NLOH4OSxEe-Dzak39t_i1A" extensionLocation="_i-DiEeSxEe-Dzak39t_i1A"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_DNovUOSvEe-Dzak39t_i1A" name="User"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_nyB5UOSvEe-Dzak39t_i1A" memberEnd="_nyEVkOSvEe-Dzak39t_i1A _nyEVkeSvEe-Dzak39t_i1A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_nyDHcOSvEe-Dzak39t_i1A" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_nyDugOSvEe-Dzak39t_i1A" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_nyEVkOSvEe-Dzak39t_i1A" name="accede" type="_dlU0wOSvEe-Dzak39t_i1A" association="_nyB5UOSvEe-Dzak39t_i1A"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_nyEVkeSvEe-Dzak39t_i1A" name="user" type="_DNovUOSvEe-Dzak39t_i1A" association="_nyB5UOSvEe-Dzak39t_i1A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pbmfMOSvEe-Dzak39t_i1A" memberEnd="_pbntUOSvEe-Dzak39t_i1A _pbntUeSvEe-Dzak39t_i1A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pbnGQOSvEe-Dzak39t_i1A" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pbnGQeSvEe-Dzak39t_i1A" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pbntUOSvEe-Dzak39t_i1A" name="si registra" type="_ie3WkOSvEe-Dzak39t_i1A" association="_pbmfMOSvEe-Dzak39t_i1A"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pbntUeSvEe-Dzak39t_i1A" name="user" type="_DNovUOSvEe-Dzak39t_i1A" association="_pbmfMOSvEe-Dzak39t_i1A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_K07bYOSwEe-Dzak39t_i1A" name="Sistema di autenticazione"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Q6hEIOSxEe-Dzak39t_i1A" memberEnd="_Q6hEI-SxEe-Dzak39t_i1A _Q6hrMOSxEe-Dzak39t_i1A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Q6hEIeSxEe-Dzak39t_i1A" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Q6hEIuSxEe-Dzak39t_i1A" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Q6hEI-SxEe-Dzak39t_i1A" name="verifica se l'utente è registrato" type="_NLOH4OSxEe-Dzak39t_i1A" association="_Q6hEIOSxEe-Dzak39t_i1A"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Q6hrMOSxEe-Dzak39t_i1A" name="sistema di autenticazione" type="_K07bYOSwEe-Dzak39t_i1A" association="_Q6hEIOSxEe-Dzak39t_i1A"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cZeawOSxEe-Dzak39t_i1A" memberEnd="_cZfB0uSxEe-Dzak39t_i1A _cZfB0-SxEe-Dzak39t_i1A">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cZfB0OSxEe-Dzak39t_i1A" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cZfB0eSxEe-Dzak39t_i1A" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cZfB0uSxEe-Dzak39t_i1A" name="entra nel menu'" type="_q9xAEOSwEe-Dzak39t_i1A" association="_cZeawOSxEe-Dzak39t_i1A"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cZfB0-SxEe-Dzak39t_i1A" name="user" type="_DNovUOSvEe-Dzak39t_i1A" association="_cZeawOSxEe-Dzak39t_i1A"/>
+  </packagedElement>
+</uml:Model>
