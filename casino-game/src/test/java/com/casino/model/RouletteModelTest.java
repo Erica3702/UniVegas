@@ -28,6 +28,4 @@ public class RouletteModelTest {
 	        int winningNumber = model.getWinningNumber(270); // Angolo che corrisponde a un numero specifico
 	        assertTrue(winningNumber ==0); // Verifica che il numero sia valido
 	    }
-	
-
 }
