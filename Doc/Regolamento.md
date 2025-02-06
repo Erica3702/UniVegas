@@ -32,7 +32,7 @@ Scommesse minime:
 - 5 per puntate sui numeri singoli
 - 20 per puntate speciali
 
-#### - Blackjack:
+#### Blackjack:
 - L'obiettivo del gioco è ottenere un punteggio più vicino possibile a 21 senza superarlo.
 
 - I giocatori possono scegliere tra "chiedere carta" (hit) o "stare" (stay) attraverso i pulsanti disponibili.
