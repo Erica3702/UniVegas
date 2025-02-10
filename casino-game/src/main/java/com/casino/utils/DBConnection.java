@@ -17,12 +17,12 @@ public class DBConnection {
 	public static Connection connect() {
         Connection connection = null;
         try {
-            logger.info("Attempting to connect to the in-memory database...");
+        //    logger.info("Attempting to connect to the in-memory database...");
             connection = DriverManager.getConnection(URL);
-            logger.info("Connection to the in-memory database successful!");
+        //    logger.info("Connection to the in-memory database successful!");
 
         } catch (SQLException e) {
-            logger.error("Error connecting to the database: ", e);
+        //    logger.error("Error connecting to the database: ", e);
         }
 		return connection;
     }

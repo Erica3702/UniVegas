@@ -73,7 +73,6 @@ public class MenuGiochi {
 	                RouletteModel model = new RouletteModel();
 	                RouletteController controller = new RouletteController();
 	                SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
-
 	            }
 	        });        
 	    }
