@@ -11,19 +11,32 @@ public class RouletteModel {
     private int winningNumber;
 
     public int getWinningNumber(double finalAngle) {
+        
         double normalizedAngle = (finalAngle % 360 + 360) % 360;
-        double sectorSize = 360.0 / 37;
-        double adjustedAngle = (normalizedAngle + 90) % 360;
-        int index = (int) (adjustedAngle / sectorSize);
 
+        // Dimensione di ogni settore (in gradi)
+        double sectorSize = 360.0 / 37; 
+
+        // Aggiusta l'angolo per tenere conto della posizione iniziale della pallina
+     
+       // double offset = 0.0785398 ; // Offset in radianti
+        double adjustedAngle = (normalizedAngle + 90 + 4.5) % 360;
+
+        // Calcola l'indice del numero vincente
+        int index = (int) (adjustedAngle  / sectorSize);
+
+        // Assicurati che l'indice sia compreso tra 0 e 36
         if (index >= ROULETTE_NUMBERS.length) {
             index = ROULETTE_NUMBERS.length - 1;
         }
 
+        // Restituisci il numero vincente
         winningNumber = ROULETTE_NUMBERS[index];
         return winningNumber;
     }
-
+    
+    
+    
     public boolean isRed(int num) {
         int[] redNumbers = {1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36};
         return Arrays.stream(redNumbers).anyMatch(red -> red == num);
