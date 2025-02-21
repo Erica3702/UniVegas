@@ -23,4 +23,6 @@ public class RouletteController {
     public void startGame() {
         view.setVisible(true);
     }
+    
+    
 }
