@@ -23,7 +23,6 @@ public class RoulettePanel extends JPanel {
         wheelImage = wheelIcon.getImage();
         this.maxRadius = wheelImage.getWidth(null) / 2 - 30; // Raggio massimo
         this.currentRadius = maxRadius;
-     //   radius = wheelImage.getWidth(null) / 4 - 15;
     }
 
     
@@ -54,6 +53,9 @@ public class RoulettePanel extends JPanel {
             // Determina il numero vincente e mostra il risultato
             int winningNumber = model.getWinningNumber(ballAngle);
             RouletteView.showResultDialog(winningNumber, model);
+           
+            
+      
         }
 
         // Riduci il raggio gradualmente

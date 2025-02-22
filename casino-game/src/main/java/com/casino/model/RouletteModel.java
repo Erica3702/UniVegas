@@ -43,7 +43,7 @@ public class RouletteModel {
     }
 
     public boolean isSpecialBet(String text) {
-        String[] specialBets = {"RED", "BLACK", "ODD", "EVEN", "1 to 18", "19 to 36", "1st 12", "2nd 12", "3rd 12", "2:1"};
+        String[] specialBets = {"RED", "BLACK", "ODD", "EVEN", "1 to 18", "19 to 36", "1st 12", "2nd 12", "3rd 12", " 2:1 ", "  2:1  ", "   2:1   "};
         return Arrays.stream(specialBets).anyMatch(bet -> bet.equalsIgnoreCase(text));
     }
 
