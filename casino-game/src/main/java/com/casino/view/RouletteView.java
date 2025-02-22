@@ -26,6 +26,7 @@ public class RouletteView extends JFrame {
     private final RoulettePanel roulettePanel;
     private static JButton[][] buttons;
     private static Map<JButton, Integer> buttonTokens;
+    
     private static int totalBet = 0;
     private static JLabel totalBetLabel;
 
@@ -54,6 +55,11 @@ public class RouletteView extends JFrame {
         setupLayout();
     }
 
+    //per i test
+    static Map<JButton, Integer> getButtonTokens() {
+        return buttonTokens;
+    }
+    
     private void initializeFrame() {
         setTitle("Roulette Game");
         setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -223,6 +229,15 @@ public class RouletteView extends JFrame {
             }
         }
         updateTotalBetLabel();
+    }
+    
+    //per i test
+    public static void clearButtonTokens() {
+        buttonTokens.clear();
+    }
+    //per i test
+    public static void addButtonToken(JButton button, int tokens) {
+        buttonTokens.put(button, tokens);
     }
 
     private void disableAllBettingButtons() {
