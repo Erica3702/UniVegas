@@ -453,9 +453,9 @@ public class RouletteView extends JFrame {
         return buttonTokens;
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         RouletteModel model = new RouletteModel();
         RouletteController controller = new RouletteController();
         SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
-    }
+    }*/
 }
