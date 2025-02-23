@@ -33,6 +33,5 @@ public class SoundManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
-		
 	}
 }

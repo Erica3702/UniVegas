@@ -2,13 +2,9 @@ package com.casino.view;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 import javax.swing.*;
 
 import com.casino.controller.RouletteController;
@@ -452,10 +448,4 @@ public class RouletteView extends JFrame {
     static Map<JButton, Integer> getButtonTokens() {
         return buttonTokens;
     }
-
-   /* public static void main(String[] args) {
-        RouletteModel model = new RouletteModel();
-        RouletteController controller = new RouletteController();
-        SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
-    }*/
 }
