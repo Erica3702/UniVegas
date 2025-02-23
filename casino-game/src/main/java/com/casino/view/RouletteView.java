@@ -1,11 +1,29 @@
 package com.casino.view;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
+import java.awt.Insets;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.*;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 
 import com.casino.controller.RouletteController;
 import com.casino.model.RouletteModel;
@@ -24,14 +42,14 @@ public class RouletteView extends JFrame {
     private final JPanel bettingPanel;
     private final RoulettePanel roulettePanel;
     private static JButton[][] buttons;
-    private static Map<JButton, Integer> buttonTokens; 
+    private static Map<JButton, Integer> buttonTokens;
     private static int totalBet = 0;
     private static JLabel totalBetLabel;
 
     // Audio
     private final SoundManager soundManager;
-    
-    
+
+
     // Modello e controller
     private final RouletteController controller;
     private final RouletteModel model;
@@ -45,21 +63,21 @@ public class RouletteView extends JFrame {
         this.model = model;
         this.soundManager = new SoundManager();
         this.soundManager.loadSound("src/main/resources/audio/ruota.wav", "spin");
-        this.soundManager.loadSound("src/main/resources/audio/fiches.wav", "fiches"); 
+        this.soundManager.loadSound("src/main/resources/audio/fiches.wav", "fiches");
 
         initializeFrame();
         initializeRoulettePanel();
         initializeBettingPanel();
-        setupSpinAndClearButtons(); // Configurazione dei pulsanti SPIN e CLEAR  
+        setupSpinAndClearButtons(); // Configurazione dei pulsanti SPIN e CLEAR
         setupTotalBetLabel(); // Configurazione dell'etichetta della puntata totale
         setupLayout();
     }
 
-    
+
     private void initializeFrame() {
         setTitle("Roulette Game");
-        setExtendedState(JFrame.MAXIMIZED_BOTH);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setExtendedState(Frame.MAXIMIZED_BOTH);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
 
@@ -165,7 +183,7 @@ public class RouletteView extends JFrame {
         gbc.gridy = getButtonLayout().length;
         gbc.gridwidth = 1;
 
-        // Creazione del pulsante SPIN 
+        // Creazione del pulsante SPIN
         JButton spinButton = createButton("SPIN", BUTTON_COLOR, TEXT_COLOR, e -> {
         	disableAllBettingButtons();
         	soundManager.playSound("spin");
@@ -174,7 +192,7 @@ public class RouletteView extends JFrame {
         spinButton.setPreferredSize(BUTTON_SIZE); // Imposta la dimensione
         bettingPanel.add(spinButton, gbc);
 
-        // Creazione del pulsante CLEAR 
+        // Creazione del pulsante CLEAR
         gbc.gridx = 1;
         JButton clearButton = createButton("CLEAR", BUTTON_COLOR, TEXT_COLOR, e -> clearBets());
         clearButton.setPreferredSize(BUTTON_SIZE); // Imposta la dimensione
@@ -204,8 +222,8 @@ public class RouletteView extends JFrame {
         setVisible(true);
     }
 
-    
-    
+
+
     // Metodi per gestire le puntate
     public static void clearBets() {
         totalBet = 0;
@@ -224,7 +242,7 @@ public class RouletteView extends JFrame {
         }
         updateTotalBetLabel();
     }
-    
+
     //per i test
     public static void clearButtonTokens() {
         buttonTokens.clear();
@@ -293,7 +311,7 @@ public class RouletteView extends JFrame {
         if (button != null) {
         	soundManager.playSound("fiches");
         	JLabel chipLabel = new JLabel(chipIcon);
-        	button.setLayout(new ChipLayout()); 
+        	button.setLayout(new ChipLayout());
             button.add(chipLabel, BorderLayout.CENTER);
             button.repaint();
             button.revalidate();
@@ -442,10 +460,5 @@ public class RouletteView extends JFrame {
         }
 
         return points - totalBetLost;
-    }
-    
-    //per i test
-    static Map<JButton, Integer> getButtonTokens() {
-        return buttonTokens;
     }
 }

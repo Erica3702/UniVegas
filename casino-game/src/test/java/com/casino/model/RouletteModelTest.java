@@ -1,6 +1,7 @@
 package com.casino.model;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -13,7 +14,7 @@ public class RouletteModelTest {
         assertFalse(model.isRed(2)); // 2 è un numero nero
         assertFalse(model.isRed(0)); // 0 non è né rosso né nero
     }
-	
+
 	@Test
     public void testIsSpecialBet() {
         RouletteModel model = new RouletteModel();
@@ -21,7 +22,7 @@ public class RouletteModelTest {
         assertTrue(model.isSpecialBet("BLACK"));  // "BLACK" è una scommessa speciale
         assertFalse(model.isSpecialBet("37"));    // "37" non è una scommessa speciale
     }
-	
+
 	 @Test
 	 public void testGetWinningNumber() {
 	        RouletteModel model = new RouletteModel();

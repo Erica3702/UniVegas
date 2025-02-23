@@ -25,15 +25,15 @@ public class RouletteModel {
         winningNumber = ROULETTE_NUMBERS[index];
         return winningNumber;
     }
-    
-       
+
+
     public boolean isRed(int num) {
         int[] redNumbers = {1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36};
         return Arrays.stream(redNumbers).anyMatch(red -> red == num);
     }
 
     public boolean isSpecialBet(String text) {
-        String[] specialBets = {"RED", "BLACK", "ODD", "EVEN", "1 to 18", "19 to 36", "1st 12", "2nd 12", "3rd 12", "2:1"};
+        String[] specialBets = {"RED", "BLACK", "ODD", "EVEN", "1 TO 18", "19 TO 36", "1ST 12", "2ND 12", "3RD 12", " 2:1 ", "  2:1  ", "   2:1   " };
         return Arrays.stream(specialBets).anyMatch(bet -> bet.equalsIgnoreCase(text));
     }
 

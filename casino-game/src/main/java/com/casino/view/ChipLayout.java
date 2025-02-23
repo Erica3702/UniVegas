@@ -1,9 +1,12 @@
 package com.casino.view;
 
-import java.awt.*;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.LayoutManager;
 
 public class ChipLayout implements LayoutManager {
-    private int xOffset = 1; 
+    private int xOffset = 1;
     private int yOffset = 4; // Spostamento verticale tra le fiches
 
     @Override
@@ -14,12 +17,12 @@ public class ChipLayout implements LayoutManager {
 
     @Override
     public Dimension preferredLayoutSize(Container parent) {
-        return new Dimension(100, 100); 
+        return new Dimension(100, 100);
     }
 
     @Override
     public Dimension minimumLayoutSize(Container parent) {
-        return new Dimension(50, 50); 
+        return new Dimension(50, 50);
     }
 
     @Override

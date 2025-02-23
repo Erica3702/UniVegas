@@ -1,13 +1,21 @@
 package com.casino.view;
 
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 
 import com.casino.model.BlackjackModel;
 import com.casino.model.Card;
-
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionListener;
 
 public class BlackjackView {
     private JFrame frame;
@@ -23,8 +31,8 @@ public class BlackjackView {
         this.model = model;
 
         frame = new JFrame("Blackjack");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
 
         gamePanel = new JPanel() {
             @Override
@@ -104,7 +112,7 @@ public class BlackjackView {
         hitButton.setEnabled(false);
         stayButton.setEnabled(false);
     }
-    
+
     public void enableNextGameButton() {
         nextGameButton.setEnabled(true); // Abilita il pulsante "Next Game"
     }
@@ -120,11 +128,11 @@ public class BlackjackView {
     public void setStayButtonListener(ActionListener listener) {
         stayButton.addActionListener(listener);
     }
-    
+
     public void setNextGameButtonListener(ActionListener listener) {
         nextGameButton.addActionListener(listener); // Aggiungi listener per "Next Game"
     }
-    
+
     public void setExitToMenuButtonListener(ActionListener listener) {
         exitToMenuButton.addActionListener(listener); // Aggiungi listener per "Exit to Menu"
     }

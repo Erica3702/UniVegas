@@ -10,7 +10,7 @@ public class MainController {
 
 	//metodo per controllare se username e pw sono nel db
     public static boolean verificaUtente(String username, String password) {
-      String url = "jdbc:sqlite:src/main/resources/database/casino.db"; 
+      String url = "jdbc:sqlite:src/main/resources/database/casino.db";
       String query = "SELECT COUNT(*) FROM utenti WHERE username = ? AND password = ?";
 
       try (Connection conn = DriverManager.getConnection(url);
@@ -33,20 +33,20 @@ public class MainController {
 
       return false; // Se c'è un errore o l'utente non esiste
   }
-    
-    
-    
+
+
+
  // Metodo per registrare nel db un nuovo utente
  	public static boolean registraUtente(String username, String password) {
  	        String query = "INSERT INTO Utenti (username, password) VALUES (?, ?)";
- 	
+
  	        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:src/main/resources/database/casino.db");
  	             PreparedStatement pstmt = conn.prepareStatement(query)) {
- 	
+
  	            // Imposta i parametri
  	            pstmt.setString(1, username);
  	            pstmt.setString(2, password);
- 	
+
  	            // Esegui l'insert
  	            pstmt.executeUpdate();
  	            return true; // Registrazione riuscita
@@ -55,6 +55,6 @@ public class MainController {
  	            return false; // Registrazione fallita
  	        }
  	}
-    
-    
+
+
 }

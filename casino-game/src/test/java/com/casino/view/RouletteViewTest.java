@@ -1,6 +1,6 @@
 package com.casino.view;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,6 @@ import javax.swing.JButton;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.casino.controller.RouletteController;
 import com.casino.model.RouletteModel;
 
 public class RouletteViewTest {
@@ -27,7 +26,7 @@ public class RouletteViewTest {
 
     @Test
     public void testCalculatePoints_WinningNumber() {
-      
+
     	model.setWinningNumber(7);  // Numero vincente impostato a 7
 
         JButton btn7 = new JButton("7");	 // Bottone con scommessa diretta sul numero 7
@@ -37,8 +36,8 @@ public class RouletteViewTest {
 
         assertEquals(180, points);  // Calcolo atteso: 1 * 5 * 35 + 1 * 5 = 180
     }
-	
-    
+
+
     @Test
     public void testCalculatePoints_LosingNumber() {
         model.setWinningNumber(10); // Numero vincente è 10
@@ -50,8 +49,8 @@ public class RouletteViewTest {
 
         assertEquals(-10, points);
     }
-	
-	
+
+
     @Test
     public void testCalculatePoints_RedWin() {
         model.setWinningNumber(3); // il 3 è rosso
@@ -63,8 +62,8 @@ public class RouletteViewTest {
 
         assertEquals(40, points);
     }
-	
-	
+
+
     @Test
     public void testCalculatePoints_BlackLose() {
         model.setWinningNumber(3); // Supponiamo che il 3 sia rosso
@@ -76,5 +75,5 @@ public class RouletteViewTest {
 
         assertEquals(-40, points);
     }
-	
+
 }
