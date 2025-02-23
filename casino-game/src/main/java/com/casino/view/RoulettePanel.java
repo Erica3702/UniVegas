@@ -35,7 +35,7 @@ public class RoulettePanel extends JPanel {
 
         angle = 0; // Resetta l'angolo di rotazione
         Random random = new Random();
-        ballSpeed = random.nextInt(21)+40;
+        ballSpeed = random.nextInt(21)+60;
         
         ballAnimationTimer = new Timer(50, e -> animateBall()); // Timer per l'animazione
     	currentRadius = wheelImage.getWidth(null) / 2 - 30;
@@ -55,10 +55,9 @@ public class RoulettePanel extends JPanel {
             int winningNumber = model.getWinningNumber(ballAngle);
             RouletteView.showResultDialog(winningNumber, model);
         }
-
         // Riduci il raggio gradualmente
         if (currentRadius > wheelImage.getWidth(null) / 4 - 15) { // Fermati a un raggio minimo 
-            currentRadius -= 1.2; // Riduci il raggio di 0.8 unità per frame
+            currentRadius -= 1; // Riduci il raggio di x unità per frame
         }
 
         // Aggiorna l'angolo della pallina
