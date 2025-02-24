@@ -35,5 +35,5 @@ public class Dealer {
             aceCount--;
         }
         return sum;
-    } 
+    }
 }

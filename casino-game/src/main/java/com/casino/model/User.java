@@ -6,7 +6,7 @@ public class User {
 
 	private boolean inGioco;
 
-	
+
 	 private ArrayList<Card> hand;
 	    private int sum;
 	    private int aceCount;
@@ -32,7 +32,7 @@ public class User {
 	    public ArrayList<Card> getHand() {
 	        return hand;
 	    }
-	    
+
 
 	    public int reduceAce() {
 	        while (sum > 21 && aceCount > 0) {
@@ -42,21 +42,21 @@ public class User {
 	        return sum;
 	    }
 
-	
+
 	public boolean isInGioco() {
 		return inGioco;
 	}
-	
+
 	public void setInGioco(boolean inGioco) {
 		this.inGioco = inGioco;
 
 	}
-	
-	
+
+
 	public void resetMano() {
 		hand.clear();
 	}
-	
+
 	public String visualizzaMano() {
 		StringBuilder sb = new StringBuilder();
 		for(Card carta : hand) {
@@ -65,8 +65,8 @@ public class User {
 		return sb.toString().trim();
 	}
 
-  
+
     public ArrayList<Card> getMano() {
         return hand;
-    }   
+    }
 }

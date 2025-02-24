@@ -2,11 +2,6 @@ package com.casino.view;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -15,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 
 import com.casino.controller.MainController;
 
@@ -23,11 +19,11 @@ public class Login {
 	    public static void showLoginFrame() {
 	        // Creazione della finestra di login
 	        JFrame loginFrame = new JFrame("Login");
-	        loginFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // Chiude solo questa finestra
+	        loginFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE); // Chiude solo questa finestra
 	        loginFrame.setSize(300, 200);
 	        loginFrame.setLayout(null);
-	        
-	        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png"); 
+
+	        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png");
 	        loginFrame.setIconImage(fiches.getImage());
 
 	        // Creazione dei campi per username e password
@@ -58,9 +54,9 @@ public class Login {
 	        loginFrame.setLocationRelativeTo(null); // Centrare la finestra
 	        loginFrame.setVisible(true);
 	        loginFrame.setResizable(false);
-	        
-	        
-	        
+
+
+
 
 	        loginButton2.addActionListener(new ActionListener() {
 	            @Override
@@ -72,14 +68,14 @@ public class Login {
 	                if (MainController.verificaUtente(username, password)) {
 	                    JOptionPane.showMessageDialog(loginFrame, "Accesso riuscito!");
 	                    MenuGiochi.Start();
-	                    
+
 	                } else {
 	                    JOptionPane.showMessageDialog(loginFrame, "Accesso negato: credenziali errate.");
 	                }
 	            }
 	        });
-	        
-	        loginFrame.setVisible(true);   
+
+	        loginFrame.setVisible(true);
 	    }
 
 }

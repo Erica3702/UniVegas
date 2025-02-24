@@ -16,7 +16,7 @@ public class BlackjackController {
         view.setHitButtonListener(e -> hit());
         view.setStayButtonListener(e -> stay());
         view.setNextGameButtonListener(e -> nextGame());
-        view.setExitToMenuButtonListener(e -> exitToMenu()); 
+        view.setExitToMenuButtonListener(e -> exitToMenu());
     }
 
     public void hit() {
@@ -42,7 +42,7 @@ public class BlackjackController {
         view.showResult(determineResult());
         view.enableNextGameButton(); // Abilita il pulsante "Next Game"
     }
-    
+
     public void nextGame() {
         // Resetta il modello per una nuova partita
         model = new BlackjackModel();
@@ -54,7 +54,7 @@ public class BlackjackController {
         view.close();
         MenuGiochi.Start();
     }
-    
+
     public String determineResult() {
         int playerSum = model.getPlayer().reduceAce();
         int dealerSum = model.getDealer().reduceAce();

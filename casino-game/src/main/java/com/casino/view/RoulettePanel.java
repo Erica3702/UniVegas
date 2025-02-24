@@ -1,10 +1,16 @@
 package com.casino.view;
 
-import com.casino.model.RouletteModel;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
 import java.util.Random;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+import javax.swing.Timer;
+
+import com.casino.model.RouletteModel;
 
 public class RoulettePanel extends JPanel {
     private double angle; // Angolo di rotazione della ruota
@@ -25,7 +31,7 @@ public class RoulettePanel extends JPanel {
         this.currentRadius = maxRadius;
     }
 
-    
+
     //Avvia animazione pallina
     public void startBallAnimation() {
         if (ballAnimationTimer != null && ballAnimationTimer.isRunning()) {
@@ -35,14 +41,14 @@ public class RoulettePanel extends JPanel {
         angle = 0; // Resetta l'angolo di rotazione
         Random random = new Random();
         ballSpeed = random.nextInt(21)+60;
-        
+
         ballAnimationTimer = new Timer(50, e -> animateBall()); // Timer per l'animazione
     	currentRadius = wheelImage.getWidth(null) / 2 - 30;
         ballAnimationTimer.start();
     }
 
-    
-   
+
+
     private void animateBall() {
     	if (ballSpeed > 0.1) {
             ballSpeed *= 0.965; // Riduce gradualmente la velocità della pallina
@@ -58,7 +64,7 @@ public class RoulettePanel extends JPanel {
       
         }
         // Riduci il raggio gradualmente
-        if (currentRadius > wheelImage.getWidth(null) / 4 - 15) { // Fermati a un raggio minimo 
+        if (currentRadius > wheelImage.getWidth(null) / 4 - 15) { // Fermati a un raggio minimo
             currentRadius -= 1; // Riduci il raggio di x unità per frame
         }
 
@@ -70,9 +76,9 @@ public class RoulettePanel extends JPanel {
 
         repaint(); // Ridisegna il pannello
     }
-    
- 
-    
+
+
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
