@@ -1,6 +1,10 @@
 package com.casino.model;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -29,20 +33,20 @@ public class BlackjackModelTest {
         model.revealDealerCard();
         assertFalse(model.isDealerCardHidden());
     }
-    
+
     @Test
     public void testDealerDrawCard() {
         int initialSize = model.getDealer().getHand().size();
         model.getDealer().addCard(model.getDeck().drawCard());
         assertEquals(initialSize + 1, model.getDealer().getHand().size());
     }
-    
-    
+
+
     @Test
     public void testPlayerDrawCard() {
         int initialSize = model.getPlayer().getHand().size();
         model.getPlayer().addCard(model.getDeck().drawCard());
         assertEquals(initialSize + 1, model.getPlayer().getHand().size());
     }
-    
+
 }

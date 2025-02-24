@@ -1,12 +1,15 @@
 package com.casino.utils;
 
-import static org.junit.Assert.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.fail;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 public class DBConnectionTest {
     private Connection connection;
@@ -32,7 +35,7 @@ public class DBConnectionTest {
         }
     }
 
-   
+
     @After
     public void tearDown() {
         try {

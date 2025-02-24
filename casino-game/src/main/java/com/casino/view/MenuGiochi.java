@@ -1,32 +1,38 @@
 package com.casino.view;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
+
 import com.casino.controller.BlackjackController;
 import com.casino.controller.RouletteController;
 import com.casino.model.BlackjackModel;
 import com.casino.model.RouletteModel;
 
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.*;
-
 public class MenuGiochi {
 
 	    public static void Start(){
-	
-	    	
+
+
 	    	JFrame frame = new JFrame("UniVegas Menù");
 
 	        // Imposta il frame a occupare l'intero schermo
-	        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // Massimizza la finestra
+	        frame.setExtendedState(Frame.MAXIMIZED_BOTH); // Massimizza la finestra
 	        frame.setResizable(false); // Disabilita il ridimensionamento
 
-	        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png"); 
+	        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png");
 	        frame.setIconImage(fiches.getImage());
-	        
-	      
+
+
 	        // Chiudi l'applicazione quando il frame viene chiuso
-	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 	        frame.setLayout(new GridLayout(1, 3)); // 3 colonne, 1 riga
 
@@ -47,7 +53,7 @@ public class MenuGiochi {
 
 	        // Rendi il frame visibile
 	        frame.setVisible(true);
-	        
+
 	        // Azioni dei bottoni, da implementare in seguito
 	        pokerButton.addActionListener(new ActionListener() {
 	            @Override
@@ -75,6 +81,6 @@ public class MenuGiochi {
 	                SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
 
 	            }
-	        });        
+	        });
 	    }
-}       
+}
