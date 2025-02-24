@@ -88,8 +88,8 @@ public class RouletteView extends JFrame {
     }
 
     private void initializeRoulettePanel() {
-        roulettePanel.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width / 2, getHeight()));
-        roulettePanel.setBackground(BACKGROUND_COLOR);
+    	roulettePanel.setPreferredSize(new Dimension(Toolkit.getDefaultToolkit().getScreenSize().width / 2, Toolkit.getDefaultToolkit().getScreenSize().height));
+    	roulettePanel.setBackground(BACKGROUND_COLOR);
         JButton backToMenuButton = createButton("Torna al menu", Color.DARK_GRAY, TEXT_COLOR, e -> MenuGiochi.Start());
         roulettePanel.setLayout(new BorderLayout());
         roulettePanel.add(backToMenuButton, BorderLayout.SOUTH);
@@ -267,7 +267,7 @@ public class RouletteView extends JFrame {
         SwingUtilities.invokeLater(() -> totalBetLabel.setText(" BET: " + totalBet));
     }
 
-    void handleButtonClick(String buttonText) {
+    protected void handleButtonClick(String buttonText) {
         disableOppositeButtons(buttonText);
         placeChip(buttonText);
         updateTotalBet();
@@ -451,14 +451,12 @@ public class RouletteView extends JFrame {
                         points += tokens * 20 * 2 + tokens * 20;
                         won = true;
                     }
-
                     if (!won) {
                         totalBetLost += tokens * 20;
                     }
                 }
             }
         }
-
         return points - totalBetLost;
     }
 }
