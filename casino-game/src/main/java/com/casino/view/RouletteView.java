@@ -54,21 +54,6 @@ public class RouletteView extends JFrame {
         setupLayout();
     }
 
-
-        initializeFrame();
-
-        initializeRoulettePanel();
-
-        initializeBettingPanel();
-
-        setupSpinAndClearButtons(); // Configurazione dei pulsanti SPIN e CLEAR
-        
-        setupTotalBetLabel(); // Configurazione dell'etichetta della puntata totale
-
-        setupLayout();
-    }
-
- 
     
     private void initializeFrame() {
         setTitle("Roulette Game");
@@ -258,18 +243,12 @@ public class RouletteView extends JFrame {
                 if (button != null) {
                     button.setEnabled(false);
                 }
+            }
         }
     }
 
-    // Classe interna per gestire le fiches
-    private class ChipPlacer implements ActionListener {
-        private final String buttonText;
 
-        public ChipPlacer(String buttonText) {
-            this.buttonText = buttonText;
-        }
-    }
-
+    
     private static void updateTotalBetLabel() {
         SwingUtilities.invokeLater(() -> totalBetLabel.setText(" BET: " + totalBet));
     }

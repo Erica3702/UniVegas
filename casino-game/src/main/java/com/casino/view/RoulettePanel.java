@@ -60,8 +60,6 @@ public class RoulettePanel extends JPanel {
             int winningNumber = model.getWinningNumber(ballAngle);
             RouletteView.showResultDialog(winningNumber, model);
            
-            
-      
         }
         // Riduci il raggio gradualmente
         if (currentRadius > wheelImage.getWidth(null) / 4 - 15) { // Fermati a un raggio minimo
