@@ -1,5 +1,4 @@
 package com.casino.view;
-import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,13 +19,11 @@ public class MenuGiochi {
 
 	    public static void Start(){
 
-
 	    	JFrame frame = new JFrame("UniVegas Menù");
 
-	        // Imposta il frame a occupare l'intero schermo
-	        frame.setExtendedState(Frame.MAXIMIZED_BOTH); // Massimizza la finestra
+	        frame.setSize(1100,750);
 	        frame.setResizable(false); // Disabilita il ridimensionamento
-
+	        frame.setLocationRelativeTo(null); //centra la finestra
 	        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png");
 	        frame.setIconImage(fiches.getImage());
 
@@ -37,9 +34,9 @@ public class MenuGiochi {
 	        frame.setLayout(new GridLayout(1, 3)); // 3 colonne, 1 riga
 
 	        // Caricamento delle immagini per ogni gioco
-	        ImageIcon pokerImage = new ImageIcon("src/main/resources/immagini/poker.png"); // Sostituisci con il tuo percorso immagine
-	        ImageIcon blackjackImage = new ImageIcon("src/main/resources/immagini/blackjackk.png"); // Sostituisci con il tuo percorso immagine
-	        ImageIcon rouletteImage = new ImageIcon("src/main/resources/immagini/roulettee.png"); // Sostituisci con il tuo percorso immagine
+	        ImageIcon pokerImage = new ImageIcon("src/main/resources/immagini/pokermenu.png"); // Sostituisci con il tuo percorso immagine
+	        ImageIcon blackjackImage = new ImageIcon("src/main/resources/immagini/blackjackmenu.png"); // Sostituisci con il tuo percorso immagine
+	        ImageIcon rouletteImage = new ImageIcon("src/main/resources/immagini/roulettemenu.png"); // Sostituisci con il tuo percorso immagine
 
 	        // Creazione dei bottoni con le immagini
 	        JButton pokerButton = new JButton(pokerImage);
@@ -54,7 +51,7 @@ public class MenuGiochi {
 	        // Rendi il frame visibile
 	        frame.setVisible(true);
 
-	        // Azioni dei bottoni, da implementare in seguito
+	        // Azioni dei bottoni
 	        pokerButton.addActionListener(new ActionListener() {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
@@ -79,7 +76,6 @@ public class MenuGiochi {
 	                RouletteModel model = new RouletteModel();
 	                RouletteController controller = new RouletteController();
 	                SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
-
 	            }
 	        });
 	    }

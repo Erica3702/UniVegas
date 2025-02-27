@@ -92,6 +92,7 @@ public class MenuUtente {
 	            @Override
 	            public void actionPerformed(ActionEvent e) {
 	                Registrazione.showRegisrationFrame(); // Apri la finestra di registrazione
+	                frame.dispose();
 	            }
 	       });
 	 }
