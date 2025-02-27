@@ -17,7 +17,6 @@ public class RoulettePanel extends JPanel {
     private Timer ballAnimationTimer; // Timer per l'animazione della pallina
     private double ballAngle = 270; // Angolo iniziale della pallina
     private double ballSpeed; // Velocità della pallina
-    private int radius; // Raggio della traiettoria della pallina
     private Image wheelImage; // Immagine della ruota (non ridimensionata)
     private final RouletteModel model; // Riferimento al modello
     private int currentRadius; // Raggio corrente della traiettoria
@@ -32,14 +31,12 @@ public class RoulettePanel extends JPanel {
         this.currentRadius = maxRadius;
     }
 
-
-    //Avvia animazione pallina
     public void startBallAnimation() {
         if (ballAnimationTimer != null && ballAnimationTimer.isRunning()) {
             ballAnimationTimer.stop();
         }
 
-        angle = 0; // Resetta l'angolo di rotazione
+        angle = 0; // Reta l'angolo di rotazione
         Random random = new Random();
         ballSpeed = random.nextInt(21)+60;
 
@@ -47,8 +44,6 @@ public class RoulettePanel extends JPanel {
     	currentRadius = wheelImage.getWidth(null) / 2 - 30;
         ballAnimationTimer.start();
     }
-
-
 
     private void animateBall() {
     	if (ballSpeed > 0.1) {
@@ -75,8 +70,6 @@ public class RoulettePanel extends JPanel {
 
         repaint(); // Ridisegna il pannello
     }
-
-
 
     @Override
     protected void paintComponent(Graphics g) {
