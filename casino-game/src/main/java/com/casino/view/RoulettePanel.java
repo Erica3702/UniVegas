@@ -27,6 +27,7 @@ public class RoulettePanel extends JPanel {
         this.model = model;
         ImageIcon wheelIcon = new ImageIcon("src/main/resources/immagini/ruota.png");
         wheelImage = wheelIcon.getImage();
+       
         this.maxRadius = wheelImage.getWidth(null) / 2 - 30; // Raggio massimo
         this.currentRadius = maxRadius;
     }

@@ -67,7 +67,9 @@ public class Login {
 	                // Chiamata al metodo verificaUtente
 	                if (MainController.verificaUtente(username, password)) {
 	                    JOptionPane.showMessageDialog(loginFrame, "Accesso riuscito!");
+	                    loginFrame.dispose();
 	                    MenuGiochi.Start();
+	                    
 
 	                } else {
 	                    JOptionPane.showMessageDialog(loginFrame, "Accesso negato: credenziali errate.");
