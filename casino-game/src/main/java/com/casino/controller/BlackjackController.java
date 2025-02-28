@@ -31,16 +31,19 @@ public class BlackjackController {
     public void stay() {
         view.disableButtons();
         model.revealDealerCard(); // Rivela la prima carta del dealer
-
-        // Il dealer pesca carte fino a raggiungere un punteggio di almeno 17
-        while (model.getDealer().getSum() < 17) {
-            Card card = model.getDeck().drawCard();
-            model.getDealer().addCard(card);
+        if(model.getPlayer().getSum()<=21) {
+        	// Il dealer pesca carte fino a raggiungere un punteggio di almeno 17
+	        while (model.getDealer().getSum() < 17) {
+	            Card card = model.getDeck().drawCard();
+	            model.getDealer().addCard(card);
+	        }
+	        view.updateView();
+	        view.showResult(determineResult());
+	        view.enableNextGameButton(); // Abilita il pulsante "Next Game"
+        }else {
+             view.showResult(determineResult());
+             view.enableNextGameButton(); // Abilita il pulsante "Next Game"	
         }
-
-        view.updateView();
-        view.showResult(determineResult());
-        view.enableNextGameButton(); // Abilita il pulsante "Next Game"
     }
 
     public void nextGame() {

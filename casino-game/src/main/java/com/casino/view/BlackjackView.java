@@ -2,7 +2,6 @@ package com.casino.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionListener;
@@ -32,7 +31,11 @@ public class BlackjackView {
 
         frame = new JFrame("Blackjack");
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setExtendedState(Frame.MAXIMIZED_BOTH);
+        frame.setSize(1100,750);
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
+
+
 
         gamePanel = new JPanel() {
             @Override
