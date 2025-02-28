@@ -10,7 +10,6 @@ import org.apache.logging.log4j.Logger;
 public class DBConnection {
 	private static final Logger logger = LogManager.getLogger(DBConnection.class);
 
-
 	private static final String URL = "jdbc:sqlite:src/main/resources/database/casino.db"; // Usa il database in memoria
 
 	public static Connection connect() {

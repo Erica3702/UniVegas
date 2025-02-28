@@ -30,7 +30,6 @@ public class RouletteView extends JFrame {
     private final RouletteModel model;
 
     public RouletteView(RouletteController controller, RouletteModel model) {
-        // Inizializzazione dei campi final
         this.chipIcon = initializeChipIcon();
         this.bettingPanel = new JPanel();
         this.roulettePanel = new RoulettePanel(model);
@@ -39,8 +38,8 @@ public class RouletteView extends JFrame {
         this.soundManager = new SoundManager();
         loadSounds();
         initializeFrame();
-        setupSpinAndClearButtons(); // Configurazione dei pulsanti SPIN e CLEAR  
-        setupTotalBetLabel(); // Configurazione dell'etichetta della puntata totale
+        setupSpinAndClearButtons();  
+        setupTotalBetLabel();
     }
  
     private void initializeFrame() {
@@ -49,14 +48,15 @@ public class RouletteView extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new GridBagLayout());
-        
+        setResizable(false);
+        setVisible(true);
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weighty = 1.0;
         
         initializeRoulettePanel();
         initializeBettingPanel();
-        
+    
      // Configura roulettePanel 
         gbc.gridx = 0;
         gbc.weightx = 0.80; 
@@ -66,9 +66,6 @@ public class RouletteView extends JFrame {
         gbc.gridx = 1;
         gbc.weightx = 0.20;  
         add(bettingPanel, gbc);
-        
-        setResizable(false);
-        setVisible(true);
     }
 
     private void initializeRoulettePanel() {
