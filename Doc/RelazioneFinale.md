@@ -7,7 +7,7 @@
 ### Progetto a cura di:
 - Cattaneo Luca, matricola 1079489
 - Locatelli Erica, matricola 1081101
-- Tacuri Rodrigo, matricola 1073963 (??????)
+
 
 ## Indice
 1. Project Plan
@@ -32,7 +32,7 @@
 ### Software Engineering Management 
  ## 1. Project plan
   Il seguente project plan si riferisce al progetto di ingegneria del Software a.a. 24/25 e consiste nello sviluppo di un casinò virtuale all'interno del quale è 
-  possibile giocare a tre differenti giochi: Blackjack, Poker e Roulette. Le partite si svolgono in modalità singleplayer.
+  possibile giocare a tre differenti giochi: Blackjack e Roulette. Le partite si svolgono in modalità singleplayer.
 
    ## 1.1 Introduzione
   Negli ultimi anni, il settore del gioco d'azzardo online ha registrato una crescita esponenziale, spinta dall'aumento dell'accesso a internet, dall'evoluzione 
@@ -51,7 +51,7 @@
         <th>WON'T</th>
     </tr>
     <tr>
-    <td>Implementazione dei tre giochi: Poker, Blackjack e Roulette</td>
+    <td>Implementazione dei giochi: Blackjack e Roulette</td>
     <td>Possibilità di modificare il profilo utente</td>
     <td>Animazioni e grafica avanzata</td>
     <td>Applicazione per dispositivi mobili</td>
@@ -94,7 +94,7 @@ Questa fase comprende:
 
 #### Implementazione e test
 Durante la fase di implementazione, il team sviluppa i moduli funzionali del software:
-- Realizzazione dei giochi (blackjack, roulette, e poker) in modo 
+- Realizzazione dei giochi in modo 
   incrementale.
 - Integrazione del database per gestire i dati utente.
 - Configurazione della libreria di logging per monitorare e registrare 
@@ -198,14 +198,14 @@ correttive.
 
 | **ID** | **Nome del package**           | **Descrizione**                                                                 | **Responsabile**       | **Output atteso**                               | **Durata prevista** |
 |--------|--------------------------------|---------------------------------------------------------------------------------|------------------------|-------------------------------------------------|---------------------|
-| WP1    | Raccolta requisiti             | Identificazione dei requisiti utilizzando la metodologia MoSCoW.                | Luca e Erica          | Documento dei requisiti.                       | 1 settimana         |
+| WP1    | Raccolta requisiti             | Identificazione dei requisiti utilizzando la metodologia MoSCoW.                | Tutto il team         | Documento dei requisiti.                       | 1 settimana         |
 | WP2    | Progettazione                  | Creazione di diagrammi UML e definizione dell'architettura MVC.                 | Tutto il team                  | Diagrammi UML, struttura del progetto.         | 3 giorni         |
-| WP3    | Configurazione ambiente        | Configurazione di GitHub, Maven, database SQLite e JavaFX(?).                      | Erica               | Ambiente pronto per lo sviluppo.               | 3 giorni         |
+| WP3    | Configurazione ambiente        | Configurazione di GitHub, Maven, database SQLite e JavaSwing.                      | Erica               | Ambiente pronto per lo sviluppo.               | 3 giorni         |
 | WP4    | Sviluppo del Model             | Implementazione della logica applicativa, del database e delle regole di gioco. | Tutto il team                 | Componenti del Model funzionanti.              | 1 settimana         |
 | WP5    | Sviluppo del Controller        | Implementazione della logica che collega il Model con la View.                  | Tutto il team                  | Controller funzionanti e testati.              | 1 settimana         |
 | WP6    | Sviluppo della View            | Creazione dell’interfaccia grafica con JavaSwing.                                  | Tutto il team                | Interfaccia grafica operativa.                 | 1 settimana         |
-| WP7    | Integrazione e testing         | Integrazione dei moduli e test unitari, di integrazione e di sistema.           | Tutto il team          | Software funzionante e testato.                | 1 settimana         |
-| WP8    | Documentazione                 | Creazione della documentazione finale, inclusi manuale utente e report tecnico. | Tutto il team                 | Documentazione completa del progetto.          | 1 settimana         |
+| WP7    | Integrazione e testing         | Integrazione dei moduli e test unitari, di integrazione e di sistema.           | Luca         | Software funzionante e testato.                | 1 settimana         |
+| WP8    | Documentazione                 | Creazione della documentazione finale, inclusi manuale utente e report tecnico. | Erica                 | Documentazione completa del progetto.          | 1 settimana         |
 
   ## 1.11 Risorse
   Le risorse usate dal team sono le seguenti:
@@ -270,7 +270,7 @@ Modifica dei Requisiti:
 Durante lo Sprint 2, abbiamo riscontrato delle difficoltà nella gestione dei token nel blackjack, li abbiamo quindi eliminati.
 
 Ridistribuzione delle Attività:
-A causa di imprevisti tecnici, un membro del gruppo si è ritirato dal progetto, ciò ha richiesto una riorganizzazione delle attività e la mancata implementazione del gioco del Poker, assegnata a quest'ultimo. ????
+A causa di imprevisti tecnici, un membro del gruppo si è ritirato dal progetto, ciò ha richiesto una riorganizzazione delle attività e la mancata implementazione del gioco del Poker, assegnata a quest'ultimo. 
 
 Estensione del Timebox:
 Lo Sprint 3 è stato esteso per consentire il completamento di tutte le attività di testing e documentazione.
