@@ -4,7 +4,6 @@
 ### Progetto a cura di:
 - Cattaneo Luca, matricola 1079489
 - Locatelli Erica, matricola 1081101
-- Tacuri Rodrigo, matricola 1073963
 
 
 ## Indice
