@@ -604,7 +604,9 @@ AGGIUNGERE DOCUMENTAZIONE TEST
 
 ## 6. Maintenance
 ### Software maintenance
-AGGIUNGERE REFACTORING 
+Il refactoring è una pratica di sviluppo software che consiste nel modificare la struttura interna del codice senza cambiarne il comportamento esterno. L'obiettivo principale del refactoring è migliorare la leggibilità, la manutenibilità, la scalabilità e la qualità complessiva del codice, senza introdurre nuovi bug o alterare le funzionalità esistenti. 
+Alcune classi del codice avevano una complessità piuttosto elevata, abbiamo quindi lavorato per risolvere dove possibile i seguenti problemi: metodi eccessivamente lunghi, classi contenenti troppi metodi e il passaggio di un elevato numero di parametri tra i metodi.
+
 La manutenzione di un software rappresenta un processo fondamentale per garantire il suo funzionamento ottimale e la sua continua adattabilità alle mutevoli esigenze degli utenti e dell'ambiente in cui opera. Tale processo si articola in diverse tipologie di intervento:
 
 Manutenzione Correttiva:
