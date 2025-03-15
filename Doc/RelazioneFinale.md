@@ -52,33 +52,27 @@
     </tr>
     <tr>
     <td>Implementazione dei giochi: Blackjack e Roulette</td>
-    <td>Animazioni e grafica avanzata</td>
+    <td>Animazioni e grafica </td>
     <td>Possibilità di modificare il profilo utente</td>
     <td>Applicazione per dispositivi mobili</td>
     </tr>
      <tr>
     <td>Sistema per la gestione degli utenti (registrazione e login)</td>
-    <td>Statistiche dettagliate per ogni utente (vincite e tempo di gioco)</td>
+    <td> Compatibilità con sistemi operativi principali </td>
     <td>Supporto per lingue multiple</td>
     <td>Integrazione con social network</td>
     </tr>
     <tr>
-    <td>Interfaccia grafica user-friendly</td>
+    <td> Gestione degli errori </td>
     <td>Effetti sonori</td>
     <td>Modalità multiplayer sullo stesso pc per competere con altri utenti</td>
     <td>Transazioni con denaro</td>
     </tr>
     <tr>
     <td>Integrazione di un database per la persistenza dei dati</td>
-    <td>Compatibilità con sistemi operativi principali</td>
+    <td> Interfaccia grafica user-friendly </td>
     <td>Sistema di tutorial per i nuovi giocatori</td>
-    <td>Chat in tempo reale tra giocatori</td>
-    </tr>
-    <tr>
-    <td>Gestione degli errori</td>
-    <td>Forum per segnalazioni di bug/suggerimenti</td> 
-    <td>Integrazione di un sistema di premi virtuali</td>
-    <td>Modalità multiplayer su pc diversi</td>
+    <td>Modalità multiplayer su pc diversi</ </td>
     </tr>
 </table>
 
@@ -321,36 +315,31 @@ Kanban Board: Utilizzato per visualizzare lo stato delle attività e migliorare 
         <th>WON'T</th>
     </tr>
     <tr>
-    <td>Implementazione dei tre giochi: Poker, Blackjack e Roulette</td>
+    <td>Implementazione dei giochi: Blackjack e Roulette</td>
+    <td>Animazioni e grafica </td>
     <td>Possibilità di modificare il profilo utente</td>
-    <td>Animazioni e grafica avanzata</td>
     <td>Applicazione per dispositivi mobili</td>
     </tr>
      <tr>
     <td>Sistema per la gestione degli utenti (registrazione e login)</td>
-    <td>Statistiche dettagliate per ogni utente (vincite e tempo di gioco)</td>
+    <td> Compatibilità con sistemi operativi principali </td>
     <td>Supporto per lingue multiple</td>
     <td>Integrazione con social network</td>
     </tr>
     <tr>
-    <td>Interfaccia grafica user-friendly</td>
+    <td> Gestione degli errori </td>
+    <td>Effetti sonori</td>
     <td>Modalità multiplayer sullo stesso pc per competere con altri utenti</td>
-    <td>Modalità multiplayer su pc diversi</td>
     <td>Transazioni con denaro</td>
     </tr>
     <tr>
     <td>Integrazione di un database per la persistenza dei dati</td>
-    <td>Compatibilità con sistemi operativi principali</td>
+    <td> Interfaccia grafica user-friendly </td>
     <td>Sistema di tutorial per i nuovi giocatori</td>
-    <td>Chat in tempo reale tra giocatori</td>
-    </tr>
-    <tr>
-    <td>Gestione degli errori</td>
-    <td>Forum per segnalazioni di bug/suggerimenti</td> 
-        <td>Integrazione di un sistema di premi virtuali</td>
-    <td></td>
+    <td>Modalità multiplayer su pc diversi</ </td>
     </tr>
 </table>
+
 
 ##  Requisiti funzionali: 
 ### Sistema per la gestione degli utenti
@@ -416,7 +405,7 @@ Portabilità: Abbiamo progettato il software per essere compatibile con diverse 
 
 Riusabilità: Abbiamo cercato di massimizzare la riusabilità del codice, creando componenti modulari che possono essere facilmente riutilizzati in altri progetti o contesti.
 
-![image](https://github.com/user-attachments/assets/4f4a820c-8705-4111-a556-9210fe17ecb2)
+![image](https://github.com/user-attachments/assets/4f4a820c-8705-4111-a556-9210fe17ecb2) 
 
 
 ## 4. Design
