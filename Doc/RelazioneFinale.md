@@ -52,8 +52,8 @@
     </tr>
     <tr>
     <td>Implementazione dei giochi: Blackjack e Roulette</td>
-    <td>Possibilità di modificare il profilo utente</td>
     <td>Animazioni e grafica avanzata</td>
+    <td>Possibilità di modificare il profilo utente</td>
     <td>Applicazione per dispositivi mobili</td>
     </tr>
      <tr>
@@ -64,8 +64,8 @@
     </tr>
     <tr>
     <td>Interfaccia grafica user-friendly</td>
+    <td>Effetti sonori</td>
     <td>Modalità multiplayer sullo stesso pc per competere con altri utenti</td>
-    <td>Modalità multiplayer su pc diversi</td>
     <td>Transazioni con denaro</td>
     </tr>
     <tr>
@@ -77,18 +77,15 @@
     <tr>
     <td>Gestione degli errori</td>
     <td>Forum per segnalazioni di bug/suggerimenti</td> 
-        <td>Integrazione di un sistema di premi virtuali</td>
-    <td></td>
+    <td>Integrazione di un sistema di premi virtuali</td>
+    <td>Modalità multiplayer su pc diversi</td>
     </tr>
 </table>
 
 #### Progettazione 
-Dopo la definizione dei requisiti, il team si è dedicato alla progettazione del sistema. La fase di progettazione è stato il punto di riperimento per l'organizzazione del tempo, la creazione degli issues e la pianificazione degli sprint.
-Questa fase comprende:
-- La creazione di diagrammi UML per rappresentare la struttura e il 
-  comportamento del sistema.
-- La progettazione dell’architettura software, identificando i moduli 
-  principali e il loro collegamento.
+Dopo la definizione dei requisiti, il team si è dedicato alla progettazione del sistema. Questa fase è stata il punto di riferimento per l'organizzazione del tempo, la creazione degli issue e la pianificazione degli sprint. La fase di progettazione comprende:
+- La creazione di diagrammi UML per rappresentare la struttura e il comportamento del sistema.
+- La progettazione dell’architettura software, identificando i moduli principali e il loro collegamento.
 - La progettazione del database per garantire la persistenza dei dati.
 - La definizione della GUI, con Swing come framework grafico.
 
@@ -167,8 +164,6 @@ correttive.
 - Strumenti di gestione:
   - GitHub Projects per tracciare attività, assegnare 
     responsabilità e monitorare lo stato di avanzamento.
-  - Git per il controllo del versionamento del codice, utilizzando 
-    strategie come Git Flow per la gestione dei rami.
 - Progettazione UML: il sistema è stato progettato utilizzando i diagrammi 
   UML, tra cui:  use case diagram, class diagram, state machine diagram, 
   sequence diagram, communication diagram/timing diagram, activity diagram 
@@ -225,8 +220,8 @@ correttive.
   documentazione dettagliata che illustri il motivo della modifica e i benefici che essa comporterebbe.
 
   ## 1.14 Consegna
-La consegna del progetto è prevista per cinque giorni prima dell'esame scritto, mentre il project plan deve essere consegnato un mese prima dell'esame. 
-Il team si impegna,inoltre, ad effettuare un'ultima revisione prima della pubblicazione finale del progetto.
+La consegna del progetto è prevista per cinque giorni prima dell'esame orale, mentre il project plan deve essere consegnato un mese prima. 
+Il team si impegna, inoltre, ad effettuare una revisione finale prima della pubblicazione del progetto.
 
 ## 2. Gestione del Progetto
 ### Software Life Cycle
@@ -239,26 +234,31 @@ Abbiamo organizzato il progetto in sprint della durata di 2 settimane, seguendo 
 
 #### Timebox e Sprint
 ##### Sprint 1:
-Obiettivo: Definizione dei requisiti e progettazione dell'architettura.
-Attività:
-Brainstorming iniziale e raccolta dei requisiti.
-Creazione del Project Plan e del Product Backlog.
-Progettazione dell'architettura MVC e dei diagrammi UML iniziali (Use Case, Class Diagram).
+Obiettivo: 
+- Definizione dei requisiti e progettazione dell'architettura.
+
+Attività: 
+- Brainstorming iniziale e raccolta dei requisiti.
+- Creazione del Project Plan e del Product Backlog.
+- Progettazione dell'architettura MVC e dei diagrammi UML iniziali (Use Case, Class Diagram).
 
 ##### Sprint 2:
-Obiettivo: Implementazione e connessione database.
+Obiettivo: 
+- Implementazione e connessione database.
+  
 Attività:
-Sviluppo del controller, view e model.
-Connessione con il database per login e registrazione.
+- Sviluppo del controller, view e model.
+- Connessione con il database per login e registrazione.
 
 ##### Sprint 3:
-Obiettivo: Testing, debugging e miglioramenti finali.
+Obiettivo: 
+- Testing, debugging e miglioramenti finali.
 
 Attività:
-Esecuzione di test funzionali e correzione dei bug.
-Ottimizzazione delle prestazioni e refactoring del codice.
+- Esecuzione di test funzionali e correzione dei bug.
+- Ottimizzazione delle prestazioni e refactoring del codice.
+- Preparazione della documentazione finale.
 
-Preparazione della documentazione finale.
 ### 3. Differenze Rispetto al Project Plan
 Durante lo sviluppo, abbiamo riscontrato alcune differenze rispetto a quanto previsto nel Project Plan iniziale:
 
@@ -288,23 +288,19 @@ Nel progetto UniVegas, abbiamo adottato l'approccio Scrum, che prevede un'organi
 
 #### Ruoli in Scrum
 #### Product Owner (PO)
-Responsabilità: Il Product Owner è stato responsabile della definizione e della priorizzazione del Product Backlog, garantendo che il team sviluppasse le funzionalità più importanti per il progetto.
-Persona: Erica.
-Attività:Raccolta e definizione dei requisiti.
-Approvazione delle funzionalità completate alla fine di ogni sprint.
+- Responsabilità: Il Product Owner è stato responsabile della definizione e della priorizzazione del Product Backlog, garantendo che il team sviluppasse le funzionalità più importanti per il progetto.
+- Persona: Erica.
+- Attività: Raccolta e definizione dei requisiti, approvazione delle funzionalità completate alla fine di ogni sprint.
 
 #### Scrum Master (SM)
-Responsabilità: Lo Scrum Master ha facilitato il processo Scrum, rimuovendo gli ostacoli e garantendo che il team rispettasse le pratiche e i principi di Scrum.
-Persona: Luca.
-Attività: Organizzazione delle riunioni (Daily Stand-up, Sprint Planning, Sprint Review, Sprint Retrospective). Monitoraggio del progresso del team e del rispetto dei timebox.
-Supporto al team nella risoluzione di problemi organizzativi o tecnici.
+- Responsabilità: Lo Scrum Master ha facilitato il processo Scrum, rimuovendo gli ostacoli e garantendo che il team rispettasse le pratiche e i principi di Scrum.
+- Persona: Luca.
+- Attività: Organizzazione delle riunioni (Daily Stand-up, Sprint Planning, Sprint Review, Sprint Retrospective). Monitoraggio del progresso del team e del rispetto dei timebox, supporto al team nella risoluzione di problemi organizzativi o tecnici.
 
 #### Development Team
-Responsabilità: Il Development Team è stato responsabile dello sviluppo del prodotto, dalla progettazione all'implementazione e al testing.
-Persone: Erica e Luca.
-Attività: Implementazione delle user story assegnate durante lo sprint.
-Collaborazione nella progettazione e nel codice (pair programming, code review).
-Esecuzione dei test e correzione dei bug.
+- Responsabilità: Il Development Team è stato responsabile dello sviluppo del prodotto, dalla progettazione all'implementazione e al testing.
+- Persone: Erica e Luca.
+- Attività: Implementazione delle user story assegnate durante lo sprint, collaborazione nella progettazione e nel codice (pair programming, code review) e esecuzione dei test e correzione dei bug.
 
 #### Collaborazione e Comunicazione
 La collaborazione tra i membri del team è stata favorita da:
@@ -358,7 +354,7 @@ Kanban Board: Utilizzato per visualizzare lo stato delle attività e migliorare 
 
 ##  Requisiti funzionali: 
 ### Sistema per la gestione degli utenti
-- Il sistema deve consentire agli utenti di regiostrarsi con nome utente e password 
+- Il sistema deve consentire agli utenti di registrarsi con nome utente e password 
 - Gli utenti devono poter effetturare login 
 ### Gestione dei giochi
 - L'utente deve poter accedere ai giochi
@@ -372,11 +368,8 @@ Kanban Board: Utilizzato per visualizzare lo stato delle attività e migliorare 
 - Il caricamento della schermata iniziale deve essere rapido
 - Le partite devono rispondere in tempo reale senza lag
 
-### Scalabilità
--  Il sistema deve supportare più utenti contemporanei senza degrado delle prestazioni.
 
 ### Sicurezza
-- Le password degli utenti devono essere salvate nel database in forma crittografata
 - L’accesso ai dati sensibili degli utenti deve essere limitato agli utenti autenticati
 
 ### Manutenibilità
@@ -600,7 +593,8 @@ VEDI DESIGN PATTERN
 
 ## 5. Testing
 ### Software Testing
-AGGIUNGERE DOCUMENTAZIONE TEST
+Per garantire una buona copertura del sistema e verificare che i singoli moduli del sistema sviluppato funzionassero correttamente, abbiamo implementato test automatici con il framework JUnit4. L'implementazione dei test unitari è stata eseguita nella directory src/test/java, creando un "JUnit Test Case" per le classi principali, denominato "NomeClasseTest".  I test sono stati svolti per verificare il corretto funzionamento dei metodi analizzati, simulando l'input e confrontando l'output con quello atteso tramite la funzione "assertEquals".
+
 
 ## 6. Maintenance
 ### Software maintenance
