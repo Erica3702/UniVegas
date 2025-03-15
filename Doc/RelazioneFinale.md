@@ -234,10 +234,6 @@ Il team si impegna,inoltre, ad effettuare un'ultima revisione prima della pubbli
 Per lo sviluppo del progetto UniVegas, abbiamo adottato un approccio Agile basato sul framework Scrum. Questo metodo ci ha permesso di gestire il progetto in modo iterativo e incrementale, 
 garantendo flessibilità e adattabilità ai cambiamenti durante lo sviluppo.
 
-Motivazione della Scelta
-Flessibilità: L'approccio Agile ci ha permesso di adattarci rapidamente ai cambiamenti nei requisiti o nelle priorità.
-Collaborazione: Scrum favorisce una stretta collaborazione tra i membri del team e con gli stakeholder.
-
 ### 2. Organizzazione del Progetto
 Abbiamo organizzato il progetto in sprint della durata di 2 settimane, seguendo il classico ciclo di Scrum. Ogni sprint è stato pianificato, eseguito e revisionato per garantire il raggiungimento degli obiettivi.
 
@@ -280,8 +276,11 @@ Lo Sprint 3 è stato esteso per consentire il completamento di tutte le attivit�
 La gestione della configurazione è stata un aspetto fondamentale per garantire il controllo delle versioni del codice, la tracciabilità delle modifiche e la collaborazione efficace tra i membri del team. Abbiamo adottato una combinazione di strumenti e pratiche per gestire il codice sorgente, le attività e i rilasci.
 
 ### 2. Strumenti utilizzati
-GitHub: Abbiamo utilizzato GitHub per ospitare il repository del progetto, garantendo un accesso centralizzato al codice sorgente. Ogni merge request è stata sottoposta a una revisione del codice da parte di almeno un altro membro del team per garantire la qualità del codice.
-KanbanBoard: Abbiamo utilizzato la Kanban Board per gestire le attività del progetto. Ogni attività è stata rappresentata come una card, organizzata in colonne corrispondenti agli stati del flusso di lavoro (ad esempio, "To Do", "In Progress", "Revision", "Done"). la Kanban Board ci ha permesso di visualizzare lo stato delle attività in tempo reale e di identificare eventuali colli di bottiglia.
+GitHub: Abbiamo utilizzato GitHub per ospitare il repository del progetto, garantendo un accesso centralizzato al codice sorgente. Ogni merge request è stata sottoposta a una revisione del codice da parte di un altro membro del team per garantire la qualità del codice.
+KanbanBoard: Abbiamo utilizzato una Kanban Board per gestire le attività del progetto. Ogni attività è stata rappresentata come un issue, organizzata in colonne corrispondenti agli stati del flusso di lavoro (ad esempio, "To Do", "In Progress", "Revision", "Done"). La Kanban Board ci ha permesso di visualizzare lo stato delle attività in tempo reale e di identificare eventuali colli di bottiglia.
+
+![image](https://github.com/user-attachments/assets/f5b081b8-5744-4d12-bdb0-4c1c07131b8a)
+
 
 ### People Management and Team Organisation
 #### Organizzazione del Team
@@ -312,12 +311,51 @@ La collaborazione tra i membri del team è stata favorita da:
 
 Riunioni Regolari: Daily Stand-up, Sprint Planning, Sprint Review, Sprint Retrospective.
 
-Strumenti di Comunicazione: Abbiamo utilizzato strumenti come [Slack, Microsoft Teams, ecc.] per la comunicazione quotidiana.
+Strumenti di Comunicazione: Abbiamo utilizzato strumenti come [E-Mail, Gogle Meet, Whatsapp, ecc.] per la comunicazione quotidiana.
 
 Kanban Board: Utilizzato per visualizzare lo stato delle attività e migliorare la trasparenza del lavoro.
 
 ## 3. Requisiti
-### Requirements Engineering AGGIUNGERE TABELLA MOSCOW 
+### Requirements Engineering 
+<table>
+    <tr>
+        <th>MUST HAVE</th>
+        <th>SHOULD HAVE</th>
+        <th>COULD HAVE</th>
+        <th>WON'T</th>
+    </tr>
+    <tr>
+    <td>Implementazione dei tre giochi: Poker, Blackjack e Roulette</td>
+    <td>Possibilità di modificare il profilo utente</td>
+    <td>Animazioni e grafica avanzata</td>
+    <td>Applicazione per dispositivi mobili</td>
+    </tr>
+     <tr>
+    <td>Sistema per la gestione degli utenti (registrazione e login)</td>
+    <td>Statistiche dettagliate per ogni utente (vincite e tempo di gioco)</td>
+    <td>Supporto per lingue multiple</td>
+    <td>Integrazione con social network</td>
+    </tr>
+    <tr>
+    <td>Interfaccia grafica user-friendly</td>
+    <td>Modalità multiplayer sullo stesso pc per competere con altri utenti</td>
+    <td>Modalità multiplayer su pc diversi</td>
+    <td>Transazioni con denaro</td>
+    </tr>
+    <tr>
+    <td>Integrazione di un database per la persistenza dei dati</td>
+    <td>Compatibilità con sistemi operativi principali</td>
+    <td>Sistema di tutorial per i nuovi giocatori</td>
+    <td>Chat in tempo reale tra giocatori</td>
+    </tr>
+    <tr>
+    <td>Gestione degli errori</td>
+    <td>Forum per segnalazioni di bug/suggerimenti</td> 
+        <td>Integrazione di un sistema di premi virtuali</td>
+    <td></td>
+    </tr>
+</table>
+
 ##  Requisiti funzionali: 
 ### Sistema per la gestione degli utenti
 - Il sistema deve consentire agli utenti di regiostrarsi con nome utente e password 
@@ -356,16 +394,43 @@ Kanban Board: Utilizzato per visualizzare lo stato delle attività e migliorare 
 
 ![useCase](https://github.com/user-attachments/assets/2b0e7b76-0b32-43c9-82fc-2793b806d010)
 
-## Software Quality USARE SOFTWARE QUALITY DI MCCALL
-Durante lo sviluppo di UniVegas, ci siamo focalizzati su una serie di qualità chiave che hanno guidato le nostre decisioni e il nostro approccio al lavoro. Queste qualità non solo hanno influenzato il processo di sviluppo, ma hanno anche contribuito al successo del progetto nel suo complesso. Ecco le principali:
-USARE SOFTWARE QUALITY DI MCCALL
+## Software Quality 
+Durante lo sviluppo di UniVegas, ci siamo focalizzati su una serie di qualità chiave che hanno guidato le nostre decisioni e il nostro approccio al lavoro. Queste qualità non solo hanno influenzato il processo di sviluppo, ma hanno anche contribuito al successo del progetto nel suo complesso. Per garantire un prodotto di alta qualità, abbiamo adottato il modello di qualità del software di McCall, che ci ha permesso di valutare e migliorare il software sotto diversi aspetti. Di seguito sono riportate le principali qualità su cui ci siamo concentrati, organizzate secondo le tre categorie del modello di McCall:
+### Operational Quality 
+La qualità operativa si riferisce alla capacità del software di funzionare correttamente durante l'esecuzione. Le caratteristiche principali su cui ci siamo concentrati sono:
+
+Correttezza: Abbiamo garantito che il software soddisfacesse tutti i requisiti funzionali e non funzionali definiti durante la fase di analisi. Attraverso i test, abbiamo verificato che il comportamento del sistema fosse conforme alle specifiche.
+
+Affidabilità: Il sistema è stato progettato per essere robusto e resistente a guasti. Abbiamo implementato meccanismi di gestione degli errori e di recupero per garantire che il software funzionasse in modo affidabile anche in condizioni non ideali.
+
+Efficienza: Abbiamo ottimizzato le prestazioni del software, riducendo i tempi di risposta e minimizzando l'utilizzo delle risorse di sistema. Questo è stato particolarmente importante per garantire un'esperienza utente fluida e reattiva.
+
+Integrità: La sicurezza dei dati è stata una priorità. Abbiamo implementato meccanismi di autenticazione e autorizzazione per proteggere le informazioni sensibili e prevenire accessi non autorizzati.
+
+Usabilità: L'interfaccia utente è stata progettata per essere intuitiva e facile da usare. Abbiamo condotto test di usabilità con utenti reali per raccogliere feedback e migliorare l'esperienza complessiva.
+### Revision Quality 
+La qualità di revisione si riferisce alla capacità del software di essere modificato e mantenuto nel tempo. Le caratteristiche principali su cui ci siamo concentrati sono:
+
+Manutenibilità: Il codice è stato scritto seguendo buone pratiche di programmazione, come l'uso di commenti, nomi significativi per variabili e funzioni, e una struttura modulare. Questo ha reso il codice più facile da comprendere e modificare.
+
+Flessibilità: Abbiamo progettato il sistema in modo che fosse facile da estendere e adattare a nuovi requisiti. L'uso di design pattern e principi di programazione orientata agli oggetti ha contribuito a raggiungere questo obiettivo.
+
+Testabilità: Il software è stato progettato per essere facilmente testabile. Abbiamo scritto test automatizzati per garantire che le modifiche future non introducessero regressioni.
+### Transition Quality
+La qualità di transizione si riferisce alla capacità del software di adattarsi a nuovi ambienti o di essere integrato con altri sistemi. Le caratteristiche principali su cui ci siamo concentrati sono:
+
+Portabilità: Abbiamo progettato il software per essere compatibile con diverse macchine. 
+
+Riusabilità: Abbiamo cercato di massimizzare la riusabilità del codice, creando componenti modulari che possono essere facilmente riutilizzati in altri progetti o contesti.
+
+![image](https://github.com/user-attachments/assets/4f4a820c-8705-4111-a556-9210fe17ecb2)
+
 
 ## 4. Design
 ### Modelling 
 INSERIre IMMAGINI DIAGRAMMI 
 
 ### Software Architecture
- VEDERE PARTE ARCHITECTURAL VIEWS
 Per il progetto UniVegas, abbiamo adottato l'architettura Model-View-Controller (MVC), un pattern architetturale che separa la logica dell'applicazione in tre componenti principali: Model, View e Controller. Questa scelta ci ha permesso di mantenere il codice ben organizzato, modulare e facile da mantenere.
 ### Model
 Contiene le classi che rappresentano la logica dell'applicazione e i dati.
@@ -397,3 +462,185 @@ Contiene classi di utilità (es. connessione al database).
 ### Data Access Object
 Il package DAO contiene le classi per l'accesso ai dati, implementando il pattern Data Access Object per separare la logica di accesso ai dati dalla logica di business.
 - UserDAO: contiene i metodi per gestire i dati degli utenti
+
+### Architectural views
+Per descrivere in modo completo l'architettura del sistema, abbiamo adottato il modello 4+1 View Model di Philippe Kruchten. Questo modello ci ha permesso di rappresentare il sistema da diverse prospettive, garantendo che tutti gli aspetti chiave fossero adeguatamente documentati.
+
+![image](https://github.com/user-attachments/assets/2b1fd07c-e81a-4d20-b00a-473e1540d9ee)
+
+### Logical View (Vista Logica)
+La Logical View descrive la struttura del sistema in termini di componenti software e relazioni tra di essi. Nel nostro progetto, abbiamo adottato un'architettura MVC (Model-View-Controller), che separa chiaramente la logica di business, l'interfaccia utente e il controllo dell'applicazione.
+
+Model: Rappresenta i dati e la logica di business del sistema. Ad esempio, il BlackjackModel e il RouletteModel contengono le regole dei giochi e gestiscono lo stato delle partite, mentre User gestisce le informazioni del giocatore.
+
+View: Si occupa della visualizzazione dei dati all'utente. Le classi come BlackjackView e RouletteView definiscono l'interfaccia grafica dei giochi, mostrando il tavolo da gioco, le carte, i pulsanti per le scommesse e i messaggi di feedback.
+
+Controller: Gestisce l'interazione tra il Model e la View. I controller, come BlackjackController e RouletteController, elaborano gli input dell'utente e aggiornano il Model di conseguenza.
+
+Diagrammi utilizzati:
+
+Diagrammi di classe UML per rappresentare le classi del Model, View e Controller.
+
+Diagrammi di package per mostrare l'organizzazione modulare del sistema.
+
+### Development View (Vista di Sviluppo)
+La Development View si concentra sull'organizzazione del codice sorgente e delle dipendenze tra i moduli. Per garantire una struttura chiara e manutenibile, abbiamo organizzato il progetto in directory e package ben definiti:
+
+model/: Contiene le classi del Model.
+
+view/: Contiene le interfacce utente.
+
+controller/: Contiene i Controller.
+
+utils/: Include la connessione al database.
+
+test/: Contiene i test unitari e di integrazione per garantire la qualità del codice.
+
+Diagrammi utilizzati:
+
+Diagrammi di componenti per mostrare le dipendenze tra i moduli.
+
+### Process View (Vista dei Processi)
+La Process View descrive il comportamento dinamico del sistema, con particolare attenzione ai processi, ai thread e alle interazioni tra i componenti. Nel nostro progetto, ci siamo concentrati sui seguenti aspetti:
+
+Flusso di gioco: Descrive come l'utente interagisce con il sistema durante una partita. Ad esempio, in una partita di Roulette, l'utente piazza una scommessa, il Controller aggiorna il Model e la View mostra il risultato.
+
+Gestione delle sessioni: Illustra come il sistema gestisce l'avvio e la fine di una partita, oltre all'aggiornamento del saldo del giocatore.
+
+Diagrammi utilizzati:
+
+Diagrammi di sequenza UML per mostrare le interazioni tra Model, View e Controller durante un flusso di gioco.
+
+Diagrammi di attività per descrivere i passaggi di una partita.
+
+### Physical View (Vista Fisica)
+La Physical View descrive l'infrastruttura hardware e la distribuzione del sistema. Sebbene il nostro progetto sia un'applicazione singleplayer, abbiamo comunque considerato i seguenti aspetti:
+
+Ambiente di esecuzione: Il software è progettato per essere eseguito su PC desktop con sistemi operativi Windows, macOS e Linux.
+
+### Scenarios (Vista degli Scenari)
+La Scenarios View combina elementi delle altre viste per descrivere casi d'uso specifici o scenari di funzionamento del sistema. Per il nostro progetto, abbiamo identificato i seguenti scenari principali:
+
+Casi d'uso:
+
+Un utente avvia una partita di Blackjack.
+
+Un utente piazza una scommessa alla Roulette.
+
+Un utente visualizza il saldo corrente.
+
+Scenari di errore:
+
+Cosa succede se l'utente tenta di piazzare una scommessa superiore al saldo disponibile.
+
+Diagrammi utilizzati:
+
+Diagrammi di casi d'uso UML per mostrare le interazioni tra l'utente e il sistema.
+
+Diagrammi di sequenza per descrivere scenari specifici.
+
+L'uso delle architectural views ci ha permesso di documentare in modo completo e strutturato l'architettura del sistema UniVegas. Grazie a questo approccio, abbiamo garantito che tutti gli aspetti del sistema fossero chiaramente rappresentati, facilitando la comunicazione e supportando lo sviluppo, il testing e il mantenimento del software.
+
+### Software design
+Il design del sistema è basato sull'architettura MVC (Model-View-Controller), che separa chiaramente la logica di business (Model), l'interfaccia utente (View) e il controllo dell'applicazione (Controller). Di seguito sono riportati i diagrammi UML principali.
+
+Diagramma delle Classi (Class Diagram)
+Il diagramma delle classi mostra la struttura statica del sistema, con le classi principali e le relazioni tra di esse.
+
+Diagramma delle Classi
+METTI IMMAGINE
+
+
+
+Diagramma di Sequenza (Sequence Diagram)
+Il diagramma di sequenza descrive il flusso di interazione tra gli oggetti durante una partita di Blackjack.
+
+Diagramma di Sequenza
+METTI IMMAGINE
+
+### Calcolo della Complessità (McCabe)
+Per valutare la complessità del codice, abbiamo utilizzato la metrica di complessità ciclomatica di McCabe. Questa metrica misura il numero di cammini linearmente indipendenti attraverso un metodo, aiutando a identificare codice potenzialmente complesso e difficile da mantenere.
+### Esempio: il metodo determineResult in BlackjackController
+
+ 
+ public String determineResult() {
+        
+        int playerSum = model.getPlayer().reduceAce();
+        int dealerSum = model.getDealer().reduceAce();
+        
+        if (playerSum > 21) {
+            return "Hai Perso!";
+        } else if (dealerSum > 21) {
+            return "Hai Vinto!";
+        } else if (playerSum == dealerSum) {
+            return "Pareggio!";
+        } else if (playerSum > dealerSum) {
+            return "Hai Vinto!";
+        } else {
+            return "Hai Perso!";
+        }
+    }
+    
+La complessità ciclomatica V(G) può essere calcolata utilizzando la formula:
+
+V(G)=E−N+2= 10-7+1=4
+
+Dove:
+
+E = Numero di archi nel grafo di controllo (flusso del programma).
+
+N = Numero di nodi nel grafo di controllo (blocchi di codice).
+
+Valore 4: Indica che il metodo ha una complessità moderata. Un valore inferiore a 10 è generalmente considerato accettabile e gestibile.
+
+### Metriche del codice
+VEDI STRUCTURE 101
+
+VEDI DESIGN PATTERN
+
+## 5. Testing
+### Software Testing
+AGGIUNGERE DOCUMENTAZIONE TEST
+
+## 6. Maintenance
+### Software maintenance
+AGGIUNGERE REFACTORING 
+La manutenzione di un software rappresenta un processo fondamentale per garantire il suo funzionamento ottimale e la sua continua adattabilità alle mutevoli esigenze degli utenti e dell'ambiente in cui opera. Tale processo si articola in diverse tipologie di intervento:
+
+Manutenzione Correttiva:
+
+Interventi volti alla risoluzione tempestiva di errori e malfunzionamenti riscontrati durante l'uso del sistema.
+Esempio: Correzione di un bug nel calcolo del punteggio nel gioco del Blackjack.
+
+Manutenzione Perfettiva:
+
+Implementazione di nuove funzionalità richieste dagli utenti o ottimizzazione delle prestazioni dell'applicativo.
+Esempio: Aggiunta di un nuovo gioco (ad esempio, Poker) o miglioramento dell'interfaccia utente.
+
+Manutenzione Preventiva:
+
+Interventi proattivi per prevenire futuri problemi e migliorare la manutenibilità complessiva del software.
+Esempio: Refactoring del codice per ridurre la complessità ciclomatica o migliorare la modularità.
+
+### Strategie di Manutenzione
+Per garantire una manutenzione efficace e continua, abbiamo adottato le seguenti strategie:
+
+ 1. Documentazione Completa
+Tutte le funzionalità del sistema sono documentate in modo dettagliato, inclusi diagrammi UML, descrizioni dei design pattern e metriche di qualità.
+La documentazione è aggiornata regolarmente per riflettere le modifiche apportate al sistema.
+
+ 2. Codice Modulare e Ben Strutturato
+Il sistema è stato progettato seguendo i principi dell'architettura MVC (Model-View-Controller), che separa chiaramente la logica di business, l'interfaccia utente e il controllo dell'applicazione.
+L'uso di design pattern come AGGIUNGERE migliora la manutenibilità e l'estensibilità del codice.
+
+ 3. Versionamento del Codice
+Il codice è gestito utilizzando un sistema di versionamento (Git) con piattaforme come GitHub o GitLab.
+Ogni modifica è tracciata attraverso commit descrittivi, e le funzionalità sono sviluppate in branch separati per facilitare il merging e il rollback.
+
+ 4. Test Automatici
+Sono stati implementati test unitari e di integrazione per garantire che le modifiche non introducano regressioni.
+Per garantire che il sistema rimanga funzionale e aggiornato, abbiamo definito un piano di manutenzione che include:
+Monitoraggio Continuo: raccolta di feedback dagli utenti per identificare bug o miglioramenti.
+Aggiornamenti Periodici:revisione e aggiornamento del codice per supportare nuove tecnologie o requisiti.
+Refactoring: miglioramento continuo della struttura del codice per ridurre la complessità e migliorare la manutenibilità.
+Formazione del Team: formazione continua del team di sviluppo sulle best practice di manutenzione del software.
