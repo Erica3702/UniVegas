@@ -589,7 +589,12 @@ Valore 4: Indica che il metodo ha una complessità moderata. Un valore inferiore
 ### Metriche del codice
 VEDI STRUCTURE 101
 
-VEDI DESIGN PATTERN
+Nel sistema software sono stati integrati due design pattern:
+
+- Singleton: garantisce che ci sia una sola connessione al database, che viene condivisa con tutto il sistema, evitando di aprire più connessioni e quindi consumare risorse inutilmente, riducendo il sovraccarico e migliorando le prestazioni.
+
+- Pattern architetturale MVC: separa il sistema in tre componenti principali: Model, View e Controller. Questo approccio migliora l'organizzazione del codice, la manutenibilità e la scalabilità dell'applicazione.
+
 
 ## 5. Testing
 ### Software Testing
