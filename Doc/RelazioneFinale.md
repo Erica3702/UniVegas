@@ -374,7 +374,7 @@ Kanban Board: Utilizzato per visualizzare lo stato delle attività e migliorare 
 ### Usabilità
 - Il software deve essere semplice, in modo che gli utenti imparino a utilizzarlo in poco tempo
 
-![useCase](https://github.com/user-attachments/assets/2b0e7b76-0b32-43c9-82fc-2793b806d010)
+![useCase](https://github.com/user-attachments/assets/2ddffcdd-5e54-40ee-bbc1-4cf5912e6cbf)
 
 ## Software Quality 
 Durante lo sviluppo di UniVegas, ci siamo focalizzati su una serie di qualità chiave che hanno guidato le nostre decisioni e il nostro approccio al lavoro. Queste qualità non solo hanno influenzato il processo di sviluppo, ma hanno anche contribuito al successo del progetto nel suo complesso. Per garantire un prodotto di alta qualità, abbiamo adottato il modello di qualità del software di McCall, che ci ha permesso di valutare e migliorare il software sotto diversi aspetti. Di seguito sono riportate le principali qualità su cui ci siamo concentrati, organizzate secondo le tre categorie del modello di McCall:
@@ -410,7 +410,30 @@ Riusabilità: Abbiamo cercato di massimizzare la riusabilità del codice, creand
 
 ## 4. Design
 ### Modelling 
-INSERIre IMMAGINI DIAGRAMMI 
+
+### Class diagram
+Il diagramma delle classi serve a rappresentare la struttura statica del sistema software. Offre una panoroamica delle classi, degli attributi, dei metodi e delle relazioni tra di esse.
+![ClassDiagram](https://github.com/user-attachments/assets/e9587e66-a7e7-4ba0-aa64-54cbc5c0d34a)
+
+
+### State machine 
+Modello dinamico con focus sul flusso di gioco di una partita a blackjack.
+![StateMachine](https://github.com/user-attachments/assets/e498bc62-41f7-43b8-849b-0004012fd148)
+
+### Communication diagram
+Il diagramma seguente mostra come gli oggetti di un sistema interagiscono tra loro attraverso lo scambio di messaggi durante l'esecuzione di un caso d'uso, partendo dalla registrazione/accesso dell'utente fino alla scelta del gioco.
+![communication](https://github.com/user-attachments/assets/8a5d13de-6e57-4925-a0a2-08efeaac31b2)
+
+### Component diagram
+Il diagramma dei componenti ha lo scopo di mostrare le relazioni tra i diversi componenti del sistema.
+![ComponentDiagram](https://github.com/user-attachments/assets/6a0ac89b-b4cd-4e65-8e09-c6381d1476b3)
+
+
+### Package diagram
+Il diagramma dei package serve a organizzare e rappresentare la struttura modulare del sistema software, suddividendolo in package. 
+![PackageDiagram](https://github.com/user-attachments/assets/7fd74fe8-340f-4656-8a47-641a025646d1)
+
+
 
 ### Software Architecture
 Per il progetto UniVegas, abbiamo adottato l'architettura Model-View-Controller (MVC), un pattern architetturale che separa la logica dell'applicazione in tre componenti principali: Model, View e Controller. Questa scelta ci ha permesso di mantenere il codice ben organizzato, modulare e facile da mantenere.
