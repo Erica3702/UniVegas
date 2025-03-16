@@ -413,24 +413,29 @@ Riusabilità: Abbiamo cercato di massimizzare la riusabilità del codice, creand
 
 ### Class diagram
 Il diagramma delle classi serve a rappresentare la struttura statica del sistema software. Offre una panoroamica delle classi, degli attributi, dei metodi e delle relazioni tra di esse.
+
 ![ClassDiagram](https://github.com/user-attachments/assets/e9587e66-a7e7-4ba0-aa64-54cbc5c0d34a)
 
 
 ### State machine 
 Modello dinamico con focus sul flusso di gioco di una partita a blackjack.
+
 ![StateMachine](https://github.com/user-attachments/assets/e498bc62-41f7-43b8-849b-0004012fd148)
 
 ### Communication diagram
 Il diagramma seguente mostra come gli oggetti di un sistema interagiscono tra loro attraverso lo scambio di messaggi durante l'esecuzione di un caso d'uso, partendo dalla registrazione/accesso dell'utente fino alla scelta del gioco.
+
 ![communication](https://github.com/user-attachments/assets/8a5d13de-6e57-4925-a0a2-08efeaac31b2)
 
 ### Component diagram
 Il diagramma dei componenti ha lo scopo di mostrare le relazioni tra i diversi componenti del sistema.
+
 ![ComponentDiagram](https://github.com/user-attachments/assets/6a0ac89b-b4cd-4e65-8e09-c6381d1476b3)
 
 
 ### Package diagram
 Il diagramma dei package serve a organizzare e rappresentare la struttura modulare del sistema software, suddividendolo in package. 
+
 ![PackageDiagram](https://github.com/user-attachments/assets/7fd74fe8-340f-4656-8a47-641a025646d1)
 
 
