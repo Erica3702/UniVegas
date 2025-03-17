@@ -4,13 +4,19 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
+
 import javax.swing.*;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.casino.controller.RouletteController;
 import com.casino.model.PointsCalculator;
 import com.casino.model.RouletteModel;
 
 public class RouletteView extends JFrame {
-    // Costanti per i pulsanti "2:1"
+    private static final Logger logger = LogManager.getLogger(RouletteView.class);
+	// Costanti per i pulsanti "2:1"
     private static final String FIRST_21 = " 2:1 ";
     private static final String SECOND_21 = "  2:1  ";
     private static final String THIRD_21 = "   2:1   ";
@@ -31,13 +37,13 @@ public class RouletteView extends JFrame {
     private final ImageIcon chipIcon;
     private final JPanel bettingPanel;
     private final RoulettePanel roulettePanel;
-    private static JButton[][] buttons;
-    private static Map<JButton, Integer> buttonTokens = new HashMap<>();
-    private static int totalBet = 0;
-    private static JLabel totalBetLabel;
+    private JButton[][] buttons; // Dichiarazione non statica
+    private  Map<JButton, Integer> buttonTokens = new HashMap<>();
+    private int totalBet = 0;
+    private JLabel totalBetLabel;
 
     // Audio
-    private final transient  SoundManager soundManager;
+    private final transient SoundManager soundManager;
 
     // Model e controller
     private final transient RouletteController controller;
@@ -46,7 +52,7 @@ public class RouletteView extends JFrame {
     public RouletteView(RouletteController controller, RouletteModel model) {
         this.chipIcon = initializeChipIcon();
         this.bettingPanel = new JPanel();
-        this.roulettePanel = new RoulettePanel(model);
+        this.roulettePanel = new RoulettePanel(model, this); 
         this.controller = controller;
         this.model = model;
         this.soundManager = new SoundManager();
@@ -236,7 +242,7 @@ public class RouletteView extends JFrame {
     /**
      * Cancella tutte le scommesse e azzera l'etichetta della puntata totale.
      */
-    public static void clearBets() {
+    public void clearBets() {
         totalBet = 0;
         buttonTokens.forEach((button, value) -> {
             button.setEnabled(true);
@@ -258,7 +264,7 @@ public class RouletteView extends JFrame {
     /**
      * Aggiorna l'etichetta della puntata totale.
      */
-    private static void updateTotalBetLabel() {
+    private void updateTotalBetLabel() {
         SwingUtilities.invokeLater(() -> totalBetLabel.setText(" BET: " + totalBet));
     }
 
@@ -284,6 +290,7 @@ public class RouletteView extends JFrame {
             case LAST18 -> disableButton(FIRST18);
             case FIRST12, SECOND12, THIRD12 -> checkAndDisableThird12Button(buttonText);
             case FIRST_21, SECOND_21, THIRD_21 -> checkAndDisableThird21Button(buttonText);
+            default -> logger.info("Scelto numero");
         }
     }
 
@@ -367,14 +374,14 @@ public class RouletteView extends JFrame {
     /**
      * Mostra il risultato della roulette.
      */
-    public static void showResultDialog(int winningNumber, RouletteModel model) {
+    public static void showResultDialog(int winningNumber, RouletteModel model, RouletteView view) {
         SwingUtilities.invokeLater(() -> {
-            int points = PointsCalculator.calculatePoints(model, buttonTokens);
+            int points = PointsCalculator.calculatePoints(model, view.buttonTokens); 
             String message = "Il numero vincente è: " + winningNumber + "\n";
             message += points > 0 ? "Hai vinto: " + points + " token!" : "Hai perso";
 
             JOptionPane.showMessageDialog(null, message, "Risultato Roulette", JOptionPane.INFORMATION_MESSAGE);
-            clearBets();
+            view.clearBets(); 
         });
     }
 }

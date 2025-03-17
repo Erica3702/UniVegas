@@ -23,15 +23,19 @@ public class RoulettePanel extends JPanel implements Serializable {
     private final transient RouletteModel model; // Riferimento al modello
     private int currentRadius; // Raggio corrente della traiettoria
     private final int maxRadius; // Raggio iniziale
-
+    private final transient RouletteView rouletteView;
+    
     Random random = new Random();
 
-    public RoulettePanel(RouletteModel model) {
+	
+
+    public RoulettePanel(RouletteModel model, RouletteView rouletteView) {
         this.model = model;
+        this.rouletteView = rouletteView; // Inizializza il riferimento
+        
         ImageIcon wheelIcon = new ImageIcon("src/main/resources/immagini/ruota.png");
         wheelImage = wheelIcon.getImage();
-
-        this.maxRadius = wheelImage.getWidth(null) / 2 - 30; // Raggio massimo
+        this.maxRadius = wheelImage.getWidth(null) / 2 - 30;
         this.currentRadius = maxRadius;
     }
 
@@ -61,7 +65,7 @@ public class RoulettePanel extends JPanel implements Serializable {
             ballAnimationTimer.stop();
 
             int winningNumber = model.getWinningNumber(ballAngle);
-            RouletteView.showResultDialog(winningNumber, model);
+            RouletteView.showResultDialog(winningNumber, model, rouletteView);
         }
         if (currentRadius > wheelImage.getWidth(null) / 4 - 15) {
             currentRadius -= 1;
