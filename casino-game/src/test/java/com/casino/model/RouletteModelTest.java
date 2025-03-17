@@ -1,5 +1,6 @@
 package com.casino.model;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -27,6 +28,6 @@ public class RouletteModelTest {
 	 public void testGetWinningNumber() {
 	        RouletteModel model = new RouletteModel();
 	        int winningNumber = model.getWinningNumber(270); // Angolo che corrisponde a un numero specifico
-	        assertTrue(winningNumber ==0); // Verifica che il numero sia valido
+	        assertEquals(0, winningNumber); // Verifica che il numero sia valido
 	    }
 }
