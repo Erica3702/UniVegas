@@ -572,12 +572,9 @@ METTI IMMAGINE
 Per valutare la complessità del codice, abbiamo utilizzato la metrica di complessità ciclomatica di McCabe. Questa metrica misura il numero di cammini linearmente indipendenti attraverso un metodo, aiutando a identificare codice potenzialmente complesso e difficile da mantenere.
 ### Esempio: il metodo determineResult in BlackjackController
 
- 
  public String determineResult() {
-        
         int playerSum = model.getPlayer().reduceAce();
         int dealerSum = model.getDealer().reduceAce();
-        
         if (playerSum > 21) {
             return "Hai Perso!";
         } else if (dealerSum > 21) {
@@ -590,10 +587,12 @@ Per valutare la complessità del codice, abbiamo utilizzato la metrica di comple
             return "Hai Perso!";
         }
     }
+ 
+
     
 La complessità ciclomatica V(G) può essere calcolata utilizzando la formula:
 
-V(G)=E−N+2= 10-7+1=4
+V(G)=E−N+2= 10-7+2=5
 
 Dove:
 
@@ -601,7 +600,7 @@ E = Numero di archi nel grafo di controllo (flusso del programma).
 
 N = Numero di nodi nel grafo di controllo (blocchi di codice).
 
-Valore 4: Indica che il metodo ha una complessità moderata. Un valore inferiore a 10 è generalmente considerato accettabile e gestibile.
+Valore 5: Indica che il metodo ha una complessità moderata. Un valore inferiore a 10 è generalmente considerato accettabile e gestibile.
 
 ### Metriche del codice
 VEDI STRUCTURE 101
