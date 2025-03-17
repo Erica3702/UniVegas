@@ -427,6 +427,11 @@ Il diagramma seguente mostra come gli oggetti di un sistema interagiscono tra lo
 
 ![communication](https://github.com/user-attachments/assets/8a5d13de-6e57-4925-a0a2-08efeaac31b2)
 
+### Sequence diagram
+Il sequence diagram è un modello dinamico che in questo caso descrive come interagiscono i vari componenti durante una partita di blackjack.
+
+![SequenceDiagram](https://github.com/user-attachments/assets/726edf8f-818c-4595-b5ff-cd9d831363a3)
+
 ### Component diagram
 Il diagramma dei componenti ha lo scopo di mostrare le relazioni tra i diversi componenti del sistema.
 
