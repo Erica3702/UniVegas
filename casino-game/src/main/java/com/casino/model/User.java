@@ -65,8 +65,4 @@ public class User {
 		return sb.toString().trim();
 	}
 
-
-    public ArrayList<Card> getMano() {
-        return hand;
-    }
 }

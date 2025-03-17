@@ -10,10 +10,13 @@ public class ChipLayout implements LayoutManager {
     private int yOffset = 4; // Spostamento verticale tra le fiches
 
     @Override
-    public void addLayoutComponent(String name, Component comp) {}
+    public void addLayoutComponent(String name, Component comp) {	
+    }
 
     @Override
-    public void removeLayoutComponent(Component comp) {}
+    public void removeLayoutComponent(Component comp) {
+
+    }
 
     @Override
     public Dimension preferredLayoutSize(Container parent) {
@@ -37,7 +40,7 @@ public class ChipLayout implements LayoutManager {
             comp.setBounds(x, y, width, height);
             x += xOffset;
             y += yOffset;
-            scaleFactor += 2; // Riduci le dimensioni per ogni fiche aggiunta
+            scaleFactor += 2; // Riduce dimensioni per ogni fiche aggiunta
         }
     }
 }

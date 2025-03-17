@@ -55,7 +55,7 @@ public class BlackjackController {
 
     private void exitToMenu() {
         view.close();
-        MenuGiochi.Start();
+        MenuGiochi.start();
     }
 
     public String determineResult() {

@@ -10,22 +10,30 @@ import com.casino.model.PointsCalculator;
 import com.casino.model.RouletteModel;
 
 public class RouletteView extends JFrame {
-    // Costanti
+    // Costanti per i pulsanti "2:1"
+    private static final String FIRST_21 = " 2:1 ";
+    private static final String SECOND_21 = "  2:1  ";
+    private static final String THIRD_21 = "   2:1   ";
+
+    // Altre costanti
     private static final Dimension BUTTON_SIZE = new Dimension(90, 30);
     private static final Color BACKGROUND_COLOR = new Color(53, 101, 77);
     private static final Color BUTTON_COLOR = Color.BLUE;
     private static final Color TEXT_COLOR = Color.WHITE;
+
     // Componenti UI
     private final ImageIcon chipIcon;
     private final JPanel bettingPanel;
     private final RoulettePanel roulettePanel;
     private static JButton[][] buttons;
-    private static Map<JButton, Integer> buttonTokens = new HashMap<>();; 
+    private static Map<JButton, Integer> buttonTokens = new HashMap<>();
     private static int totalBet = 0;
     private static JLabel totalBetLabel;
+
     // Audio
     private final SoundManager soundManager;
-    // Modello e controller
+
+    // Model e controller
     private final RouletteController controller;
     private final RouletteModel model;
 
@@ -38,75 +46,85 @@ public class RouletteView extends JFrame {
         this.soundManager = new SoundManager();
         loadSounds();
         initializeFrame();
-        setupSpinAndClearButtons();  
+        setupSpinAndClearButtons();
         setupTotalBetLabel();
     }
- 
+
+    /**
+     * Inizializza il frame e aggiunge i pannelli delle puntate e della ruota.
+     */
     private void initializeFrame() {
         setTitle("Roulette Game");
-        setSize(1100,750);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(1100, 750);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new GridBagLayout());
         setResizable(false);
         setVisible(true);
+
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.fill = GridBagConstraints.BOTH;
         gbc.weighty = 1.0;
-        
+
         initializeRoulettePanel();
         initializeBettingPanel();
-    
-     // Configura roulettePanel 
+
+        // Configura roulettePanel
         gbc.gridx = 0;
-        gbc.weightx = 0.80; 
+        gbc.weightx = 0.80;
         add(roulettePanel, gbc);
-        
-     // Configura bettingPanel
+
+        // Configura bettingPanel
         gbc.gridx = 1;
-        gbc.weightx = 0.20;  
+        gbc.weightx = 0.20;
         add(bettingPanel, gbc);
     }
 
     private void initializeRoulettePanel() {
-    	roulettePanel.setBackground(BACKGROUND_COLOR);
-        JButton backToMenuButton = createButton("MENU", Color.DARK_GRAY, TEXT_COLOR, e -> MenuGiochi.Start());
+        roulettePanel.setBackground(BACKGROUND_COLOR);
+        JButton backToMenuButton = createButton("MENU", Color.DARK_GRAY, TEXT_COLOR, e -> MenuGiochi.start());
         roulettePanel.setLayout(new BorderLayout());
         roulettePanel.add(backToMenuButton, BorderLayout.SOUTH);
     }
 
     private void initializeBettingPanel() {
-    	bettingPanel.setLayout(new GridBagLayout());
+        bettingPanel.setLayout(new GridBagLayout());
         bettingPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 10));
         bettingPanel.setBackground(BACKGROUND_COLOR);
         setupBettingButtons();
     }
-    
+
     private ImageIcon initializeChipIcon() {
         ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png");
         Image scaledImage = fiches.getImage().getScaledInstance(20, 20, Image.SCALE_SMOOTH);
         return new ImageIcon(scaledImage);
     }
-    
+
     private void loadSounds() {
         soundManager.loadSound("src/main/resources/audio/ruota.wav", "spin");
         soundManager.loadSound("src/main/resources/audio/fiches.wav", "fiches");
     }
 
+    /**
+     * Restituisce la disposizione dei pulsanti per il pannello delle scommesse.
+     */
     private String[][] getButtonLayout() {
         return new String[][]{
             {"0"}, {"1", "2", "3"}, {"4", "5", "6"}, {"7", "8", "9"},
             {"10", "11", "12"}, {"13", "14", "15"}, {"16", "17", "18"},
             {"19", "20", "21"}, {"22", "23", "24"}, {"25", "26", "27"},
             {"28", "29", "30"}, {"31", "32", "33"}, {"34", "35", "36"},
-            {" 2:1 ", "  2:1  ", "   2:1   "}, {"1ST 12", "2ND 12", "3RD 12"},
+            {FIRST_21, SECOND_21, THIRD_21}, {"1ST 12", "2ND 12", "3RD 12"},
             {"RED", "1 TO 18", "EVEN"}, {"BLACK", "19 TO 36", "ODD"},
         };
     }
 
+    /**
+     * Configura i pulsanti per le scommesse.
+     */
     private void setupBettingButtons() {
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(1,1, 1, 1);
+        gbc.insets = new Insets(1, 1, 1, 1);
 
         String[][] layout = getButtonLayout();
         buttons = new JButton[layout.length][];
@@ -126,6 +144,9 @@ public class RouletteView extends JFrame {
         }
     }
 
+    /**
+     * Crea un pulsante per le scommesse.
+     */
     private JButton createBettingButton(String text, int row, int col, GridBagConstraints gbc) {
         JButton button = createButton(text, getButtonBackground(text), TEXT_COLOR, new ChipPlacer(this, text));
         button.setPreferredSize(row == 0 ? new Dimension(273, 30) : BUTTON_SIZE);
@@ -135,15 +156,21 @@ public class RouletteView extends JFrame {
         return button;
     }
 
+    /**
+     * Restituisce il colore di sfondo per un pulsante in base al testo.
+     */
     private Color getButtonBackground(String text) {
-        if (text.matches("\\d+")) {	//una o piu cifre numeri
+        if (text.matches("\\d+")) {
             int num = Integer.parseInt(text);
             return num == 0 ? Color.GREEN : model.isRed(num) ? Color.RED : Color.BLACK;
         } else {
-        	return model.isSpecialBet(text) ? Color.GRAY : Color.LIGHT_GRAY;
-        }     
+            return model.isSpecialBet(text) ? Color.GRAY : Color.LIGHT_GRAY;
+        }
     }
 
+    /**
+     * Crea un pulsante generico.
+     */
     private JButton createButton(String text, Color background, Color foreground, ActionListener listener) {
         JButton button = new JButton(text);
         button.setFont(new Font("Arial", Font.BOLD, 13));
@@ -152,7 +179,7 @@ public class RouletteView extends JFrame {
         button.addActionListener(listener);
         return button;
     }
-  
+
     private void setupSpinAndClearButtons() {
         JButton spinButton = createButton("SPIN", BUTTON_COLOR, TEXT_COLOR, e -> {
             disableAllBettingButtons();
@@ -169,9 +196,12 @@ public class RouletteView extends JFrame {
         clearButton.setPreferredSize(BUTTON_SIZE);
         bettingPanel.add(spinButton, gbc);
         gbc.gridx = 1;
-        bettingPanel.add(clearButton, gbc);    
+        bettingPanel.add(clearButton, gbc);
     }
 
+    /**
+     * Configura l'etichetta per visualizzare la puntata totale.
+     */
     private void setupTotalBetLabel() {
         totalBetLabel = new JLabel("BET: 0");
         totalBetLabel.setPreferredSize(BUTTON_SIZE);
@@ -186,7 +216,10 @@ public class RouletteView extends JFrame {
         gbc.gridy = getButtonLayout().length;
         bettingPanel.add(totalBetLabel, gbc);
     }
-    
+
+    /**
+     * Cancella tutte le scommesse e azzera l'etichetta della puntata totale.
+     */
     public static void clearBets() {
         totalBet = 0;
         buttonTokens.forEach((button, value) -> {
@@ -199,20 +232,32 @@ public class RouletteView extends JFrame {
         updateTotalBetLabel();
     }
 
+    /**
+     * Disabilita tutti i pulsanti delle scommesse.
+     */
     private void disableAllBettingButtons() {
-    	buttonTokens.keySet().forEach(button -> button.setEnabled(false));
+        buttonTokens.keySet().forEach(button -> button.setEnabled(false));
     }
 
+    /**
+     * Aggiorna l'etichetta della puntata totale.
+     */
     private static void updateTotalBetLabel() {
         SwingUtilities.invokeLater(() -> totalBetLabel.setText(" BET: " + totalBet));
     }
 
+    /**
+     * Gestisce il clic su un pulsante di scommessa.
+     */
     protected void handleButtonClick(String buttonText) {
         disableOppositeButtons(buttonText);
         placeChip(buttonText);
         updateTotalBetLabel();
     }
 
+    /**
+     * Disabilita i pulsanti opposti a quello selezionato.
+     */
     public void disableOppositeButtons(String buttonText) {
         switch (buttonText) {
             case "RED" -> disableButton("BLACK");
@@ -222,16 +267,19 @@ public class RouletteView extends JFrame {
             case "1 TO 18" -> disableButton("19 TO 36");
             case "19 TO 36" -> disableButton("1 TO 18");
             case "1ST 12", "2ND 12", "3RD 12" -> checkAndDisableThird12Button(buttonText);
-            case " 2:1 ", "  2:1  ", "   2:1   " -> checkAndDisableThird21Button(buttonText);
+            case FIRST_21, SECOND_21, THIRD_21 -> checkAndDisableThird21Button(buttonText);
         }
     }
 
+    /**
+     * Posiziona una fiche sul pulsante selezionato.
+     */
     private void placeChip(String buttonText) {
-         JButton button = findButtonByText(buttonText);
+        JButton button = findButtonByText(buttonText);
         if (button != null) {
-        	soundManager.playSound("fiches");
-        	JLabel chipLabel = new JLabel(chipIcon);
-        	button.setLayout(new ChipLayout()); 
+            soundManager.playSound("fiches");
+            JLabel chipLabel = new JLabel(chipIcon);
+            button.setLayout(new ChipLayout());
             button.add(chipLabel, BorderLayout.CENTER);
             button.repaint();
             button.revalidate();
@@ -242,6 +290,9 @@ public class RouletteView extends JFrame {
         }
     }
 
+    /**
+     * Trova un pulsante in base al testo.
+     */
     private JButton findButtonByText(String buttonText) {
         for (JButton[] row : buttons) {
             for (JButton button : row) {
@@ -253,6 +304,9 @@ public class RouletteView extends JFrame {
         return null;
     }
 
+    /**
+     * Disabilita un pulsante in base al testo.
+     */
     private void disableButton(String buttonText) {
         JButton button = findButtonByText(buttonText);
         if (button != null) {
@@ -260,6 +314,9 @@ public class RouletteView extends JFrame {
         }
     }
 
+    /**
+     * Disabilita il terzo pulsante "12" se due sono già selezionati.
+     */
     private void checkAndDisableThird12Button(String clickedButtonText) {
         boolean is1st12Selected = isButtonSelected("1ST 12") || clickedButtonText.equals("1ST 12");
         boolean is2nd12Selected = isButtonSelected("2ND 12") || clickedButtonText.equals("2ND 12");
@@ -270,29 +327,38 @@ public class RouletteView extends JFrame {
         else if (is2nd12Selected && is3rd12Selected) disableButton("1ST 12");
     }
 
+    /**
+     * Disabilita il terzo pulsante "2:1" se due sono già selezionati.
+     */
     private void checkAndDisableThird21Button(String clickedButtonText) {
-        boolean isFirst21Selected = isButtonSelected(" 2:1 ") || clickedButtonText.equals(" 2:1 ");
-        boolean isSecond21Selected = isButtonSelected("  2:1  ") || clickedButtonText.equals("  2:1  ");
-        boolean isThird21Selected = isButtonSelected("   2:1   ") || clickedButtonText.equals("   2:1   ");
+        boolean isFirst21Selected = isButtonSelected(FIRST_21) || clickedButtonText.equals(FIRST_21);
+        boolean isSecond21Selected = isButtonSelected(SECOND_21) || clickedButtonText.equals(SECOND_21);
+        boolean isThird21Selected = isButtonSelected(THIRD_21) || clickedButtonText.equals(THIRD_21);
 
-        if (isFirst21Selected && isSecond21Selected) disableButton("   2:1   ");
-        else if (isFirst21Selected && isThird21Selected) disableButton("  2:1  ");
-        else if (isSecond21Selected && isThird21Selected) disableButton(" 2:1 ");
+        if (isFirst21Selected && isSecond21Selected) disableButton(THIRD_21);
+        else if (isFirst21Selected && isThird21Selected) disableButton(SECOND_21);
+        else if (isSecond21Selected && isThird21Selected) disableButton(FIRST_21);
     }
 
+    /**
+     * Verifica se un pulsante è selezionato.
+     */
     private boolean isButtonSelected(String buttonText) {
         JButton button = findButtonByText(buttonText);
         return button != null && button.getComponentCount() > 0;
     }
 
-	public static void showResultDialog(int winningNumber, RouletteModel model) {
-	    SwingUtilities.invokeLater(() -> {
-	        int points = PointsCalculator.calculatePoints(model, buttonTokens);
-	        String message = "Il numero vincente è: " + winningNumber + "\n";
-	        message += points > 0 ? "Hai vinto: " + points + " token!" : "Hai perso";
-	
-	        JOptionPane.showMessageDialog(null, message, "Risultato Roulette", JOptionPane.INFORMATION_MESSAGE);
-	        clearBets();
-	    });
-	}  
+    /**
+     * Mostra il risultato della roulette.
+     */
+    public static void showResultDialog(int winningNumber, RouletteModel model) {
+        SwingUtilities.invokeLater(() -> {
+            int points = PointsCalculator.calculatePoints(model, buttonTokens);
+            String message = "Il numero vincente è: " + winningNumber + "\n";
+            message += points > 0 ? "Hai vinto: " + points + " token!" : "Hai perso";
+
+            JOptionPane.showMessageDialog(null, message, "Risultato Roulette", JOptionPane.INFORMATION_MESSAGE);
+            clearBets();
+        });
+    }
 }
