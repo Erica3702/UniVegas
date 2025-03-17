@@ -4,7 +4,7 @@
 
 ### Introduzione
 Benvenuti in UniVegas, il casinò virtuale che porta l'emozione di Las Vegas direttamente nel mondo accademico!
-UniVegas offre un'esperienza di gioco coinvolgente e realistica, con tre classici intramontabili: Blackjack, Poker e Roulette, tutti disponibili in modalità singleplayer. Preparati a sfidare il computer, a mettere alla prova le tue abilità strategiche e a lasciarti trasportare dalla fortuna.
+UniVegas offre un'esperienza di gioco coinvolgente e realistica, con due classici intramontabili: Blackjack e Roulette, tutti disponibili in modalità singleplayer. Preparati a sfidare il computer, a mettere alla prova le tue abilità strategiche e a lasciarti trasportare dalla fortuna.
 
 ### Il Contesto
 Negli ultimi anni, il settore del gioco d'azzardo online ha vissuto una crescita esponenziale, trainata dalla diffusione di internet, dall'innovazione tecnologica e dalla crescente popolarità dei giochi digitali. UniVegas nasce con l'obiettivo di replicare l'atmosfera magica di un casinò reale, offrendo un'esperienza immersiva, sicura e accessibile a tutti, direttamente dal tuo pc.
@@ -31,9 +31,9 @@ Per iniziare a giocare con UniVegas, segui questi semplici passaggi:
 
 4. Gioca:
 - Una volta avviata l'applicazione, segui le istruzioni sullo schermo per selezionare 
-  il gioco desiderato (Blackjack, Poker o Roulette) e inizia a giocare!
+  il gioco desiderato e inizia a giocare!
 
 ### Unisciti a Noi
-Esplora il codice, scopri come funziona il software e, perché no, contribuisci al progetto! Ogni feedback, suggerimento o contributo è benvenuto. Insieme, possiamo rendere UniVegas ancora più straordinario.
+Esplora il codice, scopri come funziona il software e, perché no, contribuisci al progetto! Ogni feedback, suggerimento o contributo è benvenuto. 
 
 ## Preparati a vivere l'emozione del casinò... benvenuto in UniVegas! 🎰♠️♥️♣️♦️

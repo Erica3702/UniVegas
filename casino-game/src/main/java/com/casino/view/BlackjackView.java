@@ -102,6 +102,48 @@ public class BlackjackView {
             e.printStackTrace();
         }
     }
+    
+   
+    
+    public void distributeCardsWithAnimation() {
+        // Posizioni iniziali e finali per le carte del dealer
+        int dealerStartX = -110; // Fuori dallo schermo a sinistra
+        int dealerStartY = 20;
+        int dealerTargetX1 = 20; // Prima carta del dealer
+        int dealerTargetX2 = 135; // Seconda carta del dealer
+
+        // Posizioni iniziali e finali per le carte del giocatore
+        int playerStartX = -110; // Fuori dallo schermo a sinistra
+        int playerStartY = 320;
+        int playerTargetX1 = 20; // Prima carta del giocatore
+        int playerTargetX2 = 135; // Seconda carta del giocatore
+
+        // Animazione per la prima carta del dealer
+        animateCard(model.getDealer().getHand().get(0), dealerStartX, dealerStartY, dealerTargetX1, dealerStartY);
+
+        // Animazione per la seconda carta del dealer
+        animateCard(model.getDealer().getHand().get(1), dealerStartX, dealerStartY, dealerTargetX2, dealerStartY);
+
+        // Animazione per la prima carta del giocatore
+        animateCard(model.getPlayer().getHand().get(0), playerStartX, playerStartY, playerTargetX1, playerStartY);
+
+        // Animazione per la seconda carta del giocatore
+        animateCard(model.getPlayer().getHand().get(1), playerStartX, playerStartY, playerTargetX2, playerStartY);
+    }
+
+    private void animateCard(Card card, int startX, int startY, int targetX, int targetY) {
+        // Carica le immagini della carta (fronte e retro)
+        Image cardImage = new ImageIcon(getClass().getResource(card.getImagePath())).getImage();
+        Image cardBackImage = new ImageIcon(getClass().getResource("/cards/BACK.png")).getImage();
+
+        // Crea un'animazione per la carta
+        CardAnimation cardAnimation = new CardAnimation(cardImage, cardBackImage, startX, startY, targetX, targetY);
+        cardAnimation.setBounds(0, 0, frame.getWidth(), frame.getHeight()); // Imposta i limiti del pannello di animazione
+        gamePanel.add(cardAnimation);
+
+        // Avvia l'animazione
+        cardAnimation.startAnimation();
+    }
 
     public void updateView() {
         gamePanel.repaint();

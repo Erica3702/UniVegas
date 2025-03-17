@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_juwfsOSEEe-Jg8Uk48IUvg" name="PackageDiagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_jvVHcOSEEe-Jg8Uk48IUvg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_UIijUOSFEe-Jg8Uk48IUvg" name="com.casino.casino_game">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_1GfLEOSFEe-Jg8Uk48IUvg" importedPackage="_g1jogOSFEe-Jg8Uk48IUvg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_NG-TIOSHEe-Jg8Uk48IUvg" name="needs" client="_UIijUOSFEe-Jg8Uk48IUvg" supplier="_bt9ckOSFEe-Jg8Uk48IUvg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_WZNTgOSHEe-Jg8Uk48IUvg" name="needs" client="_UIijUOSFEe-Jg8Uk48IUvg" supplier="_Z9zGgOSFEe-Jg8Uk48IUvg"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_aZhuUOSHEe-Jg8Uk48IUvg" name="needs" client="_UIijUOSFEe-Jg8Uk48IUvg" supplier="_dby3YOSFEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_Z9zGgOSFEe-Jg8Uk48IUvg" name="com.casino.controller">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_IPAUEOSGEe-Jg8Uk48IUvg" importedPackage="_g1jogOSFEe-Jg8Uk48IUvg"/>
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_fp8UgOSGEe-Jg8Uk48IUvg" importedPackage="_dby3YOSFEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_dby3YOSFEe-Jg8Uk48IUvg" name="com.casino.model"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_fA_TkOSFEe-Jg8Uk48IUvg" name="com.casino.utils"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_g1jogOSFEe-Jg8Uk48IUvg" name="com.casino.view"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_bt9ckOSFEe-Jg8Uk48IUvg" name="com.casino.dao">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_nupx0OSGEe-Jg8Uk48IUvg" importedPackage="_fA_TkOSFEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+</uml:Model>
