@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_dXW5wOR5Ee-Jg8Uk48IUvg" name="ComponentDiagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_dX8voOR5Ee-Jg8Uk48IUvg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_obA3oOR9Ee-Jg8Uk48IUvg" name="App">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_VxQRwOR-Ee-Jg8Uk48IUvg" name="Operation9"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_V3utMOR-Ee-Jg8Uk48IUvg" name="Operation10"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_V5qm4OR-Ee-Jg8Uk48IUvg" name="Operation11"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_b0JoUOR-Ee-Jg8Uk48IUvg" name="Operation20"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_b2SWUOR-Ee-Jg8Uk48IUvg" name="Operation21"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_b4CCwOR-Ee-Jg8Uk48IUvg" name="Operation22"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7zVsUOR_Ee-Jg8Uk48IUvg" name="Operation25"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_74US8OR_Ee-Jg8Uk48IUvg" name="Operation26"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_755nUOR_Ee-Jg8Uk48IUvg" name="Operation27"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_tC3k0OSDEe-Jg8Uk48IUvg" name="main">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_v8GbwOSDEe-Jg8Uk48IUvg" name="main"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_wn-qUOSDEe-Jg8Uk48IUvg" name="startGame"/>
+    </nestedClassifier>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_T8beIOR-Ee-Jg8Uk48IUvg" name="Interface1"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_UMvLAOR-Ee-Jg8Uk48IUvg" name="Interface2"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_VUWTUOR-Ee-Jg8Uk48IUvg" name="Interface3"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_VZ0pMOR-Ee-Jg8Uk48IUvg" name="Interface4"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_VgwXoOR-Ee-Jg8Uk48IUvg" name="Interface5"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_VigEEOR-Ee-Jg8Uk48IUvg" name="Interface6"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_VlixAOR-Ee-Jg8Uk48IUvg" name="Interface7"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Voae0OR-Ee-Jg8Uk48IUvg" name="Interface8"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_WZ7bUOR-Ee-Jg8Uk48IUvg" name="Actor12"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_WhnXsOR-Ee-Jg8Uk48IUvg" name="Actor13"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_YACdgOR-Ee-Jg8Uk48IUvg" name="Interface14"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_YJ4WAOR-Ee-Jg8Uk48IUvg" name="Interface15"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_bizZoOR-Ee-Jg8Uk48IUvg" name="Class16"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_bod8wOR-Ee-Jg8Uk48IUvg" name="DataType17"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_bsF4gOR-Ee-Jg8Uk48IUvg" name="DataType18"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_bv6okOR-Ee-Jg8Uk48IUvg" name="Enumeration19"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IOyV0OR_Ee-Jg8Uk48IUvg" name="Class23"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_Z91xgOR_Ee-Jg8Uk48IUvg" client="_obA3oOR9Ee-Jg8Uk48IUvg" supplier="_RV4dMOR_Ee-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_RV4dMOR_Ee-Jg8Uk48IUvg" name="MenuGiochi">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_kKU20OSDEe-Jg8Uk48IUvg" name="MenuGiochi">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_lhVtEOSDEe-Jg8Uk48IUvg" name="start"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_oItX8OSDEe-Jg8Uk48IUvg" name="showGames"/>
+    </nestedClassifier>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_pS_WkOR_Ee-Jg8Uk48IUvg" client="_RV4dMOR_Ee-Jg8Uk48IUvg" supplier="_hXhU0OR_Ee-Jg8Uk48IUvg"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_rYV5gOR_Ee-Jg8Uk48IUvg" client="_RV4dMOR_Ee-Jg8Uk48IUvg" supplier="_gNCesOR_Ee-Jg8Uk48IUvg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9hLHIOR_Ee-Jg8Uk48IUvg" name="Class3"/>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_9p_r8OR_Ee-Jg8Uk48IUvg" name="DataType4"/>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_9u-5oOR_Ee-Jg8Uk48IUvg" name="Enumeration5"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_gNCesOR_Ee-Jg8Uk48IUvg" name="Roulette">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_0t0TwOSCEe-Jg8Uk48IUvg" name="Model"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_2wPegOSCEe-Jg8Uk48IUvg" name="View"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_4sXM8OSCEe-Jg8Uk48IUvg" name="Controller"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_2FpwwOR_Ee-Jg8Uk48IUvg" client="_gNCesOR_Ee-Jg8Uk48IUvg" supplier="_lIz1IOR_Ee-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_hXhU0OR_Ee-Jg8Uk48IUvg" name="Blackjack">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_ImOeEOSCEe-Jg8Uk48IUvg" name="Model"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_mRZGcOSCEe-Jg8Uk48IUvg" name="Controller"/>
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_tRXwUOSCEe-Jg8Uk48IUvg" name="View"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_1db6MOR_Ee-Jg8Uk48IUvg" client="_hXhU0OR_Ee-Jg8Uk48IUvg" supplier="_lIz1IOR_Ee-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_klP1EOR_Ee-Jg8Uk48IUvg" name="User">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_9TeiAOSCEe-Jg8Uk48IUvg" name="User">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_-JFUUOSCEe-Jg8Uk48IUvg" name="login"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__6SMMOSCEe-Jg8Uk48IUvg" name="register"/>
+    </nestedClassifier>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_zxJ-kOR_Ee-Jg8Uk48IUvg" client="_klP1EOR_Ee-Jg8Uk48IUvg" supplier="_lIz1IOR_Ee-Jg8Uk48IUvg"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Gf8jgOSBEe-Jg8Uk48IUvg" name="Interface2"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Gkvj8OSBEe-Jg8Uk48IUvg" name="Interface3"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_Gn6zwOSBEe-Jg8Uk48IUvg" name="Interface4"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_GqUAcOSBEe-Jg8Uk48IUvg" name="Interface5"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_GsoUoOSBEe-Jg8Uk48IUvg" name="Interface6"/>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_GubEYOSBEe-Jg8Uk48IUvg" name="Interface7"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_lIz1IOR_Ee-Jg8Uk48IUvg" name="DataBase">
+    <nestedClassifier xmi:type="uml:Interface" xmi:id="_PoM2kOSDEe-Jg8Uk48IUvg" name="DB">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_R3ZSAOSDEe-Jg8Uk48IUvg" name="saveUser"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_S9vPAOSDEe-Jg8Uk48IUvg" name="loadUser"/>
+    </nestedClassifier>
+  </packagedElement>
+</uml:Model>

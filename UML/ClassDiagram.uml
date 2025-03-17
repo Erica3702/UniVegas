@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_AwOKMLfXEe-9j5ILClLP4w" name="DiagrammaClassiProg">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_A1d2kLfXEe-9j5ILClLP4w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OYeaUOOiEe-Jg8Uk48IUvg" name="Card">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ds94EOOiEe-Jg8Uk48IUvg" name="type">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_uxSp0OOkEe-Jg8Uk48IUvg" name="value">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qm5X4OOiEe-Jg8Uk48IUvg" name="getValue"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_P2A54OOjEe-Jg8Uk48IUvg" name="isAce"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Vb91wOOjEe-Jg8Uk48IUvg" name="getImagePath"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X9UYMOOjEe-Jg8Uk48IUvg" name="toString"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_-gIWsOOjEe-Jg8Uk48IUvg" name="getCardValue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_5XLf4OOjEe-Jg8Uk48IUvg" name="Mazzo">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_AMsmMOOkEe-Jg8Uk48IUvg" name="deck">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_rKKRc-OsEe-Jg8Uk48IUvg" name="blackjack" type="_NNTY8OOoEe-Jg8Uk48IUvg" association="_rKKRcOOsEe-Jg8Uk48IUvg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rKKRdeOsEe-Jg8Uk48IUvg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_v9oyEuOtEe-Jg8Uk48IUvg" name="card" type="_OYeaUOOiEe-Jg8Uk48IUvg" association="_v9oLAOOtEe-Jg8Uk48IUvg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_v9pZIOOtEe-Jg8Uk48IUvg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_v9pZIeOtEe-Jg8Uk48IUvg" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_JSOK0OOlEe-Jg8Uk48IUvg" name="buildDeck"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_qODSsOOlEe-Jg8Uk48IUvg" name="shuffleDeck"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vaBoUOOlEe-Jg8Uk48IUvg" name="drawCard"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_yZRnsOOlEe-Jg8Uk48IUvg" name="getDeckSize"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_JK_E8OOmEe-Jg8Uk48IUvg" name="Dealer">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_cbPNoOOmEe-Jg8Uk48IUvg" name="hand " type="_OYeaUOOiEe-Jg8Uk48IUvg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_tqCb8OOmEe-Jg8Uk48IUvg" name="sum">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_w_yPwOOmEe-Jg8Uk48IUvg" name="aceCount">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_oJLMsuOsEe-Jg8Uk48IUvg" name="blackjack" type="_NNTY8OOoEe-Jg8Uk48IUvg" association="_oJEfAOOsEe-Jg8Uk48IUvg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oJLMtOOsEe-Jg8Uk48IUvg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0NBjo-OtEe-Jg8Uk48IUvg" name="card" type="_OYeaUOOiEe-Jg8Uk48IUvg" association="_0NBjoOOtEe-Jg8Uk48IUvg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WhR3AOOuEe-Jg8Uk48IUvg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0NBjpeOtEe-Jg8Uk48IUvg" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_DIh90OOnEe-Jg8Uk48IUvg" name="addCard">
+      <ownedRule xmi:type="uml:Constraint" xmi:id="_cueIIOOlEe-Jg8Uk48IUvg" name="ciao"/>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_RqWogOOnEe-Jg8Uk48IUvg" name="getSum"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_XNF4UOOnEe-Jg8Uk48IUvg" name="reduceAce"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_d6RiAOOnEe-Jg8Uk48IUvg" name="getHand"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NNTY8OOoEe-Jg8Uk48IUvg" name="Blackjack">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_UgEb8OOoEe-Jg8Uk48IUvg" name="deck" type="_5XLf4OOjEe-Jg8Uk48IUvg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ZG75YOOoEe-Jg8Uk48IUvg" name="dealer" type="_JK_E8OOmEe-Jg8Uk48IUvg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_k0JucOOoEe-Jg8Uk48IUvg" name="dealerCardHidden">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rn5TIOOoEe-Jg8Uk48IUvg" name="startGame"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ukDiQOOoEe-Jg8Uk48IUvg" name="revealDealerCard"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_z-GwIOOoEe-Jg8Uk48IUvg" name="isDealerCardHidden"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3L_BYOOoEe-Jg8Uk48IUvg" name="getDeck"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7Q5oUOOoEe-Jg8Uk48IUvg" name="getPlayer"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_wXtIwAHGEfCAzaRssEapmg" name="getDealer"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_GFo9QOOpEe-Jg8Uk48IUvg" name="BlackjackView">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_HuiNsOOpEe-Jg8Uk48IUvg" name="frame"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9l8sweOrEe-Jg8Uk48IUvg" name="blackjackcontroller" type="_jybWQOOpEe-Jg8Uk48IUvg" association="_9l7eoOOrEe-Jg8Uk48IUvg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_na5fg-OuEe-Jg8Uk48IUvg" name="blackjack" type="_NNTY8OOoEe-Jg8Uk48IUvg" association="_na5fgOOuEe-Jg8Uk48IUvg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_UaXnIOOpEe-Jg8Uk48IUvg" name="updateView"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_WT4GcOOpEe-Jg8Uk48IUvg" name="disableButtons"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_X5wfIOOpEe-Jg8Uk48IUvg" name="enableNextGameButton"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_aEXVgOOpEe-Jg8Uk48IUvg" name="showResult"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_craQQOOpEe-Jg8Uk48IUvg" name="setHitButtonListener"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jybWQOOpEe-Jg8Uk48IUvg" name="BlackjackController">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9EdbMOOpEe-Jg8Uk48IUvg" name="model" type="_NNTY8OOoEe-Jg8Uk48IUvg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="__3SIIOOpEe-Jg8Uk48IUvg" name="view" type="_GFo9QOOpEe-Jg8Uk48IUvg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9l8sxOOrEe-Jg8Uk48IUvg" name="blackjackview" type="_GFo9QOOpEe-Jg8Uk48IUvg" association="_9l7eoOOrEe-Jg8Uk48IUvg"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_sXsws-OuEe-Jg8Uk48IUvg" name="blackjack" type="_NNTY8OOoEe-Jg8Uk48IUvg" association="_sXswsOOuEe-Jg8Uk48IUvg"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_EDNWAOOqEe-Jg8Uk48IUvg" name="hit"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_FvYj8OOqEe-Jg8Uk48IUvg" name="stay"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_GnpBoOOqEe-Jg8Uk48IUvg" name="nextGame"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_IBVYcOOqEe-Jg8Uk48IUvg" name="exitToMenu"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_OqCx0OOqEe-Jg8Uk48IUvg" name="determineResult"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_9l7eoOOrEe-Jg8Uk48IUvg" visibility="public" memberEnd="_9l8sweOrEe-Jg8Uk48IUvg _9l8sxOOrEe-Jg8Uk48IUvg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9l8FsOOrEe-Jg8Uk48IUvg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9l8swOOrEe-Jg8Uk48IUvg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_oJEfAOOsEe-Jg8Uk48IUvg" visibility="package" memberEnd="_oJLMsuOsEe-Jg8Uk48IUvg _oJLMteOsEe-Jg8Uk48IUvg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oJLMsOOsEe-Jg8Uk48IUvg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oJLMseOsEe-Jg8Uk48IUvg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_oJLMteOsEe-Jg8Uk48IUvg" name="dealer" type="_JK_E8OOmEe-Jg8Uk48IUvg" aggregation="composite" association="_oJEfAOOsEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_rKKRcOOsEe-Jg8Uk48IUvg" visibility="public" memberEnd="_rKKRc-OsEe-Jg8Uk48IUvg _rKKRduOsEe-Jg8Uk48IUvg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rKKRceOsEe-Jg8Uk48IUvg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_rKKRcuOsEe-Jg8Uk48IUvg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_rKKRduOsEe-Jg8Uk48IUvg" name="mazzo" type="_5XLf4OOjEe-Jg8Uk48IUvg" aggregation="composite" association="_rKKRcOOsEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_v9oLAOOtEe-Jg8Uk48IUvg" memberEnd="_v9oyEuOtEe-Jg8Uk48IUvg _v9pZIuOtEe-Jg8Uk48IUvg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_v9oyEOOtEe-Jg8Uk48IUvg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_v9oyEeOtEe-Jg8Uk48IUvg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_v9pZIuOtEe-Jg8Uk48IUvg" name="mazzo" type="_5XLf4OOjEe-Jg8Uk48IUvg" aggregation="shared" association="_v9oLAOOtEe-Jg8Uk48IUvg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ObCIoOOuEe-Jg8Uk48IUvg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_0NBjoOOtEe-Jg8Uk48IUvg" memberEnd="_0NBjo-OtEe-Jg8Uk48IUvg _0NBjpuOtEe-Jg8Uk48IUvg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0NBjoeOtEe-Jg8Uk48IUvg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0NBjouOtEe-Jg8Uk48IUvg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_0NBjpuOtEe-Jg8Uk48IUvg" name="dealer" type="_JK_E8OOmEe-Jg8Uk48IUvg" aggregation="shared" association="_0NBjoOOtEe-Jg8Uk48IUvg">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XQkl8OOuEe-Jg8Uk48IUvg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_na5fgOOuEe-Jg8Uk48IUvg" memberEnd="_na5fg-OuEe-Jg8Uk48IUvg _na5fhuOuEe-Jg8Uk48IUvg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_na5fgeOuEe-Jg8Uk48IUvg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_na5fguOuEe-Jg8Uk48IUvg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_na5fhuOuEe-Jg8Uk48IUvg" name="blackjackview" type="_GFo9QOOpEe-Jg8Uk48IUvg" association="_na5fgOOuEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sXswsOOuEe-Jg8Uk48IUvg" memberEnd="_sXsws-OuEe-Jg8Uk48IUvg _sXwbEOOuEe-Jg8Uk48IUvg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sXswseOuEe-Jg8Uk48IUvg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sXswsuOuEe-Jg8Uk48IUvg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_sXwbEOOuEe-Jg8Uk48IUvg" name="blackjackcontroller" type="_jybWQOOpEe-Jg8Uk48IUvg" association="_sXswsOOuEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_sh820OSIEe-Jg8Uk48IUvg" name="UserDAO">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_5JxS8OSIEe-Jg8Uk48IUvg" name="DBConnection" type="_3fNOkOSIEe-Jg8Uk48IUvg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3fNOkOSIEe-Jg8Uk48IUvg" name="DBConnection">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BXbUEOSNEe-Jg8Uk48IUvg" name="logger">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_psS6UgG-EfCAzaRssEapmg" name="userdao" type="_sh820OSIEe-Jg8Uk48IUvg" association="_psRFIAG-EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_psThYAG-EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_psUIcAG-EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_KSZrAOSNEe-Jg8Uk48IUvg" name="connect"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_acR4oOSNEe-Jg8Uk48IUvg" name="RouletteView">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JO4XUgG_EfCAzaRssEapmg" name="roulettecontroller" type="_e8FVgAG9EfCAzaRssEapmg" association="_JO3JMAG_EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_JO4XUwG_EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_JO4-YAG_EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gGufgAHEEfCAzaRssEapmg" name="initializeFrame"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_h-UTQAHEEfCAzaRssEapmg" name="initializeRoulettePanel"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_kSac0AHEEfCAzaRssEapmg" name="initializeChipIcon"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_m05nsAHEEfCAzaRssEapmg" name="loadSounds"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_o7cdcAHEEfCAzaRssEapmg" name="setupBettingButtons"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_sxb3kAHEEfCAzaRssEapmg" name="createButton"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_u2SrQAHEEfCAzaRssEapmg" name="clearBets"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_xpyGkAHEEfCAzaRssEapmg" name="disableAllBettingButtons"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_0W-FkAHEEfCAzaRssEapmg" name="placeChip"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_3NiqEAHEEfCAzaRssEapmg" name="showResultDIalogue"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_e8FVgAG9EfCAzaRssEapmg" name="RouletteController">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_wabiEAHFEfCAzaRssEapmg" name="model: RouletteModel" visibility="private" aggregation="shared"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_47dH8AHFEfCAzaRssEapmg" name="view: RouletteView" visibility="private"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QoRYAAHFEfCAzaRssEapmg" name="isSpecialBet"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_SMiAEAHFEfCAzaRssEapmg" name="isRed"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_S6lY4AHFEfCAzaRssEapmg" name="startGame"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nQVqsAG9EfCAzaRssEapmg" name="Menu Giochi">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ATV_sgG_EfCAzaRssEapmg" name="rouletteview" type="_acR4oOSNEe-Jg8Uk48IUvg" association="_ATUxkAG_EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ATXN0AG_EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ATXN0QG_EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_C8400gG_EfCAzaRssEapmg" name="blackjack" type="_NNTY8OOoEe-Jg8Uk48IUvg" association="_C83msAG_EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C85b4AG_EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C85b4QG_EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Mkz_EAHEEfCAzaRssEapmg" name="Start"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_yK8-IAG9EfCAzaRssEapmg" name="Menu Utente">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_NPAaUQG-EfCAzaRssEapmg" name="menu giochi" type="_nQVqsAG9EfCAzaRssEapmg" association="_NO-lIAG-EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NPBBYAG-EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NPBBYQG-EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_b6sysgG-EfCAzaRssEapmg" name="dbconnection" type="_3fNOkOSIEe-Jg8Uk48IUvg" association="_b6rkkAG-EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b6uA0AG-EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_b6uA0QG-EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Ss4JgAHEEfCAzaRssEapmg" name="startMenu"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9iUfAAG9EfCAzaRssEapmg" name="User" visibility="public">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_KkO2IAG-EfCAzaRssEapmg" name="menu utente" type="_yK8-IAG9EfCAzaRssEapmg" association="_KkIvgAG-EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KkR5cAG-EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KkWx8AG-EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_kM1uYAHGEfCAzaRssEapmg" name="inGioco: boolean"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rYEGUAHDEfCAzaRssEapmg" name="getSum"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_vCnFcAHDEfCAzaRssEapmg" name="getHand"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_7vwtgAHDEfCAzaRssEapmg" name="reduceAce"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Bg3wgAHEEfCAzaRssEapmg" name="visualizzaMano"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_KkIvgAG-EfCAzaRssEapmg" name="inserisce credenziali" memberEnd="_KkO2IAG-EfCAzaRssEapmg _KkZOMAG-EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KkMZ4AG-EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KkNA8AG-EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KkZOMAG-EfCAzaRssEapmg" name="user" type="_9iUfAAG9EfCAzaRssEapmg" association="_KkIvgAG-EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_NO-lIAG-EfCAzaRssEapmg" name="consente accesso" memberEnd="_NPAaUQG-EfCAzaRssEapmg _NPBBYgG-EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_NO_zQAG-EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_NPAaUAG-EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_NPBBYgG-EfCAzaRssEapmg" name="menu utente" type="_yK8-IAG9EfCAzaRssEapmg" association="_NO-lIAG-EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_b6rkkAG-EfCAzaRssEapmg" name="verifica credenziali" memberEnd="_b6sysgG-EfCAzaRssEapmg _b6uA0gG-EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b6sysAG-EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b6sysQG-EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_b6uA0gG-EfCAzaRssEapmg" name="menu utente" type="_yK8-IAG9EfCAzaRssEapmg" association="_b6rkkAG-EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_psRFIAG-EfCAzaRssEapmg" memberEnd="_psS6UgG-EfCAzaRssEapmg _psUIcQG-EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_psS6UAG-EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_psS6UQG-EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_psUIcQG-EfCAzaRssEapmg" name="dbconnection" type="_3fNOkOSIEe-Jg8Uk48IUvg" association="_psRFIAG-EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4gg8kAG-EfCAzaRssEapmg" name="RoulettePanel">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_GjVXEQG_EfCAzaRssEapmg" name="rouletteview" type="_acR4oOSNEe-Jg8Uk48IUvg" association="_GjUI8AG_EfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GjV-IAG_EfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GjV-IQG_EfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_MG3M4AHGEfCAzaRssEapmg" name="angle: double"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_WC1t0AHGEfCAzaRssEapmg" name="ballAnimationTimer: Timer" visibility="public" aggregation="composite">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_XGLaIAHGEfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_XE2kcAHGEfCAzaRssEapmg" value="*"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ag8Q0AHGEfCAzaRssEapmg" name="ballSpeed: double"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_HOjPkAHFEfCAzaRssEapmg" name="startBallAnimation"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_JggrIAHFEfCAzaRssEapmg" name="animateBall"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LCsPkAHFEfCAzaRssEapmg" name="paintComponent"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ATUxkAG_EfCAzaRssEapmg" memberEnd="_ATV_sgG_EfCAzaRssEapmg _ATXN0gG_EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ATV_sAG_EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ATV_sQG_EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ATXN0gG_EfCAzaRssEapmg" name="menu giochi" type="_nQVqsAG9EfCAzaRssEapmg" association="_ATUxkAG_EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_C83msAG_EfCAzaRssEapmg" memberEnd="_C8400gG_EfCAzaRssEapmg _C85b4gG_EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_C8400AG_EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_C8400QG_EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_C85b4gG_EfCAzaRssEapmg" name="menu giochi" type="_nQVqsAG9EfCAzaRssEapmg" association="_C83msAG_EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_GjUI8AG_EfCAzaRssEapmg" memberEnd="_GjVXEQG_EfCAzaRssEapmg _GjV-IgG_EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GjUwAAG_EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GjVXEAG_EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_GjV-IgG_EfCAzaRssEapmg" name="roulettepanel" type="_4gg8kAG-EfCAzaRssEapmg" association="_GjUI8AG_EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JO3JMAG_EfCAzaRssEapmg" memberEnd="_JO4XUgG_EfCAzaRssEapmg _JO4-YQG_EfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JO4XUAG_EfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JO4XUQG_EfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JO4-YQG_EfCAzaRssEapmg" name="rouletteview" type="_acR4oOSNEe-Jg8Uk48IUvg" association="_JO3JMAG_EfCAzaRssEapmg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bZIvAAHEEfCAzaRssEapmg" name="SoundManager">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_6fuzkgHEEfCAzaRssEapmg" name="rouletteview" type="_acR4oOSNEe-Jg8Uk48IUvg" association="_6ftlcAHEEfCAzaRssEapmg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6fvaoAHEEfCAzaRssEapmg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6fvaoQHEEfCAzaRssEapmg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_bkhqMAHFEfCAzaRssEapmg" name="sounds: Map&lt;String,Clip>" visibility="package" aggregation="shared"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_8BKxIAHEEfCAzaRssEapmg" name="playSound"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_9vfUIAHEEfCAzaRssEapmg" name="loadSound"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6ftlcAHEEfCAzaRssEapmg" memberEnd="_6fuzkgHEEfCAzaRssEapmg _6fvaogHEEfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6fuzkAHEEfCAzaRssEapmg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6fuzkQHEEfCAzaRssEapmg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6fvaogHEEfCAzaRssEapmg" name="soundmanager" type="_bZIvAAHEEfCAzaRssEapmg" association="_6ftlcAHEEfCAzaRssEapmg"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_i-dsMAHFEfCAzaRssEapmg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_i-lA8AHFEfCAzaRssEapmg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>

@@ -2,7 +2,7 @@
 
 ##  Requisiti funzionali: 
 ### Sistema per la gestione degli utenti
-- Il sistema deve consentire agli utenti di regiostrarsi con nome utente e password 
+- Il sistema deve consentire agli utenti di registrarsi con nome utente e password 
 - Gli utenti devono poter effetturare login 
 ### Gestione dei giochi
 - L'utente deve poter accedere ai giochi

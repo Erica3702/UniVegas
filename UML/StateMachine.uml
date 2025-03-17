@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_l9eCwOOvEe-Jg8Uk48IUvg" name="StateMachine">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_l-gkkOOvEe-Jg8Uk48IUvg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_s8iGoOOvEe-Jg8Uk48IUvg" name="Flusso di gioco Blackjack">
+    <region xmi:type="uml:Region" xmi:id="_tyXicOOvEe-Jg8Uk48IUvg" name="Region1">
+      <transition xmi:type="uml:Transition" xmi:id="_jzPUIOPhEe-Jg8Uk48IUvg" source="_wo0U4OPgEe-Jg8Uk48IUvg" target="_fNWHEOPhEe-Jg8Uk48IUvg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_mf9ZEOPhEe-Jg8Uk48IUvg" name="StartGame" source="_fNWHEOPhEe-Jg8Uk48IUvg" target="_G0K8wOPhEe-Jg8Uk48IUvg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_fe-I8OPpEe-Jg8Uk48IUvg" name="exit" source="_50ouwOPhEe-Jg8Uk48IUvg" target="_HWRHwOPiEe-Jg8Uk48IUvg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_0p3ugOPrEe-Jg8Uk48IUvg" source="_nPLrAOPrEe-Jg8Uk48IUvg" target="_xuUu8OPhEe-Jg8Uk48IUvg">
+        <effect xmi:type="uml:Activity" xmi:id="_UiS4oOPsEe-Jg8Uk48IUvg" name="Rimani"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_6HkGQOPrEe-Jg8Uk48IUvg" guard="_LpgTAOPsEe-Jg8Uk48IUvg" source="_nPLrAOPrEe-Jg8Uk48IUvg" target="_1IoSoOPhEe-Jg8Uk48IUvg">
+        <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_LpgTAOPsEe-Jg8Uk48IUvg" name="if Punteggio > 21"/>
+        <effect xmi:type="uml:Activity" xmi:id="_Oi-agOPsEe-Jg8Uk48IUvg" name="Pesca"/>
+      </transition>
+      <transition xmi:type="uml:Transition" xmi:id="_JotSYOQMEe-Jg8Uk48IUvg" name="Determina vincitore" source="_1IoSoOPhEe-Jg8Uk48IUvg" target="_50ouwOPhEe-Jg8Uk48IUvg"/>
+      <transition xmi:type="uml:Transition" xmi:id="_bi3x4OQMEe-Jg8Uk48IUvg" name="nuova partita" source="_50ouwOPhEe-Jg8Uk48IUvg" target="_wo0U4OPgEe-Jg8Uk48IUvg"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_wo0U4OPgEe-Jg8Uk48IUvg"/>
+      <subvertex xmi:type="uml:State" xmi:id="_G0K8wOPhEe-Jg8Uk48IUvg" name="TurnoGiocatore">
+        <region xmi:type="uml:Region" xmi:id="_x6tIoOPiEe-Jg8Uk48IUvg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_U_XeEOQLEe-Jg8Uk48IUvg" source="_x6uWwOPiEe-Jg8Uk48IUvg" target="_nPLrAOPrEe-Jg8Uk48IUvg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_WjNPYOQLEe-Jg8Uk48IUvg" guard="_cw_nUOQLEe-Jg8Uk48IUvg" source="_nPLrAOPrEe-Jg8Uk48IUvg" target="_x6uWwOPiEe-Jg8Uk48IUvg">
+            <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_cw_nUOQLEe-Jg8Uk48IUvg" name="if Punteggio &lt;= 21"/>
+            <effect xmi:type="uml:Activity" xmi:id="_gErloOQLEe-Jg8Uk48IUvg" name="Pesca"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_x6uWwOPiEe-Jg8Uk48IUvg" name="SceltaGiocatore"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_nPLrAOPrEe-Jg8Uk48IUvg" name="" kind="choice"/>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_fNWHEOPhEe-Jg8Uk48IUvg" name="StatoIniziale"/>
+      <subvertex xmi:type="uml:State" xmi:id="_xuUu8OPhEe-Jg8Uk48IUvg" name="TurnoDealer">
+        <region xmi:type="uml:Region" xmi:id="_Zry4IOPjEe-Jg8Uk48IUvg" name="Region1">
+          <transition xmi:type="uml:Transition" xmi:id="_lrhDYOPsEe-Jg8Uk48IUvg" source="_Zr0GQOPjEe-Jg8Uk48IUvg" target="_gyJgsOPsEe-Jg8Uk48IUvg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_owbl4OPsEe-Jg8Uk48IUvg" guard="_AjG_0OQMEe-Jg8Uk48IUvg" source="_gyJgsOPsEe-Jg8Uk48IUvg" target="_Zr0GQOPjEe-Jg8Uk48IUvg">
+            <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_AjG_0OQMEe-Jg8Uk48IUvg" name="if Punteggio &lt;17"/>
+            <effect xmi:type="uml:Activity" xmi:id="_FsFr0OQMEe-Jg8Uk48IUvg" name="Pesca"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_pzd_IOQLEe-Jg8Uk48IUvg" guard="_2B5D0OQLEe-Jg8Uk48IUvg" source="_gyJgsOPsEe-Jg8Uk48IUvg" target="_1IoSoOPhEe-Jg8Uk48IUvg">
+            <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_wktCYOQLEe-Jg8Uk48IUvg" name="if Punteggio &lt; 17"/>
+            <ownedRule xmi:type="uml:InteractionConstraint" xmi:id="_2B5D0OQLEe-Jg8Uk48IUvg" name="if Punteggio >= 17"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_Zr0GQOPjEe-Jg8Uk48IUvg" name="DealerPesca"/>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_gyJgsOPsEe-Jg8Uk48IUvg" kind="choice"/>
+        </region>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_1IoSoOPhEe-Jg8Uk48IUvg" name="CheckRisultato"/>
+      <subvertex xmi:type="uml:State" xmi:id="_50ouwOPhEe-Jg8Uk48IUvg" name="FinePartita"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_HWRHwOPiEe-Jg8Uk48IUvg"/>
+    </region>
+  </packagedElement>
+</uml:Model>

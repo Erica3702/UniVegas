@@ -4,7 +4,9 @@
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
   <packagedElement xmi:type="uml:Package" xmi:id="_7CkLUOSuEe-Dzak39t_i1A" name="Univegas">
-    <packagedElement xmi:type="uml:UseCase" xmi:id="_dlU0wOSvEe-Dzak39t_i1A" name="Login"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_dlU0wOSvEe-Dzak39t_i1A" name="Login">
+      <include xmi:type="uml:Include" xmi:id="_hqYEkAG5EfCAzaRssEapmg" addition="_q9xAEOSwEe-Dzak39t_i1A"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_ie3WkOSvEe-Dzak39t_i1A" name="Sign Up"/>
     <packagedElement xmi:type="uml:UseCase" xmi:id="_q9xAEOSwEe-Dzak39t_i1A" name="Accede al menu'">
       <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_3rX7IOSwEe-Dzak39t_i1A" name="ExtensionPoint1"/>
@@ -73,12 +75,5 @@
     </eAnnotations>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Q6hEI-SxEe-Dzak39t_i1A" name="verifica se l'utente è registrato" type="_NLOH4OSxEe-Dzak39t_i1A" association="_Q6hEIOSxEe-Dzak39t_i1A"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_Q6hrMOSxEe-Dzak39t_i1A" name="sistema di autenticazione" type="_K07bYOSwEe-Dzak39t_i1A" association="_Q6hEIOSxEe-Dzak39t_i1A"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_cZeawOSxEe-Dzak39t_i1A" memberEnd="_cZfB0uSxEe-Dzak39t_i1A _cZfB0-SxEe-Dzak39t_i1A">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cZfB0OSxEe-Dzak39t_i1A" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cZfB0eSxEe-Dzak39t_i1A" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_cZfB0uSxEe-Dzak39t_i1A" name="entra nel menu'" type="_q9xAEOSwEe-Dzak39t_i1A" association="_cZeawOSxEe-Dzak39t_i1A"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_cZfB0-SxEe-Dzak39t_i1A" name="user" type="_DNovUOSvEe-Dzak39t_i1A" association="_cZeawOSxEe-Dzak39t_i1A"/>
   </packagedElement>
 </uml:Model>
