@@ -14,6 +14,12 @@ public class RouletteView extends JFrame {
     private static final String FIRST_21 = " 2:1 ";
     private static final String SECOND_21 = "  2:1  ";
     private static final String THIRD_21 = "   2:1   ";
+    private static final String FIRST18 = "1 TO 18";
+    private static final String LAST18 = "19 TO 36";
+    private static final String FIRST12 = "1ST 12";
+    private static final String SECOND12 = "2ND 12";
+    private static final String THIRD12 = "3RD 12";
+    private static final String BLACK = "BLACK";
 
     // Altre costanti
     private static final Dimension BUTTON_SIZE = new Dimension(90, 30);
@@ -31,11 +37,11 @@ public class RouletteView extends JFrame {
     private static JLabel totalBetLabel;
 
     // Audio
-    private final SoundManager soundManager;
+    private final transient  SoundManager soundManager;
 
     // Model e controller
-    private final RouletteController controller;
-    private final RouletteModel model;
+    private final transient RouletteController controller;
+    private final transient RouletteModel model;
 
     public RouletteView(RouletteController controller, RouletteModel model) {
         this.chipIcon = initializeChipIcon();
@@ -114,8 +120,8 @@ public class RouletteView extends JFrame {
             {"10", "11", "12"}, {"13", "14", "15"}, {"16", "17", "18"},
             {"19", "20", "21"}, {"22", "23", "24"}, {"25", "26", "27"},
             {"28", "29", "30"}, {"31", "32", "33"}, {"34", "35", "36"},
-            {FIRST_21, SECOND_21, THIRD_21}, {"1ST 12", "2ND 12", "3RD 12"},
-            {"RED", "1 TO 18", "EVEN"}, {"BLACK", "19 TO 36", "ODD"},
+            {FIRST_21, SECOND_21, THIRD_21}, {FIRST12, SECOND12, THIRD12},
+            {"RED", FIRST18, "EVEN"}, {BLACK, LAST18, "ODD"},
         };
     }
 
@@ -156,15 +162,25 @@ public class RouletteView extends JFrame {
         return button;
     }
 
-    /**
-     * Restituisce il colore di sfondo per un pulsante in base al testo.
-     */
     private Color getButtonBackground(String text) {
         if (text.matches("\\d+")) {
             int num = Integer.parseInt(text);
-            return num == 0 ? Color.GREEN : model.isRed(num) ? Color.RED : Color.BLACK;
+            return getNumberColor(num);
         } else {
             return model.isSpecialBet(text) ? Color.GRAY : Color.LIGHT_GRAY;
+        }
+    }
+
+    /**
+     * Restituisce il colore di sfondo per un numero specifico.
+     */
+    private Color getNumberColor(int number) {
+        if (number == 0) {
+            return Color.GREEN;
+        } else if (model.isRed(number)) {
+            return Color.RED;
+        } else {
+            return Color.BLACK;
         }
     }
 
@@ -260,13 +276,13 @@ public class RouletteView extends JFrame {
      */
     public void disableOppositeButtons(String buttonText) {
         switch (buttonText) {
-            case "RED" -> disableButton("BLACK");
-            case "BLACK" -> disableButton("RED");
+            case "RED" -> disableButton(BLACK);
+            case BLACK -> disableButton("RED");
             case "EVEN" -> disableButton("ODD");
             case "ODD" -> disableButton("EVEN");
-            case "1 TO 18" -> disableButton("19 TO 36");
-            case "19 TO 36" -> disableButton("1 TO 18");
-            case "1ST 12", "2ND 12", "3RD 12" -> checkAndDisableThird12Button(buttonText);
+            case FIRST18 -> disableButton(LAST18);
+            case LAST18 -> disableButton(FIRST18);
+            case FIRST12, SECOND12, THIRD12 -> checkAndDisableThird12Button(buttonText);
             case FIRST_21, SECOND_21, THIRD_21 -> checkAndDisableThird21Button(buttonText);
         }
     }
@@ -318,13 +334,13 @@ public class RouletteView extends JFrame {
      * Disabilita il terzo pulsante "12" se due sono già selezionati.
      */
     private void checkAndDisableThird12Button(String clickedButtonText) {
-        boolean is1st12Selected = isButtonSelected("1ST 12") || clickedButtonText.equals("1ST 12");
-        boolean is2nd12Selected = isButtonSelected("2ND 12") || clickedButtonText.equals("2ND 12");
-        boolean is3rd12Selected = isButtonSelected("3RD 12") || clickedButtonText.equals("3RD 12");
+        boolean is1st12Selected = isButtonSelected(FIRST12) || clickedButtonText.equals(FIRST12);
+        boolean is2nd12Selected = isButtonSelected(SECOND12) || clickedButtonText.equals(SECOND12);
+        boolean is3rd12Selected = isButtonSelected(THIRD12) || clickedButtonText.equals(THIRD12);
 
-        if (is1st12Selected && is2nd12Selected) disableButton("3RD 12");
-        else if (is1st12Selected && is3rd12Selected) disableButton("2ND 12");
-        else if (is2nd12Selected && is3rd12Selected) disableButton("1ST 12");
+        if (is1st12Selected && is2nd12Selected) disableButton(THIRD12);
+        else if (is1st12Selected && is3rd12Selected) disableButton(SECOND12);
+        else if (is2nd12Selected && is3rd12Selected) disableButton(FIRST12);
     }
 
     /**

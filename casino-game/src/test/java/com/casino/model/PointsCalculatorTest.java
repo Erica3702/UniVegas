@@ -2,105 +2,61 @@ package com.casino.model;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
 import javax.swing.*;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
+@RunWith(Parameterized.class) // Abilita i test parametrici
 public class PointsCalculatorTest {
 
     private RouletteModel model;
-    private PointsCalculator pointsCalculator;
     private Map<JButton, Integer> buttonTokens;
+
+    // Parametri per il test parametrico
+    private final String buttonText;
+    private final int winningNumber;
+    private final int expectedPoints;
+
+    public PointsCalculatorTest(String buttonText, int winningNumber, int expectedPoints) {
+        this.buttonText = buttonText;
+        this.winningNumber = winningNumber;
+        this.expectedPoints = expectedPoints;
+    }
 
     @Before
     public void setUp() {
         model = new RouletteModel();
-        pointsCalculator = new PointsCalculator();
         buttonTokens = new HashMap<>();
     }
 
-    @Test
-    public void testCalculatePoints_SingleNumberWin() {
-        JButton button = new JButton("17");
-        buttonTokens.put(button, 1);
-
-        model.setWinningNumber(17);
-
-        int points = PointsCalculator.calculatePoints(model, buttonTokens);
-        assertEquals(180, points); 
+    // Fornisce i dati per i test parametrici
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        return Arrays.asList(new Object[][]{
+            {"17", 17, 180},       // Singolo numero vincente
+            {"17", 5, -5},         // Singolo numero perdente
+            {"RED", 1, 40},        // Rosso vincente
+            {"BLACK", 2, 40},      // Nero vincente
+            {"EVEN", 4, 40},       // Pari vincente
+            {"ODD", 3, 40},        // Dispari vincente
+        });
     }
 
     @Test
-    public void testCalculatePoints_SingleNumberLoss() {
-        JButton button = new JButton("17");
+    public void testCalculatePoints() {
+        JButton button = new JButton(buttonText);
         buttonTokens.put(button, 1);
 
-        model.setWinningNumber(5);
+        model.setWinningNumber(winningNumber);
 
         int points = PointsCalculator.calculatePoints(model, buttonTokens);
-        assertEquals(-5, points); 
-    }
-
-    @Test
-    public void testCalculatePoints_RedWin() {
-        JButton button = new JButton("RED");
-        buttonTokens.put(button, 1);
-
-        model.setWinningNumber(1); // 1 è un numero rosso
-
-        int points = PointsCalculator.calculatePoints(model, buttonTokens);
-        assertEquals(40, points); 
-    }
-
-    @Test
-    public void testCalculatePoints_BlackWin() {
-        JButton button = new JButton("BLACK");
-        buttonTokens.put(button, 1);
-
-        model.setWinningNumber(2); // 2 è un numero nero
-
-        int points = PointsCalculator.calculatePoints(model, buttonTokens);
-        assertEquals(40, points); 
-    }
-
-    @Test
-    public void testCalculatePoints_EvenWin() {
-        JButton button = new JButton("EVEN");
-        buttonTokens.put(button, 1);
-
-        model.setWinningNumber(4); 
-
-        int points = PointsCalculator.calculatePoints(model, buttonTokens);
-        assertEquals(40, points); 
-    }
-
-    @Test
-    public void testCalculatePoints_OddWin() {
-        JButton button = new JButton("ODD");
-        buttonTokens.put(button, 1);
-
-        model.setWinningNumber(3); 
-
-        int points = PointsCalculator.calculatePoints(model, buttonTokens);
-        assertEquals(40, points); 
-    }
-
-    @Test
-    public void testCalculatePoints_MultipleBetsMixedResults() {
-        JButton button1 = new JButton("17");
-        JButton button2 = new JButton("RED");
-        JButton button3 = new JButton("EVEN");
-
-        buttonTokens.put(button1, 1);
-        buttonTokens.put(button2, 1);
-        buttonTokens.put(button3, 1);
-
-        model.setWinningNumber(17); // 17 è nero e dispari
-
-        int points = PointsCalculator.calculatePoints(model, buttonTokens);
-        int expectedPoints = 180 - 20 - 20;
-        assertEquals(expectedPoints, points); // Verifica il calcolo dei punti
+        assertEquals(expectedPoints, points);
     }
 }
