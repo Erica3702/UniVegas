@@ -1,49 +1,46 @@
 package com.casino.utils;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class DBConnectionTest {
-    private Connection connection;
+
+    private DBConnection dbConnection;
 
     @Before
     public void setUp() {
-        connection = DBConnection.connect();
-        assertNotNull("Connection should not be null", connection);
+        // Ottieni l'istanza Singleton di DBConnection
+        dbConnection = DBConnection.getInstance();
     }
 
     @Test
-    public void testConnection() {
-        assertNotNull("Database connection should be established", connection);
+    public void testSingletonInstance() {
+        // Verifica che ci sia una sola istanza di DBConnection
+        DBConnection anotherInstance = DBConnection.getInstance();
+        assertSame("Le istanze di DBConnection devono essere la stessa", dbConnection, anotherInstance);
     }
 
     @Test
-    public void testCreateTable() {
-        String query = "CREATE TABLE IF NOT EXISTS test_table (id INTEGER PRIMARY KEY, name TEXT)";
-        try (Statement stmt = connection.createStatement()) {
-            stmt.execute(query);
-        } catch (SQLException e) {
-            fail("Table creation failed: " + e.getMessage());
-        }
+    public void testConnectionIsNotNull() {
+        // Verifica che la connessione non sia null
+        Connection connection = dbConnection.getConnection();
+        assertNotNull("La connessione al database non deve essere null", connection);
     }
 
-
-    @After
-    public void tearDown() {
+    @Test
+    public void testConnectionIsValid() {
+        // Verifica che la connessione sia valida
+        Connection connection = dbConnection.getConnection();
         try {
-            if (connection != null) {
-                connection.close();
-            }
+            assertFalse("La connessione non deve essere chiusa", connection.isClosed());
+            assertTrue("La connessione deve essere valida", connection.isValid(5)); // Timeout di 5 secondi
         } catch (SQLException e) {
-            e.printStackTrace();
+            fail("Errore durante la verifica della connessione: " + e.getMessage());
         }
     }
 }

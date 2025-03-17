@@ -15,15 +15,25 @@ public class SoundManager {
         sounds = new HashMap<>();
     }
 
-
+    /**
+     * Dato un suono, lo avvia
+     * @param nome suono da avviare
+     */
     public void playSound(String name) {
         Clip clip = sounds.get(name);
         if (clip != null) {
-            clip.setFramePosition(0); // Riavvolgi il suono all'inizio
+            clip.setFramePosition(0); // dall'inizio
             clip.start();
         }
     }
 
+    
+    
+    /**
+     * Serve per caricare il suono in modo che sia pronto per essere utilizzato
+     * @param path del suono
+     * @param nome del suono
+     */
 	public void loadSound(String path, String name) {
 		try {
             AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(path));

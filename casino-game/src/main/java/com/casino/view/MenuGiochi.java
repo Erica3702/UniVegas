@@ -1,8 +1,6 @@
 package com.casino.view;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
+import java.awt.GridLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -17,66 +15,59 @@ import com.casino.model.RouletteModel;
 
 public class MenuGiochi {
 
-	    public static void Start(){
+    // Costruttore privato per impedire l'istanziazione
+    private MenuGiochi() {
+        throw new UnsupportedOperationException("Questa classe non può essere istanziata.");
+    }
 
-	    	JFrame frame = new JFrame("UniVegas Menù");
+    /**
+     * Crea il menu con 3 bottoni che aprono i tre giochi.
+     */
+    public static void start() {
+        JFrame frame = new JFrame("UniVegas Menù");
+        frame.setSize(1100, 750);
+        frame.setResizable(false);
+        frame.setLocationRelativeTo(null); // Centra la finestra
+        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png");
+        frame.setIconImage(fiches.getImage());
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setLayout(new GridLayout(1, 3)); // 3 colonne, 1 riga
 
-	        frame.setSize(1100,750);
-	        frame.setResizable(false); // Disabilita il ridimensionamento
-	        frame.setLocationRelativeTo(null); //centra la finestra
-	        ImageIcon fiches = new ImageIcon("src/main/resources/immagini/fiches.png");
-	        frame.setIconImage(fiches.getImage());
+        // Carica le immagini per i bottoni
+        ImageIcon pokerImage = new ImageIcon("src/main/resources/immagini/pokermenu.png");
+        ImageIcon blackjackImage = new ImageIcon("src/main/resources/immagini/blackjackmenu.png");
+        ImageIcon rouletteImage = new ImageIcon("src/main/resources/immagini/roulettemenu.png");
 
+        // Crea i bottoni con le immagini
+        JButton pokerButton = new JButton(pokerImage);
+        JButton blackjackButton = new JButton(blackjackImage);
+        JButton rouletteButton = new JButton(rouletteImage);
 
-	        // Chiudi l'applicazione quando il frame viene chiuso
-	        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        // Aggiungi i bottoni al frame
+        frame.add(pokerButton);
+        frame.add(blackjackButton);
+        frame.add(rouletteButton);
 
-	        frame.setLayout(new GridLayout(1, 3)); // 3 colonne, 1 riga
+        // Imposta azioni per i bottoni usando lambda
+        pokerButton.addActionListener(e -> 
+            JOptionPane.showMessageDialog(frame, "Non disponibile")
+        );
 
-	        // Caricamento delle immagini per ogni gioco
-	        ImageIcon pokerImage = new ImageIcon("src/main/resources/immagini/pokermenu.png"); // Sostituisci con il tuo percorso immagine
-	        ImageIcon blackjackImage = new ImageIcon("src/main/resources/immagini/blackjackmenu.png"); // Sostituisci con il tuo percorso immagine
-	        ImageIcon rouletteImage = new ImageIcon("src/main/resources/immagini/roulettemenu.png"); // Sostituisci con il tuo percorso immagine
+        blackjackButton.addActionListener(e -> {
+            frame.dispose(); // Chiude il menu
+            BlackjackModel model = new BlackjackModel();
+            BlackjackView view = new BlackjackView(model);
+            new BlackjackController(model, view); // Avvia il gioco Blackjack
+        });
 
-	        // Creazione dei bottoni con le immagini
-	        JButton pokerButton = new JButton(pokerImage);
-	        JButton blackjackButton = new JButton(blackjackImage);
-	        JButton rouletteButton = new JButton(rouletteImage);
+        rouletteButton.addActionListener(e -> {
+            frame.dispose(); // Chiude il menu
+            RouletteModel model = new RouletteModel();
+            RouletteController controller = new RouletteController();
+            SwingUtilities.invokeLater(() -> new RouletteView(controller, model)); // Avvia il gioco Roulette
+        });
 
-	        // Aggiungi i bottoni al frame
-	        frame.add(pokerButton);    // Aggiungi bottone Poker
-	        frame.add(blackjackButton); // Aggiungi bottone Blackjack
-	        frame.add(rouletteButton);  // Aggiungi bottone Roulette
-
-	        // Rendi il frame visibile
-	        frame.setVisible(true);
-
-	        // Azioni dei bottoni
-	        pokerButton.addActionListener(new ActionListener() {
-	            @Override
-	            public void actionPerformed(ActionEvent e) {
-	                JOptionPane.showMessageDialog(frame, "Non disponibile");
-	            }
-	        });
-
-	        blackjackButton.addActionListener(new ActionListener() {
-	            @Override
-	            public void actionPerformed(ActionEvent e) {
-	                frame.dispose();
-	                BlackjackModel model = new BlackjackModel();
-	                BlackjackView view = new BlackjackView(model);
-	                new BlackjackController(model, view);
-	            }
-	        });
-
-	        rouletteButton.addActionListener(new ActionListener() {
-	            @Override
-	            public void actionPerformed(ActionEvent e) {
-	                frame.dispose();
-	                RouletteModel model = new RouletteModel();
-	                RouletteController controller = new RouletteController();
-	                SwingUtilities.invokeLater(() -> new RouletteView(controller, model));
-	            }
-	        });
-	    }
+        // Mostra il frame
+        frame.setVisible(true);
+    }
 }
