@@ -572,7 +572,8 @@ METTI IMMAGINE
 Per valutare la complessità del codice, abbiamo utilizzato la metrica di complessità ciclomatica di McCabe. Questa metrica misura il numero di cammini linearmente indipendenti attraverso un metodo, aiutando a identificare codice potenzialmente complesso e difficile da mantenere.
 ### Esempio: il metodo determineResult in BlackjackController
 
- public String determineResult() {
+public String determineResult() {
+       
         int playerSum = model.getPlayer().reduceAce();
         int dealerSum = model.getDealer().reduceAce();
         if (playerSum > 21) {
