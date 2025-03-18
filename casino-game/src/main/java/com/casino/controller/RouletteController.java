@@ -1,9 +1,10 @@
 package com.casino.controller;
 
+import com.casino.interfaccia.RouletteGameController;
 import com.casino.model.RouletteModel;
 import com.casino.view.RouletteView;
 
-public class RouletteController {
+public class RouletteController implements RouletteGameController  {
     private RouletteModel model;
     private RouletteView view;
 
