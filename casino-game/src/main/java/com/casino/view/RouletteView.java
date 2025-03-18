@@ -7,10 +7,12 @@ import java.util.Map;
 
 import javax.swing.*;
 
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.casino.controller.RouletteController;
+import com.casino.interfaccia.RouletteGameController;
+
 import com.casino.model.PointsCalculator;
 import com.casino.model.RouletteModel;
 
@@ -46,10 +48,10 @@ public class RouletteView extends JFrame {
     private final transient SoundManager soundManager;
 
     // Model e controller
-    private final transient RouletteController controller;
+    private final transient RouletteGameController controller;
     private final transient RouletteModel model;
 
-    public RouletteView(RouletteController controller, RouletteModel model) {
+    public RouletteView(RouletteGameController controller, RouletteModel model) {
         this.chipIcon = initializeChipIcon();
         this.bettingPanel = new JPanel();
         this.roulettePanel = new RoulettePanel(model, this); 
