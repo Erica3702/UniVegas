@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_MvbKsAPUEfCbEKMMokk3Bg" name="Univegas">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_MzgZcAPUEfCbEKMMokk3Bg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_MwaCIAPUEfCbEKMMokk3Bg" name="Activity1" node="_6_K_sAPUEfCbEKMMokk3Bg _ABoM8APVEfCbEKMMokk3Bg _Ik1kIAPVEfCbEKMMokk3Bg _nFAh4APVEfCbEKMMokk3Bg _uDev4APVEfCbEKMMokk3Bg _z9tSoAPVEfCbEKMMokk3Bg _94TTgAPVEfCbEKMMokk3Bg _0tMugAPYEfCbEKMMokk3Bg _9EjbAAPYEfCbEKMMokk3Bg _sDmmAAPZEfCbEKMMokk3Bg" group="_hzbwAAPUEfCbEKMMokk3Bg _QS8UwAPUEfCbEKMMokk3Bg _smoM0APUEfCbEKMMokk3Bg _xMXB0APUEfCbEKMMokk3Bg _vmvLAAPYEfCbEKMMokk3Bg">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_MOUzUAPVEfCbEKMMokk3Bg" name="initial node" inPartition="_QS8UwAPUEfCbEKMMokk3Bg" target="_Ik1kIAPVEfCbEKMMokk3Bg" source="_6_K_sAPUEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_SLn4MAPVEfCbEKMMokk3Bg" target="_ABoM8APVEfCbEKMMokk3Bg" source="_Ik1kIAPVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ywWHoAPVEfCbEKMMokk3Bg" inPartition="_hzbwAAPUEfCbEKMMokk3Bg" target="_uDev4APVEfCbEKMMokk3Bg" source="_ABoM8APVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3sWuoAPVEfCbEKMMokk3Bg" inPartition="_hzbwAAPUEfCbEKMMokk3Bg" target="_z9tSoAPVEfCbEKMMokk3Bg" source="_uDev4APVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_44IlQAPVEfCbEKMMokk3Bg" target="_nFAh4APVEfCbEKMMokk3Bg" source="_z9tSoAPVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Adxg8APWEfCbEKMMokk3Bg" target="_94TTgAPVEfCbEKMMokk3Bg" source="_nFAh4APVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_4CpAUAPYEfCbEKMMokk3Bg" target="_0tMugAPYEfCbEKMMokk3Bg" source="_nFAh4APVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_AyS4EAPZEfCbEKMMokk3Bg" inPartition="_smoM0APUEfCbEKMMokk3Bg" target="_9EjbAAPYEfCbEKMMokk3Bg" source="_nFAh4APVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_T4NZAAPZEfCbEKMMokk3Bg" target="_9EjbAAPYEfCbEKMMokk3Bg" source="_94TTgAPVEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_UvniIAPZEfCbEKMMokk3Bg" target="_9EjbAAPYEfCbEKMMokk3Bg" source="_0tMugAPYEfCbEKMMokk3Bg"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_sEnSoAPZEfCbEKMMokk3Bg" inPartition="_smoM0APUEfCbEKMMokk3Bg" target="_sDmmAAPZEfCbEKMMokk3Bg" source="_9EjbAAPYEfCbEKMMokk3Bg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_QS8UwAPUEfCbEKMMokk3Bg" name="Utente" node="_6_K_sAPUEfCbEKMMokk3Bg _Ik1kIAPVEfCbEKMMokk3Bg" edge="_MOUzUAPVEfCbEKMMokk3Bg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_hzbwAAPUEfCbEKMMokk3Bg" name="MenuUtente" node="_ABoM8APVEfCbEKMMokk3Bg _uDev4APVEfCbEKMMokk3Bg _z9tSoAPVEfCbEKMMokk3Bg" edge="_ywWHoAPVEfCbEKMMokk3Bg _3sWuoAPVEfCbEKMMokk3Bg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_smoM0APUEfCbEKMMokk3Bg" name="MenuGiochi" node="_nFAh4APVEfCbEKMMokk3Bg _9EjbAAPYEfCbEKMMokk3Bg _sDmmAAPZEfCbEKMMokk3Bg" edge="_AyS4EAPZEfCbEKMMokk3Bg _sEnSoAPZEfCbEKMMokk3Bg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_xMXB0APUEfCbEKMMokk3Bg" name="Blackjack" node="_94TTgAPVEfCbEKMMokk3Bg"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_vmvLAAPYEfCbEKMMokk3Bg" name="Roulette" node="_0tMugAPYEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_6_K_sAPUEfCbEKMMokk3Bg" outgoing="_MOUzUAPVEfCbEKMMokk3Bg" inPartition="_QS8UwAPUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_ABoM8APVEfCbEKMMokk3Bg" name="crea un account" incoming="_SLn4MAPVEfCbEKMMokk3Bg" outgoing="_ywWHoAPVEfCbEKMMokk3Bg" inPartition="_hzbwAAPUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_Ik1kIAPVEfCbEKMMokk3Bg" name="accede al sistema" incoming="_MOUzUAPVEfCbEKMMokk3Bg" outgoing="_SLn4MAPVEfCbEKMMokk3Bg" inPartition="_QS8UwAPUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_nFAh4APVEfCbEKMMokk3Bg" name="seleziona gioco" incoming="_44IlQAPVEfCbEKMMokk3Bg" outgoing="_Adxg8APWEfCbEKMMokk3Bg _4CpAUAPYEfCbEKMMokk3Bg _AyS4EAPZEfCbEKMMokk3Bg" inPartition="_smoM0APUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_uDev4APVEfCbEKMMokk3Bg" name="torna al menu utente" incoming="_ywWHoAPVEfCbEKMMokk3Bg" outgoing="_3sWuoAPVEfCbEKMMokk3Bg" inPartition="_hzbwAAPUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_z9tSoAPVEfCbEKMMokk3Bg" name="accede" incoming="_3sWuoAPVEfCbEKMMokk3Bg" outgoing="_44IlQAPVEfCbEKMMokk3Bg" inPartition="_hzbwAAPUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_94TTgAPVEfCbEKMMokk3Bg" name="seleziona blackjack" incoming="_Adxg8APWEfCbEKMMokk3Bg" outgoing="_T4NZAAPZEfCbEKMMokk3Bg" inPartition="_xMXB0APUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_0tMugAPYEfCbEKMMokk3Bg" name="seleziona roulette" incoming="_4CpAUAPYEfCbEKMMokk3Bg" outgoing="_UvniIAPZEfCbEKMMokk3Bg" inPartition="_vmvLAAPYEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:CreateObjectAction" xmi:id="_9EjbAAPYEfCbEKMMokk3Bg" name="esci" incoming="_AyS4EAPZEfCbEKMMokk3Bg _T4NZAAPZEfCbEKMMokk3Bg _UvniIAPZEfCbEKMMokk3Bg" outgoing="_sEnSoAPZEfCbEKMMokk3Bg" inPartition="_smoM0APUEfCbEKMMokk3Bg"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_sDmmAAPZEfCbEKMMokk3Bg" name="ActivityFinalNode26" incoming="_sEnSoAPZEfCbEKMMokk3Bg" inPartition="_smoM0APUEfCbEKMMokk3Bg"/>
+  </packagedElement>
+</uml:Model>
