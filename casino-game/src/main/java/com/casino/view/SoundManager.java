@@ -26,9 +26,7 @@ public class SoundManager {
             clip.start();
         }
     }
-
-    
-    
+   
     /**
      * Serve per caricare il suono in modo che sia pronto per essere utilizzato
      * @param path del suono

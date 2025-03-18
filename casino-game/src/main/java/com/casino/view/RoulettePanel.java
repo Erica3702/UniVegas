@@ -28,7 +28,6 @@ public class RoulettePanel extends JPanel implements Serializable {
     Random random = new Random();
 
 	
-
     public RoulettePanel(RouletteModel model, RouletteView rouletteView) {
         this.model = model;
         this.rouletteView = rouletteView; // Inizializza il riferimento

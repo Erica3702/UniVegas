@@ -65,24 +65,23 @@ public class BlackjackView {
 
     private void drawGame(Graphics g) {
         try {
-            // Draw dealer's hand
             int x = 20;
             int y = 20;
 
-            // Se la prima carta è nascosta, disegna il retro della carta
+            // Se la prima carta è nascosta, mostra il retro della carta
             if (model.isDealerCardHidden()) {
                 Image hiddenCardImg = new ImageIcon(getClass().getResource("/cards/BACK.png")).getImage();
                 g.drawImage(hiddenCardImg, x, y, 110, 154, null);
                 x += 115;
 
-                // Disegna solo la seconda carta del dealer
+                // Mostra solo la seconda carta del dealer
                 if (model.getDealer().getHand().size() > 1) {
                     Card card = model.getDealer().getHand().get(1);
                     Image cardImg = new ImageIcon(getClass().getResource(card.getImagePath())).getImage();
                     g.drawImage(cardImg, x, y, 110, 154, null);
                 }
             } else {
-                // Se la prima carta è visibile, disegna tutte le carte del dealer
+                // Se la prima carta è visibile, mostra tutte le carte del dealer
                 for (Card card : model.getDealer().getHand()) {
                     Image cardImg = new ImageIcon(getClass().getResource(card.getImagePath())).getImage();
                     g.drawImage(cardImg, x, y, 110, 154, null);
@@ -90,7 +89,6 @@ public class BlackjackView {
                 }
             }
 
-            // Draw player's hand
             x = 20;
             y = 320;
             for (Card card : model.getPlayer().getHand()) {

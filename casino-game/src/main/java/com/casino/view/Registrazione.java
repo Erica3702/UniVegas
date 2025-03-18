@@ -55,10 +55,6 @@ public class Registrazione {
     registratiButton2.setEnabled(ageCheckBox.isSelected())
 );
 
-
-
-
-
 	registratiButton2.addActionListener(e -> {
 	    String username = usernameField.getText();
 	    String password = new String(passwordField.getPassword());
