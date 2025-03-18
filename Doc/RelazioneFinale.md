@@ -432,6 +432,11 @@ Il sequence diagram è un modello dinamico che in questo caso descrive come inte
 
 ![SequenceDiagram](https://github.com/user-attachments/assets/726edf8f-818c-4595-b5ff-cd9d831363a3)
 
+### Activity diagram
+L'activity diagram rappresenta il flusso delle operazioni che un utente segue all'interno di un casinò virtuale, dal momento in cui accede al sistema e si registra, fino alla scelta del gioco.
+![Activity](https://github.com/user-attachments/assets/759aa54a-4287-42cc-98d3-17d802ad5271)
+
+
 ### Component diagram
 Il diagramma dei componenti ha lo scopo di mostrare le relazioni tra i diversi componenti del sistema.
 
