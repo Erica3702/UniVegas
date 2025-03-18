@@ -623,6 +623,9 @@ Nel sistema software sono stati integrati due design pattern:
 - Pattern architetturale MVC: separa il sistema in tre componenti principali: Model, View e Controller. Questo approccio migliora l'organizzazione del codice, la manutenibilità e la scalabilità dell'applicazione.
 
 ## SonarQube cloud
+SonarQube è una piattaforma open source per il controllo continuo della qualità del codice. Utilizzata nel progetto UniVegas, SonarQube ha permesso di analizzare staticamente il codice Java, identificando bug, vulnerabilità, code smell e duplicazioni. Grazie a metriche come la copertura del codice e la complessità ciclomatica, abbiamo migliorato la qualità del software, risolvendo problemi e garantendo un codice più manutenibile e sicuro. SonarQube è stato integrato nel flusso di sviluppo tramite GitHub Actions, eseguendo analisi automatiche a ogni commit e aiutando il team a mantenere standard di qualità elevati durante tutto il ciclo di vita del progetto. 
+
+![Immagine WhatsApp 2025-03-18 ore 12 04 21_9d9a40e6](https://github.com/user-attachments/assets/377683df-5eb5-456b-9030-bd5891b3aaf0)
 
 
 ## 5. Testing
