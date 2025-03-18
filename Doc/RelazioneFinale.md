@@ -32,7 +32,7 @@
 ### Software Engineering Management 
  ## 1. Project plan
   Il seguente project plan si riferisce al progetto di ingegneria del Software a.a. 24/25 e consiste nello sviluppo di un casinò virtuale all'interno del quale è 
-  possibile giocare a tre differenti giochi: Blackjack e Roulette. Le partite si svolgono in modalità singleplayer.
+  possibile giocare a due differenti giochi: Blackjack e Roulette. Le partite si svolgono in modalità singleplayer.
 
    ## 1.1 Introduzione
   Negli ultimi anni, il settore del gioco d'azzardo online ha registrato una crescita esponenziale, spinta dall'aumento dell'accesso a internet, dall'evoluzione 
@@ -301,7 +301,7 @@ La collaborazione tra i membri del team è stata favorita da:
 
 Riunioni Regolari: Daily Stand-up, Sprint Planning, Sprint Review, Sprint Retrospective.
 
-Strumenti di Comunicazione: Abbiamo utilizzato strumenti come [E-Mail, Gogle Meet, Whatsapp, ecc.] per la comunicazione quotidiana.
+Strumenti di Comunicazione: Abbiamo utilizzato strumenti come [E-Mail, Google Meet, Whatsapp, ecc.] per la comunicazione quotidiana.
 
 Kanban Board: Utilizzato per visualizzare lo stato delle attività e migliorare la trasparenza del lavoro.
 
@@ -568,7 +568,7 @@ Diagramma delle Classi (Class Diagram)
 Il diagramma delle classi mostra la struttura statica del sistema, con le classi principali e le relazioni tra di esse.
 
 Diagramma delle Classi
-METTI IMMAGINE
+![ClassDiagram](https://github.com/user-attachments/assets/e9587e66-a7e7-4ba0-aa64-54cbc5c0d34a)
 
 
 
@@ -576,7 +576,8 @@ Diagramma di Sequenza (Sequence Diagram)
 Il diagramma di sequenza descrive il flusso di interazione tra gli oggetti durante una partita di Blackjack.
 
 Diagramma di Sequenza
-METTI IMMAGINE
+
+![SequenceDiagram](https://github.com/user-attachments/assets/726edf8f-818c-4595-b5ff-cd9d831363a3)
 
 ### Calcolo della Complessità (McCabe)
 Per valutare la complessità del codice, abbiamo utilizzato la metrica di complessità ciclomatica di McCabe. Questa metrica misura il numero di cammini linearmente indipendenti attraverso un metodo, aiutando a identificare codice potenzialmente complesso e difficile da mantenere.
@@ -614,13 +615,14 @@ N = Numero di nodi nel grafo di controllo (blocchi di codice).
 Valore 5: Indica che il metodo ha una complessità moderata. Un valore inferiore a 10 è generalmente considerato accettabile e gestibile.
 
 ### Metriche del codice
-VEDI STRUCTURE 101
 
 Nel sistema software sono stati integrati due design pattern:
 
 - Singleton: garantisce che ci sia una sola connessione al database, che viene condivisa con tutto il sistema, evitando di aprire più connessioni e quindi consumare risorse inutilmente, riducendo il sovraccarico e migliorando le prestazioni.
 
 - Pattern architetturale MVC: separa il sistema in tre componenti principali: Model, View e Controller. Questo approccio migliora l'organizzazione del codice, la manutenibilità e la scalabilità dell'applicazione.
+
+## SonarQube cloud
 
 
 ## 5. Testing
