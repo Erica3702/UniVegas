@@ -632,6 +632,8 @@ SonarQube è una piattaforma open source per il controllo continuo della qualit�
 ### Software Testing
 Per garantire una buona copertura del sistema e verificare che i singoli moduli del sistema sviluppato funzionassero correttamente, abbiamo implementato test automatici con il framework JUnit4. L'implementazione dei test unitari è stata eseguita nella directory src/test/java, creando un "JUnit Test Case" per le classi principali, denominato "NomeClasseTest".  I test sono stati svolti per verificare il corretto funzionamento dei metodi analizzati, simulando l'input e confrontando l'output con quello atteso tramite la funzione "assertEquals".
 
+L'integrazione continua (Continuous Integration) con Maven in GitHub consente di automatizzare la compilazione, i test e il deployment del codice a ogni modifica. Utilizzando GitHub Actions, abbiamo configurato un workflow che esegue Maven per verificare la correttezza del codice e garantire che eventuali errori vengano rilevati tempestivamente. Questo processo include operazioni come mvn clean install per la compilazione e l'esecuzione dei test, oltre all'eventuale pubblicazione degli artefatti. L'automazione migliora l'affidabilità del progetto e facilita la collaborazione tra sviluppatori.
+
 
 ## 6. Maintenance
 ### Software maintenance
